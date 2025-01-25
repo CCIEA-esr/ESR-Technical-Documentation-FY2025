@@ -1,9 +1,3 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-```
+Chapters of this document are organized similarly to the structure of the Ecosystem Status Report (i.e. one "chapter" of the technical documentation per section of the ESR), but also include sections encompassing indicators that no longer are published in the most current version of the document.

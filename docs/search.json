@@ -1,42 +1,12 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ESR Technical Documentation test",
-    "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
+    "objectID": "Introduction.html",
+    "href": "Introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "1.1 SAMPLING LOCATIONS\nWe generally refer to areas north of Cape Mendocino as the “Northern CCE,” Cape Mendocino to Point Conception as the “Central CCE”, and south of Point Conception as the “Southern CCE.” Figure 1.1 shows sampling areas for most regional oceanographic data. Key oceanographic transects are the Newport Line off Oregon, the Trinidad Head Line off northern California, and CalCOFI lines further south, while shaded marine regions indicate sampling areas for most biological surveys. This sampling is complemented by basin-scale oceanographic observations and by outputs from various models. Figure 1.1 also shows sampling areas for most biological indicators. The shaded terrestrial areas in Figure 1.1 represent freshwater ecoregions in the CCE, and are the basis by which we summarize indicators for snowpack, flows, and stream temperatures.\nFigure 1.1: Map of most sampling efforts in the California Current Ecosystem (CCE) and U.S. west coast Exclusive Economic Zone (EEZ). Symbols indicate hydrographic line sampling stations for oceanographic data. Shaded ocean regions represent biological sampling areas for the Northern California Current (NCC), which includes the Juvenile Salmon and Ocean Ecology Survey (JSOES); the Rockfish Recruitment and Ecosystem Assessment Survey (RREAS), including its Core Area; and the CalCOFI sampling region. The NCC and RREAS shaded areas, combined, also approximate the survey footprints for NOAA’s coastwide CPS acoustic/trawl and groundfish bottom trawl surveys. Dashed line approximates foraging area for adult female California sea lions from the San Miguel colony. Shaded terrestrial areas represent the six freshwater ecoregions in the CCE.\nThe list below shows which versions of all related products correspond to a specific Ecosystem Status report cycle. The reports and supporting products including the technical documentation are developed annually. The DOI links will be included once they are available so may lag.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
     ]
   }
 ]

@@ -2,9 +2,12 @@
 
 ```{r}
 #| echo: false
+#| warning: false
+library(googledrive)
+library(tidyverse)
+
 wd = getwd()
 fig_loc = paste0(wd,'/figures/')
-
 
 #{r get-file-from-google-drive}
 
@@ -13,8 +16,6 @@ fig_loc = paste0(wd,'/figures/')
 # 'https://docs.google.com/spreadsheets/d/1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo/edit?gid=727721099#gid=727721099'
 # RUN THIS CHUNK BEFORE knitting TO DOWNLOAD THE MOST RECENT DATA
 
-library(googledrive)
-library(tidyverse)
 
 #if(1==1){
 
