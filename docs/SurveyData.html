@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Greg Williams, Isaac Schroeder, Chris Dailey, etc">
-<meta name="dcterms.date" content="2025-01-25">
 
-<title>ESR Technical Documentation test</title>
+<title>5&nbsp; Survey Data – ESR Technical Documentation test</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Introduction.html" rel="next">
+<link href="./ConceptualModels.html" rel="next">
+<link href="./TrendAnalysis.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DataCodeAccess.html">General Methods</a></li><li class="breadcrumb-item"><a href="./SurveyData.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Survey Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -148,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SurveyData.html" class="sidebar-item-text sidebar-link">
+  <a href="./SurveyData.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Survey Data</span></span></a>
   </div>
 </li>
@@ -171,40 +170,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DataCodeAccess.html">General Methods</a></li><li class="breadcrumb-item"><a href="./SurveyData.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Survey Data</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ESR Technical Documentation test</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Survey Data</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Greg Williams, Isaac Schroeder, Chris Dailey, etc </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 25, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -214,12 +195,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Chapters of this document are organized similarly to the structure of the Ecosystem Status Report (i.e.&nbsp;one “chapter” of the technical documentation per section of the ESR), but also include sections encompassing indicators that no longer are published in the most current version of the document.</p>
+<p><strong>Methods</strong> The Northwest Fisheries Science Center (NWFSC) has been conducting standardized bottom trawl surveys in the summer since xxxx and spring since xxxx. The surveys follow a stratified random design. Fish species and several invertebrate species are enumerated on a tow by tow basis (reference). The data are housed in the NWFSC’s survey database (xxxx) maintained by the FRAM Division.</p>
+<p>Direct pulls from the database are not advisable as there have been several gear modifications and vessel changes over the course of the time series….</p>
+<p><strong>Data Source(s)</strong> xxx is an R package that allows for queries of the NWFSC survey database.These data are available to qualified researchers upon request. More information on the data request process is available under the “Access Information” field here.</p>
+<p><strong>Data Extraction</strong> Extraction methods are described above. The R package xxxx was used in the survey data extraction process.</p>
+<p><strong>Data Analysis</strong> The fisheries independent data obtained using xxxx is used in a variety of products; the more complicated analyses are detailed in their own sections. The most straightforward use of this data is for the resource species aggregate biomass indicators. For the purposes of the aggregate biomass indicators, fall and spring survey data are treated separately. Additionally, all length data is dropped and species separated by sex at the catch level are merged back together.</p>
+<p><strong>catalog link</strong></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -644,10 +627,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./TrendAnalysis.html" class="pagination-link" aria-label="Trend Analysis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Trend Analysis</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ConceptualModels.html" class="pagination-link" aria-label="Conceptual Models">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conceptual Models</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

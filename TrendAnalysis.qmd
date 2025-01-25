@@ -1,0 +1,17 @@
+# Trend Analysis
+
+**Methods**
+Summarizing trends for ecosystem indicators is desirable, but the power of statistical tests to detect a trend is hampered by low sample size and autocorrelated observations (see Nicholson and Jennings 2004; Wagner et al. 2013; Storch 1999). Prior to 2018, time series indicators in State of the Ecosystem reports were presented with trend lines based on a Mann-Kendall test for monotonic trends to test significance (p < 0.05) of both long term (full time series) and recent (2007–2016) trends, although not all time series were considered for trend analysis due to limited series lengths. There was also concern that a Mann-Kendall test would not account for any autocorrelation present in State of the Ecosystem (SOE) indicators.
+
+The best fit model was tested against the null hypothesis of no trend through a likelihood ratio test (p < 0.05). All models were fit using the R package nlme (Pinheiro et al. 2017) and AICc was calculated using the R package AICcmodavg (Mazerolle 2017). In SOE time series figures, significant positive trends were colored orange, and negative trends purple.
+
+**Data Source(s)**
+NA
+
+**Data Extraction**
+NA
+
+**Data Analysis**
+Code used for trend analysis can be found here (link)
+
+**catalog link**

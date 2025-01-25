@@ -9,7 +9,15 @@ book:
   chapters:
     - index.qmd
     - Introduction.qmd
-
+    - part: General Methods
+      chapters:
+      - DataCodeAccess.qmd
+      - TimeSeriesQuadplots.qmd
+      - TrendAnalysis.qmd
+      - SurveyData.qmd
+      - ConceptualModels.qmd
+      - Glossary.qmd
+      
 bibliography: esr-bibliography.bib
 
 format:

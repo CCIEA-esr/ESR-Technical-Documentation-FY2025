@@ -1,0 +1,9 @@
+# Glossary
+
+**Apex Predator**: Predators with no natural predators of their own, such as large sharks, toothed whales, seals, tunas, and billfish.
+
+**Benthivore**: Predator feeding on bottom-dwelling prey, such as lobster and haddock.
+
+**Benthos**: Organisms that live on or in the sea bottom (Madden and Grossman 2004), such as scallop and quahog.
+
+**Bmsy**: The weight (biomass) of a group of fish necessary to produce maximum sustainable yield (MSY) (Northwest Fisheries Science Center. Glossary, n.d.).

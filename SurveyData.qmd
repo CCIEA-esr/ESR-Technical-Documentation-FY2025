@@ -1,0 +1,17 @@
+# Survey Data
+
+**Methods**
+The Northwest Fisheries Science Center (NWFSC) has been conducting standardized bottom trawl surveys in the summer since xxxx and spring since xxxx. The surveys follow a stratified random design. Fish species and several invertebrate species are enumerated on a tow by tow basis (reference). The data are housed in the NWFSC’s survey database (xxxx) maintained by the FRAM Division.
+
+Direct pulls from the database are not advisable as there have been several gear modifications and vessel changes over the course of the time series....
+
+**Data Source(s)**
+xxx is an R package that allows for queries of the NWFSC survey database.These data are available to qualified researchers upon request. More information on the data request process is available under the “Access Information” field here.
+
+**Data Extraction**
+Extraction methods are described above. The R package xxxx was used in the survey data extraction process.
+
+**Data Analysis**
+The fisheries independent data obtained using xxxx is used in a variety of products; the more complicated analyses are detailed in their own sections. The most straightforward use of this data is for the resource species aggregate biomass indicators. For the purposes of the aggregate biomass indicators, fall and spring survey data are treated separately. Additionally, all length data is dropped and species separated by sex at the catch level are merged back together.
+
+**catalog link**

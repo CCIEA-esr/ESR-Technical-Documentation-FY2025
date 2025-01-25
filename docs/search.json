@@ -8,5 +8,81 @@
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ESR Technical Documentation test",
+    "section": "",
+    "text": "Preface\nChapters of this document are organized similarly to the structure of the Ecosystem Status Report (i.e. one “chapter” of the technical documentation per section of the ESR), but also include sections encompassing indicators that no longer are published in the most current version of the document.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "DataCodeAccess.html",
+    "href": "DataCodeAccess.html",
+    "title": "2  Data and Code Access",
+    "section": "",
+    "text": "About The Technical Documentation for the Ecosystem Status Report (ESR) is a Quarto document; hosted on the NOAA Northwest Fisheries Science Center (NWFSC) Github page, and developed in R. Derived data used to populate figures in this document are queried directly from the xxxxx R package or the SWFSC ERDDAP server. ERDDAP queries are made using the R package rerddap.\nAccessing data and build code In this technical documentation, we hope to shine a light on the processing and analytical steps involved to get from source data to final product. This means that whenever possible, we have included the code involved in source data extraction, processing, and analyses. We have also attempted to thoroughly describe all methods in place of or in supplement to provided code. Example plotting code for each indicator is presented in sections titled “Plotting”, and these code chunks can be used to recreate the figures found in ecosystem reporting documents where each respective indicator was included1.\nSource data for the derived indicators in this document are linked to in the text unless there are privacy concerns involved. In that case, it may be possible to access source data by reaching out to the Point of Contact associated with that data set. Derived data sets make up the majority of the indicators presented in ecosystem reporting documents, and these data sets are available for download through the ecodata R package.\nBuilding the document Start a local build of the ESR Quarto document by first cloning the project’s associated git repository. Next, if you would like to build a past version of the document, use git checkout [version_commit_hash] to revert the project to a past commit of interest, and set build_latest &lt;- FALSE in this code chunk. This will ensure the project builds from a cached data set, and not the most updated versions present on the NEFSC ERDDAP server. Once the xxxxx.Rproj file is opened in RStudio, run Quarto::serve_book() from the console to build the document.\nA note on data structures The majority of the derived time series used in Ecosystem Status reports are in long format. This approach was taken so that all disparate data sets could be “bound” together for ease of use in our base plotting functions.\ncatalog link",
+    "crumbs": [
+      "General Methods",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data and Code Access</span>"
+    ]
+  },
+  {
+    "objectID": "TimeSeriesQuadplots.html",
+    "href": "TimeSeriesQuadplots.html",
+    "title": "3  Time Series and Quadplots",
+    "section": "",
+    "text": "Methods The Ecosystem Status Report uses as standard time-series and quadplot format for many data streams (Fig. 3.1).\n\n\n\n\n\n\n\n\nFigure 3.1: a) Sample time-series plot, with indicator data relative to the long-term mean (black dashed horizontal line) and ±1.0 standard deviation (SD; solid blue lines) of the full time series. Dotted black line indicates missing data, and points (when included) indicate data. Arrow at the right indicates if the trend over the evaluation period (shaded blue) is positive (↗), negative (↘), or neutral (↔︎). Symbol at the lower right indicates if the recent mean was greater than (+), less than (-), or within 1.0 SD of the long-term mean. When possible, times series indicate observation error (gray envelope), defined for each plot (e.g., SD, standard error, or 95% confidence intervals). b) Sample time-series plot with the indicator plotted relative to a threshold value (blue line). Dashed lines indicate upper and lower observation error, again defined for each plot. Dotted black line indicates missing data. c) Sample quad plot where each point represents one normalized time series. The position of a point indicates if the recent trend was increasing or decreasing over the evaluation period and whether the recent mean over the evaluation period\n\n\n\n\n\nData Source(s) NA\nData Extraction NA\nData Analysis NA\ncatalog link",
+    "crumbs": [
+      "General Methods",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Time Series and Quadplots</span>"
+    ]
+  },
+  {
+    "objectID": "TrendAnalysis.html",
+    "href": "TrendAnalysis.html",
+    "title": "4  Trend Analysis",
+    "section": "",
+    "text": "Methods Summarizing trends for ecosystem indicators is desirable, but the power of statistical tests to detect a trend is hampered by low sample size and autocorrelated observations (see Nicholson and Jennings 2004; Wagner et al. 2013; Storch 1999). Prior to 2018, time series indicators in State of the Ecosystem reports were presented with trend lines based on a Mann-Kendall test for monotonic trends to test significance (p &lt; 0.05) of both long term (full time series) and recent (2007–2016) trends, although not all time series were considered for trend analysis due to limited series lengths. There was also concern that a Mann-Kendall test would not account for any autocorrelation present in State of the Ecosystem (SOE) indicators.\nThe best fit model was tested against the null hypothesis of no trend through a likelihood ratio test (p &lt; 0.05). All models were fit using the R package nlme (Pinheiro et al. 2017) and AICc was calculated using the R package AICcmodavg (Mazerolle 2017). In SOE time series figures, significant positive trends were colored orange, and negative trends purple.\nData Source(s) NA\nData Extraction NA\nData Analysis Code used for trend analysis can be found here (link)\ncatalog link",
+    "crumbs": [
+      "General Methods",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Trend Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "SurveyData.html",
+    "href": "SurveyData.html",
+    "title": "5  Survey Data",
+    "section": "",
+    "text": "Methods The Northwest Fisheries Science Center (NWFSC) has been conducting standardized bottom trawl surveys in the summer since xxxx and spring since xxxx. The surveys follow a stratified random design. Fish species and several invertebrate species are enumerated on a tow by tow basis (reference). The data are housed in the NWFSC’s survey database (xxxx) maintained by the FRAM Division.\nDirect pulls from the database are not advisable as there have been several gear modifications and vessel changes over the course of the time series….\nData Source(s) xxx is an R package that allows for queries of the NWFSC survey database.These data are available to qualified researchers upon request. More information on the data request process is available under the “Access Information” field here.\nData Extraction Extraction methods are described above. The R package xxxx was used in the survey data extraction process.\nData Analysis The fisheries independent data obtained using xxxx is used in a variety of products; the more complicated analyses are detailed in their own sections. The most straightforward use of this data is for the resource species aggregate biomass indicators. For the purposes of the aggregate biomass indicators, fall and spring survey data are treated separately. Additionally, all length data is dropped and species separated by sex at the catch level are merged back together.\ncatalog link",
+    "crumbs": [
+      "General Methods",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Survey Data</span>"
+    ]
+  },
+  {
+    "objectID": "ConceptualModels.html",
+    "href": "ConceptualModels.html",
+    "title": "6  Conceptual Models",
+    "section": "",
+    "text": "Methods Conceptual models were constructed to facilitate multidisciplinary analysis and discussion of the linked social-ecological system for integrated ecosystem assessment. The overall process was to first identify the components of the model (focal groups, human activities, environmental drivers, and objectives), and then to document criteria for including groups and linkages and what the specific links were between the components.\nThe prototype conceptual model used to design Northeast US conceptual models for each ecosystem production unit (EPU) was designed by the California Current IEA program. The California Current IEA developed an overview conceptual model for the Northern California Current Large Marine Ecosystem (NCC), with models for each focal ecosystem component that detailed the ecological, environmental, and human system linkages. Another set of conceptual models outlined habitat linkages.\nAn inital conceptual model…..\nData Source(s) Habitat-fishery linkages were drawn from unpublished reports, including:\nData Extraction “Data” included model estimated quantities to determine whether inclusion thresholds were met for each potential link in the conceptual model. A matrix with diet composition for each modeled group is an input to the food web model. A matrix of mortalities caused by each predator and fishery on each modeled group is a direct ouput of a food web model (e.g. Ecopath). Food web model biomasss flows between species, fisheries, and detritus were summarized using algorithms implemented in visual basic by Kerim Aydin, NOAA NMFS Alaska Fisheries Science Center. Because EMAX model groups were aggregated across species, selected diet compositions for individual species were taken from the NEFSC food habits database using the FEAST program for selected species (example query below). These diet queries were consulted as supplemental information.\nData Analysis Aggregated diet and mortality information was examined to determine the type of link, direction of link, and which links between which groups should be inclded in the conceptual models. Two types of ecological links were defined using food web models: prey links and predation/fishing mortality links. Prey links resulted in positve links between the prey group and the focal group, while predation/fishing mortality links resulted in negative links to the focal group to represent energy flows. The intent was to include only the most important linkages between focal groups and with other groups supporting or causing mortality on focal species groups. Therefore, threshold levels of diet and mortality were established (based on those that would select the top 1-3 prey and predators of each focal group): 10% to include a link (or add a linked group) in the model and 20% to include as a strong link. A Primary Production group was included in each model and linked to pelagic habitat to allow environmental effects on habitat to be connected to the ecologial submodel. Uncertainty for the inclusion of each link and for the magnitude of each link was qualitatively assessed and noted in the spreadsheet.\ncatalog link No associated catalog page",
+    "crumbs": [
+      "General Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conceptual Models</span>"
+    ]
+  },
+  {
+    "objectID": "Glossary.html",
+    "href": "Glossary.html",
+    "title": "7  Glossary",
+    "section": "",
+    "text": "Apex Predator: Predators with no natural predators of their own, such as large sharks, toothed whales, seals, tunas, and billfish.\nBenthivore: Predator feeding on bottom-dwelling prey, such as lobster and haddock.\nBenthos: Organisms that live on or in the sea bottom (Madden and Grossman 2004), such as scallop and quahog.\nBmsy: The weight (biomass) of a group of fish necessary to produce maximum sustainable yield (MSY) (Northwest Fisheries Science Center. Glossary, n.d.).",
+    "crumbs": [
+      "General Methods",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Glossary</span>"
+    ]
   }
 ]
