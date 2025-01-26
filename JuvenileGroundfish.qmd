@@ -30,12 +30,12 @@ The analyses estimate the biomass for each species by using length-age and lengt
 #| tbl-cap: "Length, age, and depth range information."
 #| echo: false
 #| cap-location: 'top'
+library(flextable)
+library(tidyverse)
 
 home_dir = getwd()
 fig_dir =( paste0(home_dir,"/figures/"))
 
-library(flextable)
-library(tidyverse)
 
 df = data.frame(read.csv( paste0(fig_dir, 
      "GF-RecruitInfoTable.csv"), header = TRUE))
