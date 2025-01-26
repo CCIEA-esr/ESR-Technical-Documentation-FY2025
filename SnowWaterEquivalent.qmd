@@ -1,0 +1,9 @@
+# Snow-water equivalent
+
+**Description** Snow-water equivalent (SWE) is measured using data from the California Department of Water Resources snow survey program (California Data Exchange Center, cdec.water.ca.gov) and The Natural Resources Conservation Service’s SNOTEL sites across Washington, Oregon, California and Idaho. Snow data are converted into SWEs based on the weight of samples collected at regular intervals using a standardized protocol. Measurements on April 1 are considered the best indicator of maximum extent of SWE; thereafter snow tends to melt rather than accumulate.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

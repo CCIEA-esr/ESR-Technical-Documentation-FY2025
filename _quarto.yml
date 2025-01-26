@@ -18,6 +18,28 @@ book:
       - ConceptualModels.qmd
       - Glossary.qmd
       
+    - part: Climate and Oceans
+      chapters:
+      - BasinScaleIndicators.qmd
+      - ONI.qmd
+      - PDO.qmd
+      - NPGO.qmd
+      - NPH.qmd
+      - SST.qmd
+      - JanFebNPH.qmd
+      - SSTspatial.qmd
+      - MarineHeatwaves.qmd
+      - HabitatCompressionIndex.qmd
+      - DepthTimeTemp.qmd
+      - DepthTimeTempGlider.qmd
+      - Upwelling.qmd
+      - DissolvedOxygen.qmd
+      - OceanAcidification.qmd
+      - FreshwaterHabitat.qmd
+      - SnowWaterEquivalent.qmd
+      - MaximumStreamTemperature.qmd
+      - Streamflow.qmd
+      
     - part: Focal Components of Ecological Integrity
       chapters:
       - Copepods.qmd

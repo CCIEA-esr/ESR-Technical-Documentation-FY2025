@@ -1,0 +1,13 @@
+# PDO (Pacific Decadal Oscillation)
+
+**Description**
+
+The Pacific Decadal Oscillation (PDO) describes North Pacific sea surface temperature (SST) anomalies that may persist for many years. Positive PDOs are associated with warmer SST and lower productivity in the CCE, while negative PDOs indicate cooler SST and are associated with higher productivity.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**
+
+**catalog link**

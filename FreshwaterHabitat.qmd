@@ -1,0 +1,11 @@
+# Freshwater Habitat Indicators
+
+**Description** Freshwater habitat indicators are reported based on a hierarchical spatial framework. The framework facilitates comparisons of data at the right spatial scale for particular users, whether this be the entire California Current, ecoregions within the CCE, or smaller spatial units. The framework we use divides the region encompassed by the CCE into ecoregions (Fig. 1.1), and ecoregions into smaller physiographic units. Freshwater ecoregions are based on the biogeographic delineations in Abell et al. (2008), see also www.feow.org, who define six ecoregions for watersheds entering the California Current, three of which comprise the two largest watersheds directly entering the California Current (the Columbia and the Sacramento-San Joaquin Rivers). Within ecoregions, we summarized data at scales of evolutionary significant units (ESUs) and 8-field hydrologic unit classifications (HUC-8). Status and trends for all freshwater indicators are estimated using space-time models that account for spatial and temporal autocorrelation (Lindgren and Rue 2015).
+
+#or maybe Link this under Snowpack and Hydrology?
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

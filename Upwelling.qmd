@@ -1,0 +1,40 @@
+# Upwelling
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+cciea_yr <- 2024
+source("_getmeta.R")
+cuti_meta=getMetadata("cciea_OC_CUTI")
+beuti_meta=getMetadata("cciea_OC_BEUTI")
+bakun_meta=getMetadata("cciea_OC_UI")
+meta <- rbind(cuti_meta,beuti_meta,bakun_meta)
+num_ind=nrow(meta)
+```
+
+**Indicators**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+for (i in 1:num_ind){
+cat("* <b>",meta$Title[i],"</b>\n")
+cat("     + *Component Category: *", meta$Component_Section[i],"\n")
+cat("     + *Data Steward: *",meta$Contact[i],"\n")
+cat("     + *Institution: *",meta$Institution[i],"\n")
+cat("     + *Additional Calculations: *",meta$Additional_Calculations[i],"\n")
+cat("     + *Source Data: *",meta$Source_Data[i],"\n")
+
+}
+```
+
+**Description**
+
+The CCE is an upwelling dominated system, with the interaction between upwelling, stratification, and source water properties controlling much of coastal temperatures, nutrient input, and overall productivity. Time series of the upwelling indices CUTI and BUTI provide information on upwelling strength at sub-seasonal frequency and upwelling phenology, and allow interannual comparisons of seasonal upwelling timing and frequency. Additionally, the calculation of cumulative upwelling allows for a comparison of the total amount of upwelling a region receives during the entire course of the year. Cumulative upwelling is calculated as the daily summation of upwelling values (additive for positive upwelling, and subtractive for negative upwelling - aka downwelling) starting on Jan 1 and ending on Dec 31st.
+
+**Data extraction**
+
+**Data analysis**
+
+**catalog link**

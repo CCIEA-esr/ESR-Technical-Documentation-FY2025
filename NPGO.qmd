@@ -1,0 +1,13 @@
+# NPGO (North Pacific Gyre Oscillation)
+
+**Description**
+
+The North Pacific Gyre Oscillation (NPGO), an index of sea surface height, indicates changes in circulation that affect source waters for the CCE. Positive NPGOs are associated with strong equatorward flow and higher salinity, nutrients, and chlorophyll-a in the CCE. Negative NPGOs are associated with decreased subarctic source water and lower CCE productivity.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**
+
+**catalog link**

@@ -1,0 +1,9 @@
+# Maximum Stream Temperatures
+
+**Description** Mean maximum stream temperatures in August were determined from 446 USGS gauges with temperature monitoring capability. While these gauges did not necessarily operate simultaneously throughout the period of record, at least two gauges provided data each year in all ecoregions. Stream temperature records are limited in California, so two ecoregions (Sacramento/San Joaquin and Southern California Bight-Baja) were combined. Maximum temperatures exhibit strong ecoregional differences in absolute temperature (for example, Salish Sea and Washington Coast streams are much cooler on average than California streams).
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

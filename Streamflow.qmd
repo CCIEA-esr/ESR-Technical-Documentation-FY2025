@@ -1,0 +1,3 @@
+# Streamflow
+
+Flow is derived from active USGS gages with records that are of at least 30 years’ duration (waterdata.usgs.gov/nwis/sw). Daily means from 213 gauges were used to calculate annual 1-day maximum and 7-day minimum flows. These indicators correspond to flow parameters to which salmon populations are most sensitive. We use standardized anomalies of streamflow time series from individual gages.

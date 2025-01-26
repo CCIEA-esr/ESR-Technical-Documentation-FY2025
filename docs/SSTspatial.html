@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Krill – ESR Technical Documentation test</title>
+<title>15&nbsp; SST anoms, 5-year means and trends – ESR Technical Documentation test</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +64,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./DungenessCrabMegalopae.html" rel="next">
-<link href="./Copepods.html" rel="prev">
+<link href="./MarineHeatwaves.html" rel="next">
+<link href="./JanFebNPH.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +75,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +118,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Copepods.html">Focal Components of Ecological Integrity</a></li><li class="breadcrumb-item"><a href="./Krill.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Krill</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./BasinScaleIndicators.html">Climate and Oceans</a></li><li class="breadcrumb-item"><a href="./SSTspatial.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">SST anoms, 5-year means and trends</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -206,6 +223,120 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ONI (Oceanic Niño Index)</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PDO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">PDO (Pacific Decadal Oscillation)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./NPGO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NPGO (North Pacific Gyre Oscillation)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./NPH.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">North Pacific High Indicators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./SST.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Sea Surface Temperature (SST)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./JanFebNPH.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">North Pacific High Indicators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./SSTspatial.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">SST anoms, 5-year means and trends</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MarineHeatwaves.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Marine Heatwaves</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./HabitatCompressionIndex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Habitat Compression Index</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DepthTimeTemp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Newport and CalCOFI time-depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DepthTimeTempGlider.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">CUGN glider time-depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Upwelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Upwelling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MarineHeatwaves.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Marine Heatwaves</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Upwelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Upwelling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DissolvedOxygen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dissolved Oxygen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./OceanAcidification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Ocean Acidification</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./FreshwaterHabitat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Freshwater Habitat Indicators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./SnowWaterEquivalent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Snow-water equivalent</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MaximumStreamTemperature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Maximum Stream Temperatures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Streamflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Streamflow</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -220,115 +351,115 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Copepods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Copepods</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Copepods</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Krill.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Krill</span></span></a>
+  <a href="./Krill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Krill</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./DungenessCrabMegalopae.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Dungeness crab megalopae</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Dungeness crab megalopae</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./NCCForage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Northern California Current Forage</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Northern California Current Forage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CCCForage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central California Current Forage</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Central California Current Forage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SCCForage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Southern California Current Forage</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Southern California Current Forage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CPSSurvey.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">CPS Survey</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">CPS Survey</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SalmonStoplightTables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Salmon Stoplight Tables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Salmon Stoplight Tables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChinookSalmonEscapementColumbia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chinook Salmon Escapement - Columbia River</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Chinook Salmon Escapement - Columbia River</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChinookSalmonEcosystemCalifornia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Chinook Salmon Ecosystem Conditions - California</span></span></a>
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Chinook Salmon Ecosystem Conditions - California</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./GroundfishStockAbundance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Groundfish Stock Abundance</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Groundfish Stock Abundance</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./JuvenileGroundfish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Juvenile Groundfish Abundance</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Juvenile Groundfish Abundance</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./GroundfishPortAvailability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Groundfish Port Availability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Groundfish Port Availability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./HMSDiets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">HMS Diets</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">HMS Diets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SeaLionProductivity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sea Lion Productivity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Sea Lion Productivity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SeabirdProductivity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Seabird Productivity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Seabird Productivity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SeabirdDensity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Seabird At-Sea Density</span></span></a>
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Seabird At-Sea Density</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SeabirdMortality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Seabird Mortality</span></span></a>
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Seabird Mortality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./HarmfulAlgalBlooms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Harmful Algal Blooms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Harmful Algal Blooms</span></span></a>
   </div>
 </li>
       </ul>
@@ -345,13 +476,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./FisheryLandings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fishery Landings and Revenues</span></span></a>
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Fishery Landings and Revenues</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SpatialInteractionsOceanUse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Spatial Interactions with Ocean-Use Sectors</span></span></a>
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Spatial Interactions with Ocean-Use Sectors</span></span></a>
   </div>
 </li>
       </ul>
@@ -368,31 +499,31 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SocialVulnerability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Social Vulnerability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Social Vulnerability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./FleetIncomeDiversification.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Fleet Income Diversification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Fleet Income Diversification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./NonFisheryIncomeDiversification.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Non-Fishery Income Diversification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Non-Fishery Income Diversification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./FisheryRevenueConcentration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Fishery Revenue Concentration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Fishery Revenue Concentration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./FisheriesParticipationNetworks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fisheries Participation Networks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Fisheries Participation Networks</span></span></a>
   </div>
 </li>
       </ul>
@@ -408,9 +539,9 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Copepods.html">Focal Components of Ecological Integrity</a></li><li class="breadcrumb-item"><a href="./Krill.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Krill</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./BasinScaleIndicators.html">Climate and Oceans</a></li><li class="breadcrumb-item"><a href="./SSTspatial.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">SST anoms, 5-year means and trends</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Krill</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">SST anoms, 5-year means and trends</span></h1>
 </div>
 
 
@@ -427,20 +558,258 @@ div.csl-indent {
 </header>
 
 
-<p><strong>Description</strong> Krill are among the most important prey in the CCE. The krill Euphausia pacifica is sampled year-round along the Trinidad Head Line off northern California (Fig. 1.1). Mean adult length and total biomass of E. pacifica sampled off the Trinidad Head Line indicate productivity at the base of the food web, krill condition, and energy content for predators (<span class="citation" data-cites="robertson2020climate">Robertson and Bjorkstedt (<a href="#ref-robertson2020climate" role="doc-biblioref">2020</a>)</span>).</p>
-<p>Trinidad Head krill data are provided by E. Bjorkstedt, NMFS/SWFSC SWFSC, Cal Poly, Humboldt and R. Robertson, Cooperative Institute for Marine Ecosystems and Climate (CIMEC) at Cal Poly, Humboldt.</p>
-<p>Krill are also detected acoustically during the Joint U.S.-Canada Pacific Hake Ecosystem and Acoustic Trawl (PHEAT) Survey, conducted between June-September from Point Conception, California to Dixon Entrance, British Columbia. The coastwide nautical-area-backscattering coefficient (NASC) represents relative krill abundance observed between 50-300 m water depth (see Phillips et al.&nbsp;2022 for methodology).</p>
-<p>Krill biomass estimates derived from the Joint U.S.-Canada Pacific Hake Ecosystem and Acoustic Trawl (PHEAT) survey hydroacoustic data are provided by E. Phillips, NMFS/NWFSC.</p>
-<p><strong>Data sources</strong></p>
-<p><strong>Data extraction</strong></p>
-<p><strong>Data analysis</strong></p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-robertson2020climate" class="csl-entry" role="listitem">
-Robertson, Roxanne R, and Eric P Bjorkstedt. 2020. <span>“<span class="nocase">Climate-driven variability in <em>Euphausia pacifica</em> size distributions off northern California</span>.”</span> <em>Progress in Oceanography</em> 188: 102412.
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cciea_yr <span class="ot">&lt;-</span> <span class="dv">2024</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><strong>Description</strong> Seasonal SST summary maps are derived from the three statistics shown in the IEA type time series (current value, mean and trend over the last 5 years). The current value is shown as an anomaly and the 5-year mean and trend are</p>
+<p><strong>Indicator Category</strong> Climate and Ocean Drivers</p>
+<p><strong>Data Steward</strong> Schroeder</p>
+<p><strong>Erddap Dataset ID</strong></p>
+<p><strong>CCIEA timeseries ID</strong></p>
+<p><strong>Region</strong></p>
+<p><strong>Additional Information</strong> The seasonal averages are: winter (Jan-Mar), spring (Apr-Jun), summer (Jul-Sep), and summer (Oct-Nov). Daily SST maps are optimally interpolated, remotely sensed temperatures <span class="citation" data-cites="Huang2021">(<a href="#ref-Huang2021" role="doc-biblioref"><strong>Huang2021?</strong></a>)</span>. The daily optimal interpolated AVHRR SST can be downloaded from ERDDAP, https://coastwatch.pfeg.noaa.gov/erddap/index.html, dataset ID: ncdcOisst21Agg.</p>
+<p><strong>Figures</strong></p>
+<div id="fig-sst_spatial" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sst_spatial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sst_spatial" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-sst_spatial_winter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sst_spatial_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/oc_sst_spatial_winter_clim_1982_current_year.png" class="lightbox" data-gallery="fig-sst_spatial" title="Figure&nbsp;15.1&nbsp;(a): Winter"><img src="plots/oc_sst_spatial_winter_clim_1982_current_year.png" class="img-fluid figure-img" data-ref-parent="fig-sst_spatial"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sst_spatial_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Winter
+</figcaption>
+</figure>
 </div>
 </div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sst_spatial" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-sst_spatial_spring" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sst_spatial_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/oc_sst_spatial_spring_clim_1982_current_year.png" class="lightbox" data-gallery="fig-sst_spatial" title="Figure&nbsp;15.1&nbsp;(b): Spring"><img src="plots/oc_sst_spatial_spring_clim_1982_current_year.png" class="img-fluid figure-img" data-ref-parent="fig-sst_spatial"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sst_spatial_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Spring
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sst_spatial" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-sst_spatial_summer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sst_spatial_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/oc_sst_spatial_summer_clim_1982_current_year.png" class="lightbox" data-gallery="fig-sst_spatial" title="Figure&nbsp;15.1&nbsp;(c): Summer"><img src="plots/oc_sst_spatial_summer_clim_1982_current_year.png" class="img-fluid figure-img" data-ref-parent="fig-sst_spatial"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sst_spatial_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Summer
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sst_spatial" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-sst_spatial_fall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sst_spatial_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/oc_sst_spatial_fall_clim_1982_current_year.png" class="lightbox" data-gallery="fig-sst_spatial" title="Figure&nbsp;15.1&nbsp;(d): Fall"><img src="plots/oc_sst_spatial_fall_clim_1982_current_year.png" class="img-fluid figure-img" data-ref-parent="fig-sst_spatial"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sst_spatial_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Fall
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sst_spatial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.1: Sea surface temperature (SST) anomalies (2024; left), five-year means (2019–2024; middle), and five-year trends (2019–2024; right) in winter (a, Jan-Mar), spring (b, Apr-Jun), summer (c, Jul–Sep), and fall (d, Oct-Dec). The time series at each grid point began in 1982. Black circles mark cells where the anomaly was &gt;1 SD above the long-term mean. Black x’s mark cells where the anomaly was the highest (or lowest) of the time series.
+</figcaption>
+</figure>
+</div>
+<p><strong>Diagnositc maps with time series at key locations</strong></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3," data-layout="[[4,4,4], [4,4,4], [4,4,4], [4,4,4]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_anom_winter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_anom_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/winter/winter_anom_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;15.2: Winter 2024 Anom"><img src="plots/winter/winter_anom_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_anom_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.2: Winter 2024 Anom
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_mean_winter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_mean_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/winter/winter_mean5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;15.3: Winter 2020 - 2024 Mean"><img src="plots/winter/winter_mean5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_mean_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.3: Winter 2020 - 2024 Mean
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_trend_winter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_trend_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/winter/winter_trend5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;15.4: Winter 2020 - 2024 Trend"><img src="plots/winter/winter_trend5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_trend_winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.4: Winter 2020 - 2024 Trend
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_anom_spring" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_anom_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/spring/spring_anom_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;15.5: Spring 2024 Anom"><img src="plots/spring/spring_anom_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_anom_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.5: Spring 2024 Anom
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_mean_spring" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_mean_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/spring/spring_mean5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;15.6: Spring 2020 - 2024 Mean"><img src="plots/spring/spring_mean5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_mean_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.6: Spring 2020 - 2024 Mean
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_trend_spring" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_trend_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/spring/spring_trend5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;15.7: Spring 2020 - 2024 Trend"><img src="plots/spring/spring_trend5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_trend_spring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.7: Spring 2020 - 2024 Trend
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_anom_summer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_anom_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/summer/summer_anom_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;15.8: Summer 2024 Anom"><img src="plots/summer/summer_anom_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_anom_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.8: Summer 2024 Anom
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_mean_summer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_mean_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/summer/summer_mean5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;15.9: Summer 2020 - 2024 Mean"><img src="plots/summer/summer_mean5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_mean_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.9: Summer 2020 - 2024 Mean
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_trend_summer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_trend_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/summer/summer_trend5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;15.10: Summer 2020 - 2024 Trend"><img src="plots/summer/summer_trend5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_trend_summer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.10: Summer 2020 - 2024 Trend
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_anom_fall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_anom_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/fall/fall_anom_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;15.11: Fall 2024 Anom"><img src="plots/fall/fall_anom_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_anom_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.11: Fall 2024 Anom
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_mean_fall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_mean_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/fall/fall_mean5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;15.12: Fall 2020 - 2024 Mean"><img src="plots/fall/fall_mean5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_mean_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.12: Fall 2020 - 2024 Mean
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-ts_trend_fall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ts_trend_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="plots/fall/fall_trend5_example_ts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;15.13: Fall 2020 - 2024 Trend"><img src="plots/fall/fall_trend5_example_ts.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ts_trend_fall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.13: Fall 2020 - 2024 Trend
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p>Understanding the anoms, 5-year means and trends can be difficult without looking at time series. These are diagnostic plots that have IEA time series at key locations on the maps.</p>
+</div>
+</div>
+</div>
+<p><strong>2024 Conditions</strong></p>
+<ul>
+<li>Winter SST anomalies were positive (above 1°C) along the coast, the usual pattern for an El Niño winter <a href="#fig-sst_spatial_winter" class="quarto-xref">Figure&nbsp;<span>15.1 (a)</span></a>.</li>
+<li>Summer SST anomalies were negative in the north and south (~1°C) and slightly above average (~0.5°C) in central California <a href="#fig-sst_spatial_summer" class="quarto-xref">Figure&nbsp;<span>15.1 (c)</span></a>.</li>
+<li>Summer SST anomalies offshore were positve near the highest of the time series for the area centered on 45°N - 140°W <a href="#fig-sst_spatial_summer" class="quarto-xref">Figure&nbsp;<span>15.1 (c)</span></a>.</li>
+<li>NOTE: Fall seasonal averages are not complete, they still need to be updated to include December <a href="#fig-sst_spatial_fall" class="quarto-xref">Figure&nbsp;<span>15.1 (d)</span></a>.</li>
+</ul>
+<p><strong>References</strong></p>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -865,17 +1234,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Copepods.html" class="pagination-link" aria-label="Copepods">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Copepods</span></span>
+      <a href="./JanFebNPH.html" class="pagination-link" aria-label="North Pacific High Indicators">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">North Pacific High Indicators</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./DungenessCrabMegalopae.html" class="pagination-link" aria-label="Dungeness crab megalopae">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Dungeness crab megalopae</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./MarineHeatwaves.html" class="pagination-link" aria-label="Marine Heatwaves">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Marine Heatwaves</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

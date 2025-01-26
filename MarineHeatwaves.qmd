@@ -1,0 +1,41 @@
+
+# Marine Heatwaves
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+erddap_id='cciea_OC_MHW'
+source("_getmeta.R")
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+**Indicators**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+for (i in 1:num_ind){
+cat("* <b>",meta$Title[i],"</b>\n")
+cat("     + *Component Category: *", meta$Component_Section[i],"\n")
+cat("     + *Data Steward: *",meta$Contact[i],"\n")
+cat("     + *Institution: *",meta$Institution[i],"\n")
+cat("     + *Additional Calculations: *",meta$Additional_Calculations[i],"\n")
+cat("     + *Source Data: *",meta$Source_Data[i],"\n")
+
+}
+```
+
+**Description** Marine heatwaves (MHW) occur when ocean temperatures are much warmer than usual for an extended period of time; they are specifically defined by the difference between the current temperature and the expected temperature for a specific location and time of year \[1\]. MHWs are a growing field of study worldwide because of their effects on ecosystem structure, biodiversity, and regional economies.
+
+**Additional Information**
+
+There is growing recognition that marine heatwaves can have strongly disruptive impacts on the CCE [@morgan2019recent]. Based on an analysis of sea surface temperature anomalies (SSTa) obtained from satellite measurements (OISST); we define marine heatwaves as 1.0 times when normalized SSTa \>1.29 s.d. (90th percentile) of the long-term SSTa time series at a location, and 2. lasts for \>5 days; which are analogous to the thresholds suggested in @hobday2016hierarchical. Here, we further report on statistics concerning large heatwaves (LHW) which were tracked through space and time, with LHW defined as those heatwaves with an area \> 400,000 km2 (these denote the top 20% of all heatwaves by area as measured since 1982 when satellite data became available for tracking.
+
+The underlying climatology used for SST anomaly analysis has changed from 1982-2010, to now encompass 1982-2020; hence small changes in the retrospective analysis of tracked heatwaves reported more recently as compared to previous reports.
+
+**Figures**
+
+
+**References**
