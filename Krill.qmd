@@ -1,0 +1,15 @@
+# Krill
+
+**Description** Krill are among the most important prey in the CCE. The krill Euphausia pacifica is sampled year-round along the Trinidad Head Line off northern California (Fig. 1.1). Mean adult length and total biomass of E. pacifica sampled off the Trinidad Head Line indicate productivity at the base of the food web, krill condition, and energy content for predators (@robertson2020climate).
+
+Trinidad Head krill data are provided by E. Bjorkstedt, NMFS/SWFSC SWFSC, Cal Poly, Humboldt and R. Robertson, Cooperative Institute for Marine Ecosystems and Climate (CIMEC) at Cal Poly, Humboldt.
+
+Krill are also detected acoustically during the Joint U.S.-Canada Pacific Hake Ecosystem and Acoustic Trawl (PHEAT) Survey, conducted between June-September from Point Conception, California to Dixon Entrance, British Columbia. The coastwide nautical-area-backscattering coefficient (NASC) represents relative krill abundance observed between 50-300 m water depth (see Phillips et al. 2022 for methodology).
+
+Krill biomass estimates derived from the Joint U.S.-Canada Pacific Hake Ecosystem and Acoustic Trawl (PHEAT) survey hydroacoustic data are provided by E. Phillips, NMFS/NWFSC.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

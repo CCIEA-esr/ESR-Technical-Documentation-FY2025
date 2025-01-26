@@ -1,0 +1,9 @@
+# Dungeness crab megalopae
+
+**Description** In addition to being a lipid-rich prey source, preliminary analyses suggest the megalopae index from Oregon light traps is strongly correlated with commercial landings of Dungeness crab four years later (Shanks et al., in prep). Note that commercial catches are limited to males that are roughly 4 years old, so landings can also be interpreted as the 4-year-old year class of the population. There was also a noted difference in the relationship between heatwave and non-heatwave years. Within this time series, there were three years (2015, 2016, and 2019) when marine heat waves occurred over the continental shelf off Oregon. These results suggest that the size of the Dungeness crab population is strongly influenced by the annual larval success, as indicated by the number of megalopae caught; and in years with marine heat waves, recruitment from megalopae to 4-year-old crabs is higher. While only Oregon data are shown, the light trap data is positively correlated with commercial catch in California, but is not correlated with catches in Washington. This index stems from a collaborative effort between the Oregon Institute of Marine Biology (OIMB, University of Oregon) and ODFW and warrants further attention in the future as an additional index of prey availability in this region.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

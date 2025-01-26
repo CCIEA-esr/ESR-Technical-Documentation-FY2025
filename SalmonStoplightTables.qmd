@@ -1,0 +1,11 @@
+# Salmon Stoplight Tables
+
+**Description** We use color to represent anomalous years for the stoplight tables presented in the salmon section of the report. As described in Harvey et al. (2023), we have addressed past feedback from the SSC and others by developing a more statistically based stoplight table format, which produces five bins that are determined relative to a fixed baseline reference period. In this new format, we assumed a normal distribution for each of the indicators and estimated a mean and standard deviation for the base period. For each cell within a given indicator, we determined how many standard deviations the values were from their respective base period mean and used a five-color set to indicate whether a value was \>2 s.d. below the mean, 1 to 2 s.d. below the mean, within 1 s.d. of the mean in either direction, 1 to 2 s.d. above the mean, or \>2 s.d. above the mean. This approach overcomes many of the issues that had been previously identified (e.g., better highlighting values that represent truly exceptional years; past values are now static and do not suddenly change colors; etc.).
+
+\[this section will require a bit more writingto incorporate evolving approaches and methods\]
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

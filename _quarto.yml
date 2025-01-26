@@ -18,6 +18,28 @@ book:
       - ConceptualModels.qmd
       - Glossary.qmd
       
+    - part: Focal Components of Ecological Integrity
+      chapters:
+      - Copepods.qmd
+      - Krill.qmd
+      - DungenessCrabMegalopae.qmd
+      - NCCForage.qmd
+      - CCCForage.qmd
+      - SCCForage.qmd
+      - CPSSurvey.qmd
+      - SalmonStoplightTables.qmd
+      - ChinookSalmonEscapementColumbia.qmd
+      - ChinookSalmonEcosystemCalifornia.qmd
+      - GroundfishStockAbundance.qmd
+      - JuvenileGroundfish.qmd
+      - GroundfishPortAvailability.qmd
+      - HMSDiets.qmd
+      - SeaLionProductivity.qmd
+      - SeabirdProductivity.qmd
+      - SeabirdDensity.qmd
+      - SeabirdMortality.qmd
+      - HarmfulAlgalBlooms.qmd
+      
 bibliography: esr-bibliography.bib
 
 format:

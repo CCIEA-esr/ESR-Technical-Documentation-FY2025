@@ -1,0 +1,54 @@
+# Copepods
+
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+# download/update the excel file with the spreadsheet ####
+# get link from google drive
+
+# 'https://docs.google.com/spreadsheets/d/1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo/edit?gid=727721099#gid=727721099'
+
+# RUN THIS CHUNK BEFORE knitting TO DOWNLOAD THE MOST RECENT DATA
+
+library(googledrive)
+library(tidyverse)
+
+#if(1==1){
+
+
+#file_id = '1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo'
+
+
+#drive_download( as_id(file_id) , path = 'metadata.csv', overwrite = TRUE)
+#}
+
+df = read.csv('metadata.csv')
+
+df_trimmed<- df %>% select(c('Component_Section', 'Subcomponent', 'ERDDAP_Dataset_ID', 'Contact', 'Title', 'Institution', 'Source_Data', 'Additional_Calculations'))
+
+```
+
+```{r}
+#| echo: false
+df_trimmed<- df_trimmed %>% filter(ERDDAP_Dataset_ID=='cciea_EI_COP')
+
+```
+
+**Indicator Names** `r df_trimmed$Title[1]`, `r df_trimmed$Title[2]`, `r df_trimmed$Title[3]`
+
+**Indicator Component Category** `r df_trimmed$Component_Section[1]`, `r df_trimmed$Subcomponent[1]`
+
+**Data Steward** `r df_trimmed$Contact[1]`, `r df_trimmed$Source_Data[1]`
+
+**Institution** `r df_trimmed$Institution[1]`
+
+**Additional_Calculations** `r df_trimmed$Additional_Calculations[1]`; `r df_trimmed$Additional_Calculations[2]`;`r df_trimmed$Additional_Calculations[3]`
+
+**Description** Copepod biomass anomalies represent variation in northern copepods (cold-water crustacean zooplankton species rich in wax esters and fatty acids) and southern copepods (smaller species with lower fat content and nutritional quality). Northern copepods usually dominate the summer zooplankton community along the Newport Line, while southern species dominate winter. Positive northern copepod anomalies generally correlate with stronger returns of Chinook salmon to Bonneville Dam and coho salmon to coastal Oregon (@peterson2014applied). Historically, northern copepods typically have been favored by La Niña and negative PDO conditions (@keister2011zooplankton; @fisher2015impact).
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

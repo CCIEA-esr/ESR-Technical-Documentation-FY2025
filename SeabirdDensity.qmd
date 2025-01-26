@@ -1,0 +1,11 @@
+# Seabird At-Sea Density
+
+**Description** Seabird densities on the water during the breeding season can track marine environmental conditions and may reflect regional production and availability of forage. Data from this indicator type can establish habitat use and may be used to detect and track seabird population movements or increases/declines as they relate to ecosystem change. We monitor and report on at-sea densities of three focal seabird species in the Northern, Central, and Southern CCE.
+
+Sooty shearwaters migrate to the CCE from the Southern Hemisphere in spring and summer to forage on the shelf and near the shelf break on small fish, including northern anchovy, as well as squid and zooplankton. Common murres and Cassin’s auklets are resident species in the CCE that feed primarily over the shelf. Common murres target a variety of pelagic fish, while Cassin’s auklets prey mainly on zooplankton and small fish.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

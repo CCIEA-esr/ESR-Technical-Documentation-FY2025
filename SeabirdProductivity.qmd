@@ -1,0 +1,11 @@
+# Seabird Productivity
+
+**Description** Seabird population productivity, measured through indicators of reproductive success, tracks marine environmental conditions and often reflects forage production near breeding colonies. We report on standardized anomalies of fledgling production per pair of breeding adults for the Northern CCE (one species at Destruction Island, Washington and three species at Yaquina Head, Oregon) and the Central CCE (five species on Southeast Farallon Island and two species on Año Nuevo Island). These focal species span a range of feeding habits and ways of provisioning their chicks, and thus provide a broad picture of the status of foraging conditions.
+
+\[add Table N.1\]
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**

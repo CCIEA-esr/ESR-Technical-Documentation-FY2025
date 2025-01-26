@@ -1,0 +1,11 @@
+# Sea Lion Productivity
+
+**Description** California sea lion pup count and condition are robust indicators of prey quality and abundance even when the sea lion population is at or near carrying capacity (see Appendix L in Harvey et al. 2022). Pup count relates to prey availability and nutritional status for gestating females from October to June. Pup growth from birth to age 7 months is related to prey availability to lactating females from June to February. Data on the overwinter growth rate of sea lion pups were not available at the time of submission of this document. Nursing female diet information was also not available in time for this report but the lower number of births and moderate condition of pups for the 2023 cohort indicates that foraging conditions may have declined for nursing females in the past year.
+
+To reduce disturbance to California sea lions and to improve the accuracy of our pup counts, we transitioned to using small drones (Aerial Imagery Systems' APH-28 and the Parrot Anafi) for our pup census in 2023. A pilot study in 2017 and 2018 that paired drone surveys and ground counts for the same areas showed no significant differences in counts determined from drones or ground counts. The drone surveys were flown at an altitude of 46 m over small or narrow sections of coastline or in transects over large areas. The images were stitched together using DigiKam software and pups were counted using DotDotGoose software that automatically entered the counts into a data file for analysis. In 2023, weather conditions precluded using the drones for the entire count so we conducted ground counts for about 20% of the colony and used drones for 80%.
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**
