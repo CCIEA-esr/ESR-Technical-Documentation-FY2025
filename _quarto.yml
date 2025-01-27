@@ -3,13 +3,18 @@ project:
   output-dir: docs
 
 book:
-  title: "ESR Technical Documentation"
+  title: "CCIEA ESR Technical Documentation"
   subtitle: "California Current Integrated Ecosystem Assessment"
   author: "Greg Williams, Isaac Schroeder, Chris Dailey, etc"
   date: last-modified
-  sidebar: 
+  navbar:
+    background: "#276189"
     search: true
     logo: "figures/logo-5.png"
+    logo-alt: "California Current Integrated Ecosystem Assessment Website"
+    logo-href: "https://www.integratedecosystemassessment.noaa.gov/regions/california-current"
+  sidebar: 
+    search: false
     collapse-level: 1
   chapters:
     - index.qmd
