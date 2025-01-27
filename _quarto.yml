@@ -4,8 +4,13 @@ project:
 
 book:
   title: "ESR Technical Documentation"
+  subtitle: "California Current Integrated Ecosystem Assessment"
   author: "Greg Williams, Isaac Schroeder, Chris Dailey, etc"
-  date: "1/25/2025"
+  date: last-modified
+  sidebar: 
+    search: true
+    logo: "figures/logo-5.png"
+    collapse-level: 1
   chapters:
     - index.qmd
     - Introduction.qmd
