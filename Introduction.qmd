@@ -1,32 +1,12 @@
-# Introduction
+# Introduction {-}
 
 ```{r}
 #| echo: false
 #| warning: false
-library(googledrive)
 library(tidyverse)
 
 wd = getwd()
 fig_loc = paste0(wd,'/figures/')
-
-#{r get-file-from-google-drive}
-
-# download/update the excel file with the spreadsheet ####
-# get link from google drive
-# 'https://docs.google.com/spreadsheets/d/1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo/edit?gid=727721099#gid=727721099'
-# RUN THIS CHUNK BEFORE knitting TO DOWNLOAD THE MOST RECENT DATA
-
-
-#if(1==1){
-
-#file_id = '1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo'
-
-#drive_download( as_id(file_id) , path = 'metadata.csv', overwrite = TRUE)
-#}
-
-df = read.csv('metadata.csv')
-
-df_trimmed1<- df %>% select(c('Component_Section', 'Subcomponent', 'ERDDAP_Dataset_ID', 'Contact', 'Title', 'Institution', 'Source_Data', 'Additional_Calculations'))
 
 ```
 
