@@ -36,7 +36,6 @@ book:
       - NPGO.qmd
       - NPH.qmd
       - SST.qmd
-      - JanFebNPH.qmd
       - SSTspatial.qmd
       - MarineHeatwaves.qmd
       - HabitatCompressionIndex.qmd
