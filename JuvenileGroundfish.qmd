@@ -29,6 +29,7 @@ The analyses estimate the biomass for each species by using length-age and lengt
 ```{r tbl-bio-info}
 #| tbl-cap: "Length, age, and depth range information."
 #| echo: false
+#| message: false
 #| cap-location: 'top'
 library(flextable)
 library(tidyverse)
