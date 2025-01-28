@@ -5,7 +5,7 @@ project:
 book:
   title: "CCIEA ESR Technical Documentation"
   subtitle: "California Current Integrated Ecosystem Assessment"
-  author: "Greg Williams, Isaac Schroeder, Chris Dailey, etc"
+  author: "Lynn DeWitt, Greg Williams, Isaac Schroeder, Chris Dailey, etc"
   date: last-modified
   navbar:
     background: "#276189"
