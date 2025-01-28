@@ -1,30 +1,35 @@
+
 # Habitat Compression Index
 
-```{r get-file-from-google-drive}
+```{r}
 #| echo: false
 #| message: false
 #| eval: true
-erddap_id='cciea_OC_HCI'
 source("_getmeta.R")
+
+erddap_id='cciea_OC_HCI'
 meta=getMetadata(erddap_id)
 num_ind = nrow(meta)
 ```
 
-**Indicators**
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-
+cat("* <b>Latitude bands:</b>\n")
 for (i in 1:num_ind){
-cat("* <b>",meta$Title[i],"</b>\n")
-cat("     + *Component Category: *", meta$Component_Section[i],"\n")
-cat("     + *Data Steward: *",meta$Contact[i],"\n")
-cat("     + *Institution: *",meta$Institution[i],"\n")
-cat("     + *Additional Calculations: *",meta$Additional_Calculations[i],"\n")
-cat("     + *Source Data: *",meta$Source_Data[i],"\n")
-
+cat("     + ",meta$latitude[i],"-",meta$latitude2[i],"N</i>\n")
 }
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```
 
 **Description** The Habitat Compression Index (HCI) is the area of cool habitat along the coast, which is suitable for a diverse and productive portion of the CCE food web. HCI is estimated in four biogeographic provinces along the shelf within the CCE.
