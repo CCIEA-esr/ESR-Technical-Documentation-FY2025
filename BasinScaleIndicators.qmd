@@ -1,7 +1,7 @@
 
 # Basin-Scale Indicators
 
-**Description**     I think The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. Large-scale variability is represented by three indices: the status of the equatorial El Niño–Southern Oscillation (ENSO), described by the Oceanic Niño Index (ONI, <https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php>); the Pacific Decadal Oscillation [PDO, @Mantua1997]; and the North Pacific Gyre Oscillation [NPGO, @DiLorenzo2008]. Positive ONI and PDO values and negative NPGO values usually denote conditions that lead to low CCLME productivity, whereas negative ONI and PDO values and positive NPGO values are associated with periods of high CCE productivity.
+**Description**     The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. Large-scale variability is represented by three indices: the status of the equatorial El Niño–Southern Oscillation (ENSO), described by the Oceanic Niño Index (ONI, <https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php>); the Pacific Decadal Oscillation [PDO, @Mantua1997]; and the North Pacific Gyre Oscillation [NPGO, @DiLorenzo2008]. Positive ONI and PDO values and negative NPGO values usually denote conditions that lead to low CCLME productivity, whereas negative ONI and PDO values and positive NPGO values are associated with periods of high CCE productivity.
 ```{r get-file-from-google-drive}
 #| echo: false
 #| message: false
