@@ -4,10 +4,38 @@
 
 Pelagic forage data from the Central CCE were provided by J. Field, T. Rogers, K. Sakuma, and J. Santora, NMFS/SWFSC, from the SWFSC Rockfish Recruitment and Ecosystem Assessment Survey (https://go.usa.gov/xGMfR). Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.
 
-**Data sources**
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+
+erddap_id='cciea_EI_FBC'
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Species:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",meta$ERDDAP_query_value[i],"\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+```
 
 **Data extraction**
 
 **Data analysis**
 
-**catalog link**
