@@ -30,7 +30,6 @@ book:
       
     - part: Climate and Oceans
       chapters:
-      - BasinScaleIndicators.qmd
       - ONI.qmd
       - PDO.qmd
       - NPGO.qmd

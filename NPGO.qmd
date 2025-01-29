@@ -1,13 +1,33 @@
 # NPGO (North Pacific Gyre Oscillation)
 
-**Description**
+**Description** The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The North Pacific Gyre Oscillation (NPGO) is a low-frequency variation of sea surface height, indicating variations in the circulation of the North Pacific Subtropical Gyre and the Alaskan Gyre, which in turn relate to the source waters for the CCLME. Positive NPGO values are associated with increased equatorward flow, along with increased surface salinities, nutrients, and chlorophyll-a. Negative NPGO values are associated with decreases in such values, implying less subarctic source water and generally lower productivity.
 
-The North Pacific Gyre Oscillation (NPGO), an index of sea surface height, indicates changes in circulation that affect source waters for the CCE. Positive NPGOs are associated with strong equatorward flow and higher salinity, nutrients, and chlorophyll-a in the CCE. Negative NPGOs are associated with decreased subarctic source water and lower CCE productivity.
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+erddap_id='cciea_OC_NPGO'
+source("_getmeta.R")
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+for (i in 1:num_ind){
+cat("<b>",meta$Title[i],"</b>\n\n",sep="")
+cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[i],"\n")
+cat("* <b>Institution: </b>",meta$Institution[i],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n")
+if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n")
+}
+```
+
 
 **Data sources**
 
 **Data extraction**
 
-**Data analysis**
-
-**catalog link**
