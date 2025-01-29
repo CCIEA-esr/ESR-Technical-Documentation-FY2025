@@ -1,6 +1,41 @@
 # Ocean Acidification
 
-**Description** Ocean acidification (OA), which occurs when atmospheric CO2 dissolves into seawater, reduces seawater pH and carbonate ion levels. Upwelling transports hypoxic, acidified waters from deeper offshore onto the continental shelf, where increased community-level metabolic activity can further exacerbate OA (@feely2008evidence). A key indicator of OA is aragonite saturation state, a measure of the availability of aragonite (a form of calcium carbonate). Aragonite saturation \<1.0 indicates relatively acidified, corrosive conditions that are stressful for many CCE species, particularly shell-forming invertebrates. OA impacts on these species can propagate through marine food webs and potentially affect fisheries (Marshall et al. 2017). Aragonite saturation states tend to be lowest during spring and summer upwelling, and highest in winter.
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+erddap_id='cciea_OC_ARG'
+source("_getmeta.R")
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+**Description** Ocean acidification (OA), which occurs when atmospheric CO2 dissolves into seawater, reduces seawater pH and carbonate ion levels. Upwelling transports hypoxic, acidified waters from deeper offshore onto the continental shelf, where increased community-level metabolic activity can further exacerbate OA [@feely2008evidence]. A key indicator of OA is aragonite saturation state, a measure of the availability of aragonite (a form of calcium carbonate). Aragonite saturation \<1.0 indicates relatively acidified, corrosive conditions that are stressful for many CCE species, particularly shell-forming invertebrates. OA impacts on these species can propagate through marine food webs and potentially affect fisheries (Marshall et al. 2017). Aragonite saturation states tend to be lowest during spring and summer upwelling, and highest in winter.
+
+**Newport Line Aragonite Saturation**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+cat("* <b>Locations:</b>\n")
+for (i in 1:num_ind){
+if(grepl("NH",meta$Title[i])){
+  cat("     + ",meta$ERDDAP_query_value[i],"\n")
+  cind=i
+  }
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
+cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n")
+```
 
 **Data sources**
 
