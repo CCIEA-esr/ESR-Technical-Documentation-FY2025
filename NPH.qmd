@@ -1,6 +1,8 @@
 
 # North Pacific High Indicators
 
+**Description** Variations in the areal extent of the North Pacific High (NPH) during the winter is predictive of winter upwelling. The January and February average of the NPH area can be used as a "preconditioning" index for ecosystem responses in the spring.
+
 ```{r get-file-from-google-drive}
 #| echo: false
 #| message: false
@@ -29,12 +31,9 @@ cat("     + *Source Data: *",meta$Source_Data[i],"\n")
 }
 ```
 
+**Data sources** The U.S. Navy Fleet Numerical Meteorology and Oceanography Center (FNMOC) to take advantage of the Navy's global oceanographic and meteorological databases. FNMOC produces operational forecasts of the state of the atmosphere and the ocean several times daily and maintains archives of several important parameters, such as sea level pressure and temperature. The NPH area is derived from FNMOC Sea Level Pressure (SLP) monthly means. The SLP data are available at <https://upwell.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html>.
 
-**Description** Variations in the areal extent of the North Pacific High (NPH) during the winter is predictive of winter upwelling. The January and February average of the NPH area can be used as a "preconditioning" index for ecosystem responses in the spring.
-
-**Data sources**   &nbsp The U.S. Navy Fleet Numerical Meteorology and Oceanography Center (FNMOC) to take advantage of the Navy's global oceanographic and meteorological databases. FNMOC produces operational forecasts of the state of the atmosphere and the ocean several times daily and maintains archives of several important parameters, such as sea level pressure and temperature. The NPH area is derived from FNMOC Sea Level Pressure (SLP) monthly means. The SLP data are available at <https://upwell.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html>.
-
-**Additional Information**   &nbsp During the winter, periods of upwelling or, farther north, reduced downwelling can limit stratification and facilitate introduction of nutrients to the surface, acting to precondition the ecosystem for increased production in the spring [@schroeder2009; @black2010]. The area of sea level pressure associated with the North Pacific High (NPH) can be used as an index of this winter preconditioning [@schroeder2013].
+**Additional Information** During the winter, periods of upwelling or, farther north, reduced downwelling can limit stratification and facilitate introduction of nutrients to the surface, acting to precondition the ecosystem for increased production in the spring [@Schroeder2009; @Black2010]. The area of sea level pressure associated with the North Pacific High (NPH) can be used as an index of this winter preconditioning [@Schroeder2013].
 
 **Figures**
 

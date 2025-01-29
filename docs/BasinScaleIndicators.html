@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -505,7 +525,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> &nbsp; &nbsp; The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. Large-scale variability is represented by three indices: the status of the equatorial El Niño–Southern Oscillation (ENSO), described by the Oceanic Niño Index (ONI, <a href="https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php" class="uri">https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php</a>); the Pacific Decadal Oscillation <span class="citation" data-cites="Mantua1997">(PDO, <a href="#ref-Mantua1997" role="doc-biblioref"><strong>Mantua1997?</strong></a>)</span>; and the North Pacific Gyre Oscillation <span class="citation" data-cites="DiLorenzo2008">(NPGO, <a href="#ref-DiLorenzo2008" role="doc-biblioref"><strong>DiLorenzo2008?</strong></a>)</span>. Positive ONI and PDO values and negative NPGO values usually denote conditions that lead to low CCLME productivity, whereas negative ONI and PDO values and positive NPGO values are associated with periods of high CCE productivity.</p>
+<p><strong>Description</strong> &nbsp; &nbsp; The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. Large-scale variability is represented by three indices: the status of the equatorial El Niño–Southern Oscillation (ENSO), described by the Oceanic Niño Index (ONI, <a href="https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php" class="uri">https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php</a>); the Pacific Decadal Oscillation <span class="citation" data-cites="Mantua1997">(PDO, <a href="#ref-Mantua1997" role="doc-biblioref">Mantua et al. 1997</a>)</span>; and the North Pacific Gyre Oscillation <span class="citation" data-cites="DiLorenzo2008">(NPGO, <a href="#ref-DiLorenzo2008" role="doc-biblioref">Di Lorenzo et al. 2008</a>)</span>. Positive ONI and PDO values and negative NPGO values usually denote conditions that lead to low CCLME productivity, whereas negative ONI and PDO values and positive NPGO values are associated with periods of high CCE productivity.</p>
 <p><strong>Indicators</strong></p>
 <ul>
 <li><b> Oceanic Nino Index </b>
@@ -513,8 +533,6 @@ ul.task-list li input[type="checkbox"] {
 <li><em>Component Category: </em> Climate and Ocean Drivers</li>
 <li><em>Data Steward: </em> isaac.schroeder@noaa.gov</li>
 <li><em>Institution: </em> NOAA, Climate Prediction Center (CPC)</li>
-<li><em>Additional Calculations: </em><br>
-</li>
 <li><em>Source Data: </em> NOAA/CPC (http://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php) The ONI is the 3 month running mean of sea surface temperature anomalies in the Nino 3.4 region</li>
 </ul></li>
 <li><b> Pacific Decadal Oscillation Index </b>
@@ -522,8 +540,6 @@ ul.task-list li input[type="checkbox"] {
 <li><em>Component Category: </em> Climate and Ocean Drivers</li>
 <li><em>Data Steward: </em> isaac.schroeder@noaa.gov</li>
 <li><em>Institution: </em> NOAA SWFSC/FED</li>
-<li><em>Additional Calculations: </em><br>
-</li>
 <li><em>Source Data: </em> <strong>Note: 2023-03-10 UW-JISAO PDO is not longer being updated. This PDO is now ERSST V5</strong> PDO index is defined as the projections of the ERSST V5 monthly SSTA onto the 1st EOF pattern of North Pacific 20N-60N. 1900-1993 DATA from ERSST V3b is used to derived the climatology and the 1st EOF pattern.Reference: Wen, C., A. Kumar, and Y. Xue, 2014: Factors contributing to uncertainty in Pacific decadal oscillation index. Geophys. Res. Lett., 41, 7980-7986, doi:https://doi.org/10.1002/2014GL061992 ERSST.V5 : Huang, B., Peter W. Thorne, et. al, 2017: Extended Reconstructed Sea Surface Temperature version 5 (ERSSTv5), Upgrades, validations, and intercomparisons. J. Climate Smith, T. M., Reynolds, R. W., Peterson, T. C., and Lawrimore, J. (2008), Improvements to NOAA’s historical merged land-ocean surface temperature analysis (1880-2006), J. Clim., 21( 10), 2283-2296.</li>
 </ul></li>
 <li><b> North Pacific Gyre Oscillation Index </b>
@@ -531,8 +547,6 @@ ul.task-list li input[type="checkbox"] {
 <li><em>Component Category: </em> Climate and Ocean Drivers</li>
 <li><em>Data Steward: </em> isaac.schroeder@noaa.gov</li>
 <li><em>Institution: </em> Georgia Institute of Technology (GT)</li>
-<li><em>Additional Calculations: </em><br>
-</li>
 <li><em>Source Data: </em> http://www.o3d.org/npgo/npgo.php The NPGO is calculated from an Empirical Orthogonal Function analysis of sea-surface height in the Northeast Pacific. The NPGO is the second dominant mode.</li>
 </ul></li>
 </ul>
@@ -544,6 +558,14 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-DiLorenzo2008" class="csl-entry" role="listitem">
+Di Lorenzo, E., N. Schneider, K. M. Cobb, P. J. S. Franks, K. Chhak, A. J. Miller, J. C. McWilliams, et al. 2008. <span>“North Pacific Gyre Oscillation Links Ocean Climate and Ecosystem Change.”</span> <em>Geophysical Research Letters</em> 35 (8). <a href="https://doi.org/10.1029/2007gl032838">https://doi.org/10.1029/2007gl032838</a>.
+</div>
+<div id="ref-Mantua1997" class="csl-entry" role="listitem">
+Mantua, Nathan J., Steven R. Hare, Yuan Zhang, John M. Wallace, and Robert C. Francis. 1997. <span>“A Pacific Interdecadal Climate Oscillation with Impacts on Salmon Production.”</span> <em>Bulletin of the American Meteorological Society</em> 78 (6): 1069–79. <a href="https://doi.org/10.1175/1520-0477(1997)078<1069:apicow>2.0.co;2">https://doi.org/10.1175/1520-0477(1997)078&lt;1069:apicow&gt;2.0.co;2</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

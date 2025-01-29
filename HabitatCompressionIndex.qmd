@@ -1,6 +1,9 @@
 
 # Habitat Compression Index
 
+
+**Description** The Habitat Compression Index (HCI) is the area of cool habitat along the coast, which is suitable for a diverse and productive portion of the CCE food web. HCI is estimated in four biogeographic provinces along the shelf within the CCE.
+
 ```{r}
 #| echo: false
 #| message: false
@@ -31,8 +34,6 @@ cat("* <b>Institution: </b>",meta$Institution[1],"\n")
 cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
 cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```
-
-**Description** The Habitat Compression Index (HCI) is the area of cool habitat along the coast, which is suitable for a diverse and productive portion of the CCE food web. HCI is estimated in four biogeographic provinces along the shelf within the CCE.
 
 **References** @Santora2020, @Schroeder2022
 
