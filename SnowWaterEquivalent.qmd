@@ -2,7 +2,51 @@
 
 **Description** Snow-water equivalent (SWE) is measured using data from the California Department of Water Resources snow survey program (California Data Exchange Center, cdec.water.ca.gov) and The Natural Resources Conservation Service’s SNOTEL sites across Washington, Oregon, California and Idaho. Snow data are converted into SWEs based on the weight of samples collected at regular intervals using a standardized protocol. Measurements on April 1 are considered the best indicator of maximum extent of SWE; thereafter snow tends to melt rather than accumulate.
 
+Freshwater habitat indicators are reported based on a hierarchical spatial framework. The framework facilitates comparisons of data at the right spatial scale for particular users, whether this be the entire California Current, ecoregions within the CCE, or smaller spatial units. The framework we use divides the region encompassed by the CCE into ecoregions (Fig. 1.1), and ecoregions into smaller physiographic units. Freshwater ecoregions are based on the biogeographic delineations in Abell et al. (2008), see also www.feow.org, who define six ecoregions for watersheds entering the California Current, three of which comprise the two largest watersheds directly entering the California Current (the Columbia and the Sacramento-San Joaquin Rivers). Within ecoregions, we summarized data at scales of evolutionary significant units (ESUs) and 8-field hydrologic unit classifications (HUC-8). Status and trends for all freshwater indicators are estimated using space-time models that account for spatial and temporal autocorrelation (Lindgren and Rue 2015).
+
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+erddap_id='cciea_HB_FLOW'
+source("_getmeta.R")
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+regions=c("Ecoregion")
+nregions=length(regions)
+meas=c("Snow water equivalent")
+nmeas=length(meas)
+for(j in 1:nregions){
+  for(k in 1:nmeas){
+    cat("**Streamflow ",meas[k]," ",regions[j]," indicators:**\n\n",sep="")
+    cat("* <b>",regions[j],"s:</b>\n",sep="")
+      for (i in 1:num_ind){
+        if(grepl(meas[k],meta$Title[i]) & grepl(regions[j],meta$Title[i])){
+  cat("     + ",meta$region[i],"\n")
+  cind=i
+  }
+}
+
+cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
+cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
+  }
+}
+```
+
+
 **Data sources**
+
+
 
 **Data extraction**
 

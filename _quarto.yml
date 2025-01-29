@@ -43,7 +43,6 @@ book:
       - Upwelling.qmd
       - DissolvedOxygen.qmd
       - OceanAcidification.qmd
-      - FreshwaterHabitat.qmd
       - SnowWaterEquivalent.qmd
       - MaximumStreamTemperature.qmd
       - Streamflow.qmd
