@@ -21,7 +21,7 @@ num_ind = nrow(meta)
 #| results: 'asis'
 cat("* <b>Latitude bands:</b>\n")
 for (i in 1:num_ind){
-cat("     + ",meta$latitude[i],"-",meta$latitude2[i],"N</i>\n")
+cat("     + ",meta$latitude[i],"-",meta$latitude2[i],"N\n")
 }
 ```
 
