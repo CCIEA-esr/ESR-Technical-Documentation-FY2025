@@ -7,9 +7,7 @@
 #| eval: true
 cciea_yr <- 2024
 source("_getmeta.R")
-arg1_meta=getMetadata("cciea_OC_ARG")
-arg2_meta=getMetadata("cciea_OC_ARG2")
-meta <- rbind(arg1_meta,arg2_meta)
+meta=getMetadata("cciea_OC_ARG")
 num_ind=nrow(meta)
 ```
 

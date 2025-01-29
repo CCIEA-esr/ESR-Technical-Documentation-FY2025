@@ -19,7 +19,7 @@ library(dplyr)
 
 df = read.csv('metadata.csv')
 
-df_trimmed<- df %>% select(c('Component_Section', 'Subcomponent', 'ERDDAP_Dataset_ID', 'Contact', 'Title', 'Institution', 'Source_Data', 'Additional_Calculations', 'region', 'latitude', 'longitude', 'latitude2', 'longitude2'))
+df_trimmed<- df %>% select(c('Component_Section', 'Subcomponent', 'ERDDAP_Dataset_ID', 'ERDDAP_query_value', 'Contact', 'Title', 'Institution', 'Source_Data', 'Additional_Calculations', 'region', 'latitude', 'longitude', 'latitude2', 'longitude2'))
 meta <- df_trimmed %>% filter(ERDDAP_Dataset_ID==erddap_id)
 
 return(meta)

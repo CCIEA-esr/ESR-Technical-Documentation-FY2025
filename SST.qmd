@@ -1,5 +1,41 @@
 # Sea Surface Temperature (SST)
 
-Satellite data, which has been collected in a similar fashion since 1982, allows for a basin-scale view of sea surface temperature (SST) at up to daily and sub-degree (spatial) resolution.
+## Buoy Data {-}
 
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+
+erddap_id='cciea_OC_SST'
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Latitudes:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",meta$latitude[i],"N\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+```
+
+
+## Satellite data {-}
+Satellite data which has been collected in a similar fashion since 1982, allows for a basin-scale view of sea surface temperature (SST) at up to daily and sub-degree (spatial) resolution.
+
+## Glider data {-}
 Glider data has also become an increasingly useful tool for analyzing trends in subsurface water temperatures over time. Subsurface gliders, which generally sample in onshore-offshore transects on a weekly to monthly basis, have been in service long enough for the development of climatologies, which are then used to compute temperature anomalies.
