@@ -4,7 +4,29 @@
 
 To reduce disturbance to California sea lions and to improve the accuracy of our pup counts, we transitioned to using small drones (Aerial Imagery Systems' APH-28 and the Parrot Anafi) for our pup census in 2023. A pilot study in 2017 and 2018 that paired drone surveys and ground counts for the same areas showed no significant differences in counts determined from drones or ground counts. The drone surveys were flown at an altitude of 46 m over small or narrow sections of coastline or in transects over large areas. The images were stitched together using DigiKam software and pups were counted using DotDotGoose software that automatically entered the counts into a data file for analysis. In 2023, weather conditions precluded using the drones for the entire count so we conducted ground counts for about 20% of the colony and used drones for 80%.
 
-**Data sources**
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+erddap_id='cciea_MM_pup_count'
+source("_getmeta.R")
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+for (i in 1:num_ind){
+cat("<b>",meta$Title[i],"</b>\n\n",sep="")
+cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[i],"\n")
+cat("* <b>Institution: </b>",meta$Institution[i],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n")
+if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n\n")
+}
+```
 
 **Data extraction**
 

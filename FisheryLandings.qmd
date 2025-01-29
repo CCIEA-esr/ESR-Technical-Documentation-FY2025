@@ -2,7 +2,36 @@
 
 **Description** Commercial landings and revenue data are best summarized by the Pacific Fisheries Information Network (PacFIN; pacfin.psmfc.org), and recreational landings are best summarized by the Recreational Fisheries Information Network (RecFIN; www.recfin.org). Landings provide the best long-term indicator of fisheries removals. Revenues are calculated based on consumer price indices in 2023 dollars. Status and trends are estimated relative to a frame of reference of 1991-2020.
 
-**Data sources**
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+
+erddap_id='cciea_AC_landings'
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Species:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",meta$ERDDAP_query_value[i],"\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+```
 
 **Data extraction**
 

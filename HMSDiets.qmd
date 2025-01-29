@@ -4,7 +4,79 @@
 
 \[need for descriptive text for figures?\]
 
-**Data sources**
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+alb_meta=getMetadata("cciea_HMS_ALB_DIET")
+blf_meta=getMetadata("cciea_HMS_BLF_DIET")
+swd_meta=getMetadata("cciea_HMS_SWD_DIET")
+```
+
+**Albacore tuna diet**
+```{r}
+#| echo: false
+#| results: 'asis'
+num_ind=nrow(alb_meta)
+
+cat("* <b>Species:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",alb_meta$ERDDAP_query_value[i],"\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", alb_meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",alb_meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",alb_meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",alb_meta$Source_Data[1],"\n")
+if(alb_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",alb_meta$Additional_Calculations[1],"\n")
+```
+**Bluefin diet**
+```{r}
+#| echo: false
+#| results: 'asis'
+num_ind=nrow(blf_meta)
+
+cat("* <b>Species:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",blf_meta$ERDDAP_query_value[i],"\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", blf_meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",blf_meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",blf_meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",blf_meta$Source_Data[1],"\n")
+if(blf_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",blf_meta$Additional_Calculations[1],"\n")
+```
+**Swordfish diet**
+```{r}
+#| echo: false
+#| results: 'asis'
+num_ind=nrow(swd_meta)
+
+cat("* <b>Species:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",swd_meta$ERDDAP_query_value[i],"\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", swd_meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",swd_meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",swd_meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",swd_meta$Source_Data[1],"\n")
+if(swd_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",swd_meta$Additional_Calculations[1],"\n")
+```
 
 **Data extraction**
 
