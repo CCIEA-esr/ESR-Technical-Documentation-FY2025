@@ -27,23 +27,4 @@ cciea_yr <- 2024
 
 **Data sources** Netcdf files of the three lines can be downloaded from <https://spraydata.ucsd.edu/projects/CUGN/>. The data downloaded are temperature anomalies created by CUGN.
 
-**Additional Information** The temperature anomaly data provided in the netcdf file has data across the line at 5 m intervals over 0-500 m and distances at 5 km from the coat out to the end of the line (66=400 km, 80=365 km, 90=530 km). Distance can be averaged using Python xarray to select specific distance ranges and then averaging over the distances. The time interval of the netcdf file is 10 days and this is shown in @fig-tz_glider.
-
-**Figures**
-
-::: {#fig-calcofi_map}
-![](plots/113StationPositions300.png){width="30%"}
-
-Map CalCOFI line and station sampling stations. CUGN has been sampling lines 66, 80, 90 since 2006.
-:::
-
-::: {#fig-tz_glider}
-![](plots/oc_z_temperature_gldr_lines_66_80_90_distance_0_200km_same_ylim.png){width="100%"}
-
-Time–depth temperature anomalies for line 66, 80 and 90; all plots covering April 2003 to December `{r} cciea_yr`. Temperature anomalies were area averaged from the coast out to 200 km.
-:::
-
-**`{r} cciea_yr` Conditions**
-
--   Along line 90, winter 2023-24 El Niño influence at the surface (upper 100 m) is not as extreme as the 2016 event (@fig-tz_glider, bottom).
--   All three lines had similar positive anomalies down to 500 m mostly occuring in the fall 2023.
+**Additional Information** The temperature anomaly data provided in the netcdf file has data across the line at 5 m intervals over 0-500 m and distances at 5 km from the coat out to the end of the line (66=400 km, 80=365 km, 90=530 km). Distance can be averaged using Python xarray to select specific distance ranges and then averaging over the distances. The time interval of the netcdf file is 10 days.
