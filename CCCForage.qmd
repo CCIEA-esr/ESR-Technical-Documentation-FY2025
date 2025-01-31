@@ -4,6 +4,8 @@
 
 Pelagic forage data from the Central CCE were provided by J. Field, T. Rogers, K. Sakuma, and J. Santora, NMFS/SWFSC, from the SWFSC Rockfish Recruitment and Ecosystem Assessment Survey (https://go.usa.gov/xGMfR). Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.
 
+**Indicators**
+
 ```{r}
 #| echo: false
 #| message: false
