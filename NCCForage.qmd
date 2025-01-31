@@ -5,6 +5,9 @@
 Several other taxa collected by the June JSOES surface trawl are noted in terms of their relative prevalence (proportion of stations where they were caught), but are not considered to be sampled quantitatively due to their behavior and mesh size of sampling gear.
 
 Pelagic forage data from the Northern CCE are provided by B. Burke, NMFS/NWFSC and C. Morgan, OSU/CIMRS. Data are derived from surface trawls taken during the NWFSC Juvenile Salmon & Ocean Ecosystem Survey (JSOES; https://www.fisheries.noaa.gov/west-coast/science-data/ocean-ecosystem-indicators-pacific-salmon-marine-survival-northern). Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.
+
+**Indicators**
+
 ```{r}
 #| echo: false
 #| message: false
