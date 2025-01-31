@@ -4,6 +4,8 @@
 
 Pelagic forage larvae data from the Southern CCE were provided by A. Thompson, NMFS/SWFSC, from spring CalCOFI surveys (https://calcofi.org/); data were not collected in 2020 due to survey cancellations associated with the COVID pandemic. Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.
 
+**Indicators**
+
 ```{r}
 #| echo: false
 #| message: false
