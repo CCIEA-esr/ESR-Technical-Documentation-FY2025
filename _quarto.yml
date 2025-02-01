@@ -76,7 +76,7 @@ book:
       - FisheryLandings.qmd
       - FisheryRevenue.qmd
       - TrawlBottomContact.qmd
-      - OtherHumanActivities
+      - OtherHumanActivities.qmd
       - SpatialInteractionsOceanUse.qmd
 
     - part: Human Wellbeing
