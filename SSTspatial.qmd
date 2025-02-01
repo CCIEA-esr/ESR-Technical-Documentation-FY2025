@@ -19,6 +19,5 @@ cciea_yr <- 2024
 
 **Data Steward** Schroeder
 
-
 **Additional Information** The seasonal averages are: winter (Jan-Mar), spring (Apr-Jun), summer (Jul-Sep), and summer (Oct-Nov). Daily SST maps are optimally interpolated, remotely sensed temperatures [@Huang2021]. The daily optimal interpolated AVHRR SST can be downloaded from ERDDAP, https://coastwatch.pfeg.noaa.gov/erddap/index.html, dataset ID: ncdcOisst21Agg.
 

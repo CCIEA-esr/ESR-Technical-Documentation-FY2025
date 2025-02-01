@@ -1,6 +1,8 @@
-# Fishery Landings and Revenues
+# Fishery Landings
 
-**Description** Commercial landings and revenue data are best summarized by the Pacific Fisheries Information Network (PacFIN; pacfin.psmfc.org), and recreational landings are best summarized by the Recreational Fisheries Information Network (RecFIN; www.recfin.org). Landings provide the best long-term indicator of fisheries removals. Revenues are calculated based on consumer price indices in 2023 dollars. Status and trends are estimated relative to a frame of reference of 1991-2020.
+**Description** Fishery landings are indicators of ecosystem services provided and also reflect removals from the CCE. Commercial landings data are best summarized by the Pacific Fisheries Information Network (PacFIN; pacfin.psmfc.org), and recreational landings are best summarized by the Recreational Fisheries Information Network (RecFIN; www.recfin.org). Landings provide the best long-term indicator of fisheries removals. Status and trends are estimated relative to a frame of reference of 1991-2020. In most cases, landings data for the most recent reporting years are only complete through the latter months (e.g., October-December); these data are updated in the next annual cycle.
+
+Commercial landings data are reported coastwide and by state (CA, OR, WA) by fishery species category; in the case of recreational landings, however, we use the same geographic reporting distinctions but differentiate only between salmon recreational and total recreational landings.
 
 **Indicators**
 
@@ -38,3 +40,5 @@ if(meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",
 **Data extraction**
 
 **Data analysis**
+  
+**References**

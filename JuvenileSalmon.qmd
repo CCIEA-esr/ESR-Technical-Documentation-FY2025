@@ -1,6 +1,6 @@
-# Whale Entanglement
+# Juvenile Salmon
 
-**Description** The dynamics of entanglement risk and reporting are complex, and are affected by shifts in ocean conditions and prey fields, changes in whale populations, changes in distribution and timing of fishing effort, and increased public awareness.
+**Description** \[Write this up and trim the list to only categories: ERDDAP_query_value: Yearling Chinook, Yearling Coho, and Subyearling Chinook\]
 
 **Indicators**
 
@@ -10,10 +10,11 @@
 #| eval: true
 source("_getmeta.R")
 
-erddap_id='cciea_EI_WH_ENT'
+erddap_id='cciea_EI_FBN'
 meta=getMetadata(erddap_id)
 num_ind = nrow(meta)
 ```
+
 
 ```{r}
 #| echo: false
@@ -34,10 +35,6 @@ cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
 cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```
 
-**Data sources**
-
 **Data extraction**
 
 **Data analysis**
-
-**References**

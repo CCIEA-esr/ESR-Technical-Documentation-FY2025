@@ -1,0 +1,47 @@
+# HMS Spawning Stock Biomass and Recruitment
+
+**Description** Biomass and recruitment estimates for many HMS stocks that occupy the California Current are available from stock assessments conducted by collaborators under the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean (ISC) or the Inter-American Tropical Tuna Commission (IATTC). The only assessment updates since the 2023-24 ecosystem status report are for Pacific bluefin tuna, skipjack tuna, and bigeye tuna.
+
+The 2024 bigeye tuna assessment underwent several changes since the last benchmark assessment (Xu et al. 2024) The assessment uses a risk analysis approach, encompassing three levels of hypotheses structured hierarchically to address the main uncertainties in the assessment. The time-series shown here are multi-model estimates. The 2024 skipjack tuna assessment is a significant improvement over the 2022 interim assessment (Bi et al. 2024). It reflects major advancements in the assessment methodologies and incorporates new data sets, including tagging data. The Pacific bluefin tuna assessment also included some improvements to the model used in the last (2022) benchmark assessment (ISC 2024). One of the major changes made was to shorten the assessment time period to start in 1983 instead of 1952. This adjustment was implemented because more reliable data were available after 1983. For all species, we emphasize that the status and trends symbols shown in our status and trend figures reflect short-term patterns relative to time series averages (with a period of reference of 1991-2020), and do not necessarily reflect reference points based on, e.g., unfished stock biomass.
+
+\[this section will require a bit more writing to incorporate evolving approaches and methods\]
+
+**Indicators**
+```{r}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+
+erddap_id='cciea_HMS_recruit'
+meta=getMetadata(erddap_id)
+num_ind = nrow(meta)
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Species:</b>\n")
+for (i in 1:num_ind){
+cat("     + ",meta$ERDDAP_query_value[i],"\n")
+}
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
+cat("* <b>Institution: </b>",meta$Institution[1],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
+cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+```
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**
+
+**References**

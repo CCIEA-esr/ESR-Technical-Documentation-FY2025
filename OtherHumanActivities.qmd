@@ -1,6 +1,7 @@
-# Whale Entanglement
+# Other Human Activities
 
-**Description** The dynamics of entanglement risk and reporting are complex, and are affected by shifts in ocean conditions and prey fields, changes in whale populations, changes in distribution and timing of fishing effort, and increased public awareness.
+**Description** 
+\[draw from old reports; this section will require a bit more writing to incorporate evolving approaches and methods\]
 
 **Indicators**
 
@@ -10,10 +11,11 @@
 #| eval: true
 source("_getmeta.R")
 
-erddap_id='cciea_EI_WH_ENT'
+erddap_id='cciea_AC_nonfisheries'
 meta=getMetadata(erddap_id)
 num_ind = nrow(meta)
 ```
+
 
 ```{r}
 #| echo: false
@@ -31,13 +33,11 @@ cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
 cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
 cat("* <b>Institution: </b>",meta$Institution[1],"\n")
 cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+if(meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```
-
-**Data sources**
 
 **Data extraction**
 
 **Data analysis**
-
+  
 **References**

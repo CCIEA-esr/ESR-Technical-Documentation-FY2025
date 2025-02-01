@@ -50,29 +50,31 @@ book:
       chapters:
       - Copepods.qmd
       - Krill.qmd
-      - DungenessCrabMegalopae.qmd
       - NCCForage.qmd
       - CCCForage.qmd
       - SCCForage.qmd
       - CPSSurvey.qmd
+      - JuvenileSalmon.qmd
       - SalmonStoplightTables.qmd
       - ChinookSalmonEscapementColumbia.qmd
       - ChinookSalmonEcosystemCalifornia.qmd
       - GroundfishStockAbundance.qmd
       - JuvenileGroundfish.qmd
       - GroundfishPortAvailability.qmd
+      - HMSRecruitmentSSB
       - HMSDiets.qmd
       - SeabirdProductivity.qmd
       - SeabirdDensity.qmd
       - SeabirdMortality.qmd
-      - SeaLionProductivity.qmd
       - SeabirdDiet.qmd
+      - SeaLionProductivity.qmd
       - WhaleEntanglement.qmd
       - HarmfulAlgalBlooms.qmd
       
     - part: Fishing and Non-Fishing Human Activities
       chapters:
       - FisheryLandings.qmd
+      - FisheryRevenue.qmd
       - SpatialInteractionsOceanUse.qmd
 
     - part: Human Wellbeing
