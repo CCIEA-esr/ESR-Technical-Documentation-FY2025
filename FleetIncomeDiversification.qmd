@@ -4,6 +4,12 @@
 
 Diversification can take other forms. Spreading effort and catch over the year, or simply fishing more weeks of the year, can both increase revenue and decrease interannual variation of revenue just as species diversification does. In fact, Abbot et al. (2023) showed that reductions in revenue variation associated with species diversification can be explained mainly by increased temporal diversification, which can be achieved by fishing in multiple fisheries but also by fishing for more weeks of the year in a single fishery. Effective Shannon Index can also be used to examine how widely and evenly vessel revenues are spread across weeks of the year as an indicator or temporal diversification. Like the species diversification metric, this index increases the more weeks of the year a vessel has revenue and the more evenly that revenue is distributed across weeks. A vessel fishing 15 weeks of the year with the same revenue each of those weeks would have a temporal ESI of 15, and that number would decline as revenue is spread less evenly over the 15 weeks.
 
+**Indicator Category** 
+
+**Data Steward** 
+
+**Additional Information** 
+
 **Data sources**
 
 **Data extraction**

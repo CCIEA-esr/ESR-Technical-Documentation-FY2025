@@ -1,5 +1,18 @@
----
-title: "TrawlBottomContact"
-format: html
----
+# Trawl Bottom Contact
 
+**Description** 
+\[this section will require a bit more writing to incorporate evolving approaches and methods; none of these data are archived in the ERDDAP database\]
+
+**Indicator Category** 
+
+**Data Steward** Andrews
+
+**Additional Information** 
+
+**Data sources**
+
+**Data extraction**
+
+**Data analysis**
+
+**References**
