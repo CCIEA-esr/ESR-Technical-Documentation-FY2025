@@ -75,7 +75,6 @@ book:
       chapters:
       - FisheryLandings.qmd
       - FisheryRevenue.qmd
-      - TrawlBottomContact.qmd
       - OtherHumanActivities.qmd
       - SpatialInteractionsOceanUse.qmd
 
