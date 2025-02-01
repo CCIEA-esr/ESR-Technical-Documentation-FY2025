@@ -4,7 +4,39 @@
 
 Sooty shearwaters migrate to the CCE from the Southern Hemisphere in spring and summer to forage on the shelf and near the shelf break on small fish, including northern anchovy, as well as squid and zooplankton. Common murres and Cassin’s auklets are resident species in the CCE that feed primarily over the shelf. Common murres target a variety of pelagic fish, while Cassin’s auklets prey mainly on zooplankton and small fish.
 
-**Data sources**
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+meta=getMetadata("cciea_B_AS_DENS")
+regions <- unique(meta['region'])
+num_ind <- nrow(meta)
+num_regions <- nrow(regions)
+```
+
+**Indicator Regions**
+```{r}
+#| echo: false
+#| results: 'asis'
+
+for (r in 1:num_regions){
+  cat("**",regions$region[r],"**\n\n",sep="")
+  
+  cat("* <b>Species:</b>\n")
+  for (i in 1:num_ind){
+    if(meta$region[i]==regions$region[r]){
+      cat("     + ",sub(" \\(.*","",meta$ERDDAP_query_value[i]),"\n")
+      cind=i
+    }
+    }
+cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
+cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
+if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
+}
+```
 
 **Data extraction**
 

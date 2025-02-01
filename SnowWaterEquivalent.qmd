@@ -43,11 +43,3 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\
 }
 ```
 
-
-**Data sources**
-
-
-
-**Data extraction**
-
-**Data analysis**

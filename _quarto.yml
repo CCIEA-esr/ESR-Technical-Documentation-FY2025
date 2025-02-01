@@ -67,6 +67,8 @@ book:
       - SeabirdMortality.qmd
       - SeaLionProductivity.qmd
       - WhaleEntanglement.qmd
+      - SeabirdDiet.qmd
+      - WhaleEntanglement.qmd
       - HarmfulAlgalBlooms.qmd
       
     - part: Fishing and Non-Fishing Human Activities

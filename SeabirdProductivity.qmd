@@ -4,8 +4,38 @@
 
 \[add Table N.1\]
 
-**Data sources**
+```{r get-file-from-google-drive}
+#| echo: false
+#| message: false
+#| eval: true
+source("_getmeta.R")
+sb_meta=getMetadata("cciea_B_PR_ANOM")
+sb_private_meta=getMetadata("cciea_B_PR_ANOM_ND")
+meta <- rbind(sb_meta,sb_private_meta)
+regions <- unique(meta['region'])
+num_ind <- nrow(meta)
+num_regions <- nrow(regions)
+```
 
-**Data extraction**
+**Indicator Regions**
+```{r}
+#| echo: false
+#| results: 'asis'
 
-**Data analysis**
+for (r in 1:num_regions){
+  cat("**",regions$region[r],"**\n\n",sep="")
+  
+  cat("* <b>Species:</b>\n")
+  for (i in 1:num_ind){
+    if(meta$region[i]==regions$region[r]){
+      cat("     + ",sub(" productivity.*","",meta$ERDDAP_query_value[i]),"\n")
+      cind=i
+    }
+    }
+cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
+cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
+cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
+cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
+if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
+}
+```

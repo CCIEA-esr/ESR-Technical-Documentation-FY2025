@@ -37,8 +37,5 @@ cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
 cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n")
 ```
 
-**Data sources**
+**References**
 
-**Data extraction**
-
-**Data analysis**

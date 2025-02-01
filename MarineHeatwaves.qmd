@@ -36,7 +36,4 @@ There is growing recognition that marine heatwaves can have strongly disruptive 
 
 The underlying climatology used for SST anomaly analysis has changed from 1982-2010, to now encompass 1982-2020; hence small changes in the retrospective analysis of tracked heatwaves reported more recently as compared to previous reports.
 
-**Figures**
-
-
 **References**

@@ -86,9 +86,3 @@ cat("* <b>Source Data: </b>",bakun_meta$Source_Data[1],"\n")
 if(bakun_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",bakun_meta$Additional_Calculations[1],"\n")
 ```
 
-
-**Data extraction**
-
-**Data analysis**
-
-**catalog link**

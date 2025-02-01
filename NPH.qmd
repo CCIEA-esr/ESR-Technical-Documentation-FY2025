@@ -37,6 +37,4 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[2],"\n")
 
 **Additional Information** During the winter, periods of upwelling or, farther north, reduced downwelling can limit stratification and facilitate introduction of nutrients to the surface, acting to precondition the ecosystem for increased production in the spring [@Schroeder2009; @Black2010]. The area of sea level pressure associated with the North Pacific High (NPH) can be used as an index of this winter preconditioning [@Schroeder2013].
 
-**Figures**
-
 **References**

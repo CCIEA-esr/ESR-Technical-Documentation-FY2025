@@ -1,15 +1,15 @@
-# Seabird Mortality
+# Seabird Diet
 
-**Description** Monitoring of dead beached birds provides information on the health of seabird populations, ecosystem health, and unusual mortality events, and previous ESRs from the anomalously warm and unproductive years of 2014–2016 noted major seabird mortality events in each year.
-
-In the Northern CCE, the Coastal Observation and Seabird Survey Team (COASST) at the University of Washington monitors beaches in Washington, Oregon, and northern California. In the Central CCE, the Beach Watch program monitors beaches from Point Arena to Point Año Nuevo, California.
+**Description** Seabird diet .....
 
 ```{r get-file-from-google-drive}
 #| echo: false
 #| message: false
 #| eval: true
 source("_getmeta.R")
-meta=getMetadata("cciea_B_B_MORT")
+sb_meta=getMetadata("cciea_B_AS_DIET")
+sb_private_meta=getMetadata("cciea_B_AS_DIET_ND")
+meta <- rbind(sb_meta,sb_private_meta)
 regions <- unique(meta['region'])
 num_ind <- nrow(meta)
 num_regions <- nrow(regions)
@@ -26,7 +26,7 @@ for (r in 1:num_regions){
   cat("* <b>Species:</b>\n")
   for (i in 1:num_ind){
     if(meta$region[i]==regions$region[r]){
-      cat("     + ",sub(" encounter.*","",meta$ERDDAP_query_value[i]),"\n")
+      cat("     + ",sub(" \\(.*","",meta$ERDDAP_query_value[i]),"\n")
       cind=i
     }
     }
