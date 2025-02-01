@@ -61,7 +61,7 @@ book:
       - GroundfishStockAbundance.qmd
       - JuvenileGroundfish.qmd
       - GroundfishPortAvailability.qmd
-      - HMSRecruitmentSSB
+      - HMSRecruitmentSSB.qmd
       - HMSDiets.qmd
       - SeabirdProductivity.qmd
       - SeabirdDensity.qmd
