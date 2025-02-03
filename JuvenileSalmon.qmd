@@ -1,6 +1,6 @@
 # Juvenile Salmon
 
-**Description** \[Write this up and trim the list to only categories: ERDDAP_query_value: Yearling Chinook, Yearling Coho, and Subyearling Chinook\]
+**Description** \[Write this up \]
 
 **Indicators**
 
@@ -11,8 +11,10 @@
 source("_getmeta.R")
 
 erddap_id='cciea_EI_FBN'
+# just want particular indicators from this dataset
+erddap_query_vals <- c("Yearling Chinook", "Yearling Coho", "Subyearling Chinook")
 meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
+num_ind = length(erddap_query_vals)
 ```
 
 
@@ -21,7 +23,7 @@ num_ind = nrow(meta)
 #| results: 'asis'
 cat("* <b>Species:</b>\n")
 for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
+cat("     + ",erddap_query_vals[i],"\n")
 }
 ```
 
