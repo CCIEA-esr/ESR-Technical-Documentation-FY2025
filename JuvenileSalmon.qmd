@@ -17,7 +17,6 @@ meta=getMetadata(erddap_id)
 num_ind = length(erddap_query_vals)
 ```
 
-
 ```{r}
 #| echo: false
 #| results: 'asis'
@@ -40,3 +39,5 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 **Data extraction**
 
 **Data analysis**
+
+**References**
