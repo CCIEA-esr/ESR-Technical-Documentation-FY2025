@@ -6,6 +6,12 @@ Levels and trends in non-fishery income diversification have not been presented 
 
 Among other questions, the surveys ask fishing vessel owners what percentage of their household income came from fishing versus non-fishing sources in the prior calendar year (e.g. 2022 for the 2023 survey) and also what percentage of the income they personally contribute to the household is from non-fishery sources. The survey also asks vessel owners that personally contributed NFI to their household what type of non-fishing work they did. Treakle et al. (2023) provides a detailed analysis of the survey data on non-fishing income from the 2017 and 2020 surveys.
 
+**Indicator Category** Human Wellbeing
+
+**Data Steward** 
+
+**Additional Information**
+
 **Data sources**
 
 **Data extraction**
