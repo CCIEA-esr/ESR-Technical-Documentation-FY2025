@@ -7,8 +7,9 @@
 #| message: false
 #| eval: true
 source("_getmeta.R")
-sb_meta=getMetadata("cciea_B_AS_DIET")
-sb_private_meta=getMetadata("cciea_B_AS_DIET_ND")
+erddap_id <- c("cciea_B_AS_DIET","cciea_B_AS_DIET_ND")
+sb_meta=getMetadata(erddap_id[1])
+sb_private_meta=getMetadata(erddap_id[2])
 meta <- rbind(sb_meta,sb_private_meta)
 regions <- unique(meta['region'])
 num_ind <- nrow(meta)
@@ -39,5 +40,14 @@ if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b
 ```
 
 **Data extraction**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; links: \n\n")
+for(i in 1:length(erddap_id)){
+  cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
+  }
+```
 
 **Data analysis**
