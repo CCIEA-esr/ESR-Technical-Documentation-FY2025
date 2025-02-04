@@ -1,6 +1,7 @@
 # Groundfish Port Availability
 
-**Description** We estimated the relative availability of groundfish biomass to individual ports following the methods described in Selden et al. (2020), with some exceptions. In brief, we used data from the Northwest Fisheries Science Center’s West Coast Groundfish Bottom Trawl Survey (Keller et al. 2017) to estimate spatial distribution of species-specific biomass (Location Biomass), and the Center of Gravity (CoG) of the Location Biomass. We then calculate the Availability Index for each port by summing the Location Biomass within a radius from that port based on the 75th quantile of the distance traveled from port to harvest of species of interest, weighted by catch, as measured from trawl logbooks. We analyzed 12 species that make up a large component of landings for vessels using bottom trawl gear along the West Coast, or that have broader management interest (e.g., shortbelly rockfish).
+**Description** 
+We estimated the relative availability of groundfish biomass to individual ports following the methods described in Selden et al. (2020), with some exceptions. In brief, we used data from the Northwest Fisheries Science Center’s West Coast Groundfish Bottom Trawl Survey (Keller et al. 2017) to estimate spatial distribution of species-specific biomass (Location Biomass), and the Center of Gravity (CoG) of the Location Biomass. We then calculate the Availability Index for each port by summing the Location Biomass within a radius from that port based on the 75th quantile of the distance traveled from port to harvest of species of interest, weighted by catch, as measured from trawl logbooks. We analyzed 12 species that make up a large component of landings for vessels using bottom trawl gear along the West Coast, or that have broader management interest (e.g., shortbelly rockfish).
 
 The present analysis differs from Selden et al. (2020) in three ways:
 
@@ -11,11 +12,13 @@ The present analysis differs from Selden et al. (2020) in three ways:
 3- We used only the WCGBTS, and did not combine the Triennial survey (1980-2004) with the WCGBTS. This approach shortens the analysis period but allows us to expand the depth range to 55-1250 m.
 
 **2025-01 Update**
-
 Previous sdmTMB models used a delta-poisson-link-gamma model structure/distribution and included depth a linear factor. In 2025 (for the CY2025 ESR), models were updated to use a delta-lognormal model structure, and normalized depth was included as a smoothed variable (with three knots). The delta-lognormal models produced better residuals (as evaluate with QQ-plots) than the delta-poisson-link-gamma models. The smoothed depth term allowed non-linear relationships with depth, such as higher mid-depth abundance versus shallow and deeper zones.
 
 **Data sources**
+Data for indicators come from the West Coast Groundfish Bottom Trawl Survey (WCGBTS) (Keller et al. 2017) for 2003-2021. There were no data for 2020 because the WCGBTS was canceled due to the COVID-19 pandemic. The survey data includes estimates of age, length, and biomass for subsamples of each haul, and occasionally for the entire haul when catch is low.
 
 **Data extraction**
 
 **Data analysis**
+
+**References**
