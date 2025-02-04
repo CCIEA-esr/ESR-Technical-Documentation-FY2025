@@ -1,17 +1,18 @@
 # Data and Code Access
 
-**About**
-The Technical Documentation for the annual CCIEA Ecosystem Status Report (ESR) is a Quarto document; hosted on the NOAA Northwest Fisheries Science Center (NWFSC) Github page, and developed in R. Derived data used to populate figures in this document are queried directly from the SWFSC ERDDAP server. ERDDAP queries are made using the R package rerddap.
+**About the CCIEA Ecosystem Status Report (ESR)**
+The annual CCIEA Ecosystem Status Report (ESR) is a Quarto document; hosted on the NOAA Northwest Fisheries Science Center (NWFSC) Github page, and developed in R.
 
-**Accessing data and build code**
-In this technical documentation, we hope to shine a light on the processing and analytical steps involved to get from source data to final product. This means that whenever possible, we have included the code involved in source data extraction, processing, and analyses. We have also attempted to thoroughly describe all methods in place of or in supplement to provided code. Example plotting code for each indicator is presented in sections titled “Plotting”, and these code chunks can be used to recreate the figures found in ecosystem reporting documents where each respective indicator was included1.
+**Indicator data**
+Derived data sets make up the majority of the indicators presented in the CCIEA ESR. In this technical documentation, we list the derived indicators, their source, and where possible, the computations used to produce them from the raw data. This metadata is also [publicly available](https://oceanview.pfeg.noaa.gov/erddap/tabledap/CCIEA_metadata.html) for download. The derived indicator data can be downloaded using links in the sections of this document unless there are privacy concerns involved. In that case, it may be possible to access source data by reaching out to the Data Steward associated with that data set.
 
-Source data for the derived indicators in this document are linked to in the text unless there are privacy concerns involved. In that case, it may be possible to access source data by reaching out to the Point of Contact associated with that data set. Derived data sets make up the majority of the indicators presented in ecosystem reporting documents, and these data sets are available for download through the ecodata R package.
+**Data flow**
+Indicator data is submitted by data providers in a standard format consisting of "long" csv files with standardized column headers and consistent file names. These requirement allow all indicators to be handled with the same R plotting code and enable automation of the data upload process.
 
-**Building the document**
-Start a local build of the ESR Quarto document by first cloning the project’s associated git repository. Next, if you would like to build a past version of the document, use git checkout [version_commit_hash] to revert the project to a past commit of interest, and set build_latest <- FALSE in this code chunk. This will ensure the project builds from a cached data set, and not the most updated versions present on the SWFSC ERDDAP server. Once the xxxxx.Rproj file is opened in RStudio, run Quarto::serve_book() from the console to build the document.
+After uploading, standardized data and metadata is organized on a private Google Drive by ESR year, and served publicly via [ERDDAP&trade;](https://oceanview.pfeg.noaa.gov/erddap/search/index.html?&searchFor=cciea_)
 
-**A note on data structures**
-The majority of the derived time series used in Ecosystem Status reports are in long format. This approach was taken so that all disparate data sets could be “bound” together for ease of use in our base plotting functions.
 
-**catalog link**
+**Plotting code**
+
+
+
