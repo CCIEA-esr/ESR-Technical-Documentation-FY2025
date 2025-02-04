@@ -9,9 +9,10 @@
 #| message: false
 #| eval: true
 source("_getmeta.R")
-alb_meta=getMetadata("cciea_HMS_ALB_DIET")
-blf_meta=getMetadata("cciea_HMS_BLF_DIET")
-swd_meta=getMetadata("cciea_HMS_SWD_DIET")
+erddap_id <- c("cciea_HMS_ALB_DIET","cciea_HMS_BLF_DIET","cciea_HMS_SWD_DIET")
+alb_meta=getMetadata(erddap_id[1])
+blf_meta=getMetadata(erddap_id[2])
+swd_meta=getMetadata(erddap_id[3])
 ```
 
 **Albacore tuna diet**
@@ -79,5 +80,14 @@ if(swd_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </
 ```
 
 **Data extraction**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; links: \n\n")
+for(i in 1:length(erddap_id)){
+  cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
+  }
+```
 
 **Data analysis**

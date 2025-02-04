@@ -38,6 +38,12 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 
 **Data extraction**
 
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_EI_FBN.html>",sep="")
+```
+
 **Data analysis**
 
 **References**

@@ -37,5 +37,14 @@ cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
 cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n")
 ```
 
+**Data extraction**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+```
+
+
 **References**
 
