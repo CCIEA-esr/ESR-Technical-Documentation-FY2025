@@ -9,7 +9,8 @@ In the Northern CCE, the Coastal Observation and Seabird Survey Team (COASST) at
 #| message: false
 #| eval: true
 source("_getmeta.R")
-meta=getMetadata("cciea_B_B_MORT")
+erddap_id = "cciea_B_B_MORT"
+meta=getMetadata(erddap_id)
 regions <- unique(meta['region'])
 num_ind <- nrow(meta)
 num_regions <- nrow(regions)
@@ -39,5 +40,11 @@ if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b
 ```
 
 **Data extraction**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+```
 
 **Data analysis**

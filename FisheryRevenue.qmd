@@ -39,6 +39,12 @@ if(meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",
 
 **Data extraction**
 
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+```
+
 **Data analysis**
 
 **References**

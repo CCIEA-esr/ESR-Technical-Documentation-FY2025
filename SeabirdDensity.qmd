@@ -9,7 +9,8 @@ Sooty shearwaters migrate to the CCE from the Southern Hemisphere in spring and 
 #| message: false
 #| eval: true
 source("_getmeta.R")
-meta=getMetadata("cciea_B_AS_DENS")
+erddap_id="cciea_B_AS_DENS"
+meta=getMetadata(erddap_id)
 regions <- unique(meta['region'])
 num_ind <- nrow(meta)
 num_regions <- nrow(regions)
@@ -40,5 +41,11 @@ if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b
 ```
 
 **Data extraction**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+```
 
 **Data analysis**
