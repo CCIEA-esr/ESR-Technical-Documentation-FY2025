@@ -23,10 +23,6 @@ book:
       chapters:
       - DataCodeAccess.qmd
       - TimeSeriesQuadplots.qmd
-      - TrendAnalysis.qmd
-      - SurveyData.qmd
-      - ConceptualModels.qmd
-      - Glossary.qmd
       
     - part: Climate and Oceans
       chapters:
