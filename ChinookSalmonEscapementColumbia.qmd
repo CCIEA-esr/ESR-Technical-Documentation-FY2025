@@ -2,10 +2,14 @@
 
 **Description** In this analysis, models are fit to past smolt-to-adult return (SAR) data, and use the most recent ecosystem indicator data to predict what smolt-to-adult survival will be for cohorts that have gone to sea but not yet returned. Separate models have been developed for spring and fall Chinook salmon and steelhead from the Snake River basins and spring Chinook salmon from the Upper Columbia basin. The specific approach uses a Dynamic Linear Model, founded on linear regressions of single ecosystem indicators vs. survival rates of PIT-tagged fish that left Bonneville Dam as smolts and returned as adults. The model labeled “Stoplight PC1” uses the first principal component (PC1) from a Principal Component Analysis of the stoplight chart as a covariate. The second model, labeled “CMISST” uses a Covariance Map Index of Sea Surface Temperature (B. Burke, unpublished), which is a metric derived by calculating the similarity of sea surface temperature (SST) spatial patterns in the North Pacific Ocean to a stock-specific optimal pattern. The CMISST metric is still in development, but analyzes to date indicate that the CMISST model has better prediction skill for spring Chinook salmon and steelhead SAR, while the PC1 model has better prediction skill for fall Chinook salmon SAR.
 
+**Indicator Category** Ecological Integrity
+
+**Data Steward** Burke; brian.burke@noaa.gov
+
 **Data sources**
 
 **Data extraction**
 
 **Data analysis**
 
-**catalog link**
+**References**

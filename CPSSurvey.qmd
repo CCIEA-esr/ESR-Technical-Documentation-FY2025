@@ -4,6 +4,12 @@
 
 CPS surveys typically span the area between Cape Flattery and San Diego, but in some years also include Vancouver Island, Canada (2015-2019) and portions of Baja CA (2021-2022). Data and figure provided by K. Stierhoff, NMFS/SWFSC and J. Zwolinski, UCSC and NMFS/SWFSC.
 
+**Indicator Category** Ecological Integrity
+
+**Data Steward** Stierhoff; kevin.stierhoff@noaa.gov
+
+**Additional Information**
+
 **Data sources**
 
 **Data extraction**
