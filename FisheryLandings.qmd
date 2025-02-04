@@ -21,9 +21,11 @@ num_ind = nrow(meta)
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("* <b>Species:</b>\n")
+
 for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
+cat("* **",meta$ERDDAP_query_value[i],"**\n",sep="")
+  if(meta$Additional_Calculations[i]!="")cat("    + *About this indicator: * ",meta$Additional_Calculations[i],"\n")
+cat("    + *Source Data: *",meta$Source_Data[i],"\n")
 }
 ```
 
@@ -33,8 +35,7 @@ cat("     + ",meta$ERDDAP_query_value[i],"\n")
 cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
 cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
 cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-if(meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+
 ```
 
 **Data extraction**
