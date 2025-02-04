@@ -38,8 +38,6 @@ cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
 cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```
 
-**Data sources**
-
 **Data extraction**
 
 **Data analysis**

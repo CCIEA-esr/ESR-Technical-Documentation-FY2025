@@ -26,7 +26,7 @@ for (r in 1:num_regions){
   cat("* <b>Species:</b>\n")
   for (i in 1:num_ind){
     if(meta$region[i]==regions$region[r]){
-      cat("     + ",sub(" encounter.*","",meta$ERDDAP_query_value[i]),"\n")
+      cat("     + ",meta$ERDDAP_query_value[i],"\n")
       cind=i
     }
     }

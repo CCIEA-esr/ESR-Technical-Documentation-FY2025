@@ -26,7 +26,8 @@ for (r in 1:num_regions){
   cat("* <b>Species:</b>\n")
   for (i in 1:num_ind){
     if(meta$region[i]==regions$region[r]){
-      cat("     + ",sub(" \\(.*","",meta$ERDDAP_query_value[i]),"\n")
+      s<-meta$ERDDAP_query_value[i]
+      cat("     + ",paste(sub(" \\(.*","",s),",",sub("\\).*","",sub(".*,","",s)),sep=""),"\n")
       cind=i
     }
     }
