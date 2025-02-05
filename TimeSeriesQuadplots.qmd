@@ -15,7 +15,7 @@ The standard time-series plot (a) shows indicator data relative to the long-term
 
 In some cases where the indicator has defined threshold values (e.g., hypoxia or domoic acid toxicity levels), the time-series plot (b) shows the indicator data relative to these threshold value, indicated with a blue line. In this case, dashed lines indicate upper and lower observation error, and the dotted black lines indicate missing data. 
 
-Sample quad plots are also used in some other cases (e.g., streamflow), where each point represents one normalized time series. The position of a point indicates if the recent trend (x-axis) was increasing or decreasing over the evaluation period and whether the recent mean (y-axis) was above or below the evaluation period mean. Symbols fall therefore fall into quadrants based on recent average (high or low) and recent trend (increasing or decreasing) relative to a defined, long-term evaluation period.
+Sample quad plots (c) are also used in some other cases (e.g., streamflow), where each point represents one normalized time series. The position of a point indicates if the recent trend (x-axis) was increasing or decreasing over the evaluation period and whether the recent mean (y-axis) was above or below the evaluation period mean. Symbols fall therefore fall into quadrants based on recent average (high or low) and recent trend (increasing or decreasing) relative to a defined, long-term evaluation period.
 
 ```{r}
 #| label: fig-standard-plots

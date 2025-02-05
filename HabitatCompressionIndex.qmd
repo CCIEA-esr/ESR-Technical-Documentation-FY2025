@@ -37,8 +37,6 @@ cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
 cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```
 
-**References** @Santora2020, @Schroeder2022
-
 **Public availability statement** Source data are publicly available.
 
 **Data sources** Surface temperature data are the 2 m temperature levels of the University of California Santa Cruz 31-year historical reanalysis (<https://oceanmodeling.ucsc.edu/reanalccs31/>) and near-real-time (NRT; <https://oceanmodeling.ucsc.edu/ccsnrt/>) data-assimilative models.
@@ -50,3 +48,6 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 #| results: 'asis'
 cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
 ```
+
+**References**
+[@santora2020habitat; @schroeder2022habitat]
