@@ -12,7 +12,5 @@ Indicator data is submitted by data providers in a standard format consisting of
 After uploading, standardized data and metadata is organized on a private Google Drive by ESR year, and served publicly via [ERDDAP&trade;](https://oceanview.pfeg.noaa.gov/erddap/search/index.html?&searchFor=cciea_)
 
 
-**Plotting code**
-
 
 
