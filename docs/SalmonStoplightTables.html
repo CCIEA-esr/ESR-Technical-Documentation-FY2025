@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -493,7 +513,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> We use color to represent anomalous years for the stoplight tables presented in the salmon section of the report. As described in Harvey et al.&nbsp;(2023), we have addressed past feedback from the SSC and others by developing a more statistically based stoplight table format, which produces five bins that are determined relative to a fixed baseline reference period. In this new format, we assumed a normal distribution for each of the indicators and estimated a mean and standard deviation for the base period. For each cell within a given indicator, we determined how many standard deviations the values were from their respective base period mean and used a five-color set to indicate whether a value was &gt;2 s.d. below the mean, 1 to 2 s.d. below the mean, within 1 s.d. of the mean in either direction, 1 to 2 s.d. above the mean, or &gt;2 s.d. above the mean. This approach overcomes many of the issues that had been previously identified (e.g., better highlighting values that represent truly exceptional years; past values are now static and do not suddenly change colors; etc.).</p>
+<p><strong>Description</strong> Northern California Current; Columbia Basin stocks: We use color to represent anomalous years for the stoplight tables presented in the salmon section of the report. As described in Harvey et al.&nbsp;(2023), we have addressed past feedback from the SSC and others by developing a more statistically based stoplight table format, which produces five bins that are determined relative to a fixed baseline reference period. In this new format, we assumed a normal distribution for each of the indicators and estimated a mean and standard deviation for the base period. For each cell within a given indicator, we determined how many standard deviations the values were from their respective base period mean and used a five-color set to indicate whether a value was &gt;2 s.d. below the mean, 1 to 2 s.d. below the mean, within 1 s.d. of the mean in either direction, 1 to 2 s.d. above the mean, or &gt;2 s.d. above the mean. This approach overcomes many of the issues that had been previously identified (e.g., better highlighting values that represent truly exceptional years; past values are now static and do not suddenly change colors; etc.).</p>
+<p>Central California Current; Klamath / Sacramento / Central Valley stocks: The process of identifying key indicators for salmon habitat stoplight tables is ongoing (Munsch et al.&nbsp;in prep). To summarize our approach and findings to date, we used linear models to relate recruitment of SRFC, CVSC, and KRFC to salmon habitat indicators. In light of the potential for recruitment-indicator relationships to change over time, we selected indicators based on model performance metrics that suggested that the indicators were persistently or recently important to recruitment. Through preliminary analyses, we selected twelve key indicators, two of which are shared among the California Central Valley stocks (SRFC and CVSC) for a total of ten unique indicators (<span class="quarto-unresolved-ref">?tbl-salmon-info</span>). We note that we only found strong evidence for a linear relationship between natural spawners and future recruitment for SRFC (and thus use this indicator for forecasts below), but report natural spawner counts for other stocks for context. Our ongoing analyses will examine for evidence of a Ricker stock-recruitment relationship, which is not included here.</p>
+<p>We also report new efforts to examine thiamine deficiency in hatchery eggs across the Central Valley in California. Some of the indicators we selected, particularly those relevant to SRFC, have been identified as important by previous research efforts <span class="citation" data-cites="friedman2019modeling munsch2020science munsch2022one">(<a href="#ref-friedman2019modeling" role="doc-biblioref">Friedman et al. 2019</a>; <a href="#ref-munsch2020science" role="doc-biblioref">Munsch et al. 2020</a>, <a href="#ref-munsch2022one" role="doc-biblioref">2022</a>)</span>. Indicators were indexed according to brood year or outmigration year and then adjusted to return or fishing year via the assumptions that juveniles migrated the calendar year after their brood year and that most adults were harvested or returned as spawners three years after their brood year.</p>
 <p>[this section will require a bit more writing to incorporate evolving approaches and methods]</p>
 <p><strong>Data sources</strong></p>
 <p><strong>Data extraction</strong></p>
@@ -501,6 +523,17 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-friedman2019modeling" class="csl-entry" role="listitem">
+Friedman, Whitney R, Benjamin T Martin, Brian K Wells, Pete Warzybok, Cyril J Michel, Eric M Danner, and Steven T Lindley. 2019. <span>“<span class="nocase">Modeling composite effects of marine and freshwater processes on migratory species</span>.”</span> <em>Ecosphere</em> 10 (7): e02743.
+</div>
+<div id="ref-munsch2020science" class="csl-entry" role="listitem">
+Munsch, Stuart H, Correigh M Greene, Rachel C Johnson, William H Satterthwaite, Hiroo Imaki, Patricia L Brandes, and Michael R O’Farrell. 2020. <span>“<span class="nocase">Science for integrative management of a diadromous fish stock: interdependencies of fisheries, flow, and habitat restoration</span>.”</span> <em>Canadian Journal of Fisheries and Aquatic Sciences</em> 77 (9): 1487–1504.
+</div>
+<div id="ref-munsch2022one" class="csl-entry" role="listitem">
+Munsch, Stuart H, Correigh M Greene, Nathan J Mantua, and William H Satterthwaite. 2022. <span>“<span class="nocase">One hundred-seventy years of stressors erode salmon fishery climate resilience in California’s warming landscape</span>.”</span> <em>Global Change Biology</em> 28 (7): 2183–2201.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

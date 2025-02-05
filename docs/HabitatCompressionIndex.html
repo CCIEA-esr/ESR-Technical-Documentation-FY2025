@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -509,13 +529,21 @@ ul.task-list li input[type="checkbox"] {
 <li><b>Source Data: </b> The habitat compression index uses 2 m temperature from the historic and NRT data assimilative ROMS physical model of the California Current system (http//:oceanmodeling.ucsc.edu/index.html). Grid points between 30-48 degrees N and from the shore out to 150 km offshore are used in the analysis.</li>
 <li><b>Additional Calculations: </b> In eastern boundary upwelling ecosystems the spatial footprint of cool upwelled water is regularly demarcated by the differential boundary of warmer oceanic water offshore from cooler coastal water, with upwelling conditions varying with latitude. Therefore, the goal of the habitat compression index (HCI) is to track the area of cool surface waters as an index of potential ‘upwelling habitat’ for assessing the spatio-temporal aspects of upwelling. Upwelling patterns of cold nutrient-rich water are clearly assessed by models and satellite observations and classified spatially by monitoring SST values less than and equal to a monthly resolved temperature threshold. The HCI tracks the amount of area, determined by the number of grid cells in the model with 2 m surface temperature values less than the monthly temperature threshold, therefore the time series reflects the area of cool water adjacent to the coastline and provides a measure for how compressed cool surface temperatures may be in a particular month. In this study (Schroeder et al.&nbsp;2022; https://www.sciencedirect.com/science/article/pii/S1470160X22009931), we extracted modeled 2 m temperature fields over the domain of 35.5-40 degree N for each month and tracked the amount of area with temperature values less than and equal to a monthly temperature threshold, resulting in monthly time series starting January 1980. Monthly temperature thresholds for a given month is the spatial average of 2 m temperature grid cells between 35.5-40N from shore out to 75 km for the time period 1980-2010. Cool expansion periods (low compression) are defined as months with HCI values exceeding + 1 standard deviation (SD) of the full time series, limited cool habitat (high compression) where area of cool water is less than the mean (MN) of the full time series, and periods of medium compression when the area of cool water falls between the +1 SD and the MN.</li>
 </ul>
-<p><strong>References</strong> <span class="citation" data-cites="Santora2020">(<a href="#ref-Santora2020" role="doc-biblioref"><strong>Santora2020?</strong></a>)</span>, <span class="citation" data-cites="Schroeder2022">(<a href="#ref-Schroeder2022" role="doc-biblioref"><strong>Schroeder2022?</strong></a>)</span></p>
 <p><strong>Public availability statement</strong> Source data are publicly available.</p>
 <p><strong>Data sources</strong> Surface temperature data are the 2 m temperature levels of the University of California Santa Cruz 31-year historical reanalysis (<a href="https://oceanmodeling.ucsc.edu/reanalccs31/" class="uri">https://oceanmodeling.ucsc.edu/reanalccs31/</a>) and near-real-time (NRT; <a href="https://oceanmodeling.ucsc.edu/ccsnrt/" class="uri">https://oceanmodeling.ucsc.edu/ccsnrt/</a>) data-assimilative models.</p>
 <p><strong>Data extraction</strong></p>
 <p>ERDDAP™ link: <a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_OC_HCI.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_OC_HCI.html</a></p>
+<p><strong>References</strong> <span class="citation" data-cites="santora2020habitat schroeder2022habitat">(<a href="#ref-santora2020habitat" role="doc-biblioref">Santora et al. 2020</a>; <a href="#ref-schroeder2022habitat" role="doc-biblioref">Schroeder et al. 2022</a>)</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-santora2020habitat" class="csl-entry" role="listitem">
+Santora, Jarrod A, Nathan J Mantua, Isaac D Schroeder, John C Field, Elliott L Hazen, Steven J Bograd, William J Sydeman, et al. 2020. <span>“<span class="nocase">Habitat compression and ecosystem shifts as potential links between marine heatwave and record whale entanglements</span>.”</span> <em>Nature Communications</em> 11 (1): 1–12.
+</div>
+<div id="ref-schroeder2022habitat" class="csl-entry" role="listitem">
+Schroeder, Isaac D, Jarrod A Santora, Nate Mantua, John C Field, Brian K Wells, Elliott L Hazen, Michael Jacox, and Steven J Bograd. 2022. <span>“Habitat Compression Indices for Monitoring Ocean Conditions and Ecosystem Impacts Within Coastal Upwelling Systems.”</span> <em>Ecological Indicators</em> 144: 109520.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
