@@ -2,7 +2,7 @@
 
 Flow is derived from active USGS gauges with records that are of at least 30 years’ duration (waterdata.usgs.gov/nwis/sw). Daily means from 213 gauges were used to calculate annual 1-day maximum and 7-day minimum flows for ecoregion and Chinook salmon ESU boundaries. These indicators correspond to flow parameters to which salmon populations are most sensitive. We use standardized anomalies of streamflow time series from individual gauges.
 
-Freshwater habitat indicators are reported based on a hierarchical spatial framework. The framework facilitates comparisons of data at the right spatial scale for particular users, whether this be the entire California Current, ecoregions within the CCE, or smaller spatial units. The framework we use divides the region encompassed by the CCE into ecoregions (Fig. 1.1), and ecoregions into smaller physiographic units. Freshwater ecoregions are based on the biogeographic delineations in Abell et al. (2008), see also www.feow.org, who define six ecoregions for watersheds entering the California Current, three of which comprise the two largest watersheds directly entering the California Current (the Columbia and the Sacramento-San Joaquin Rivers). Within ecoregions, we summarized data at scales of evolutionary significant units (ESUs) and 8-field hydrologic unit classifications (HUC-8). Status and trends for all freshwater indicators are estimated using space-time models that account for spatial and temporal autocorrelation (Lindgren and Rue 2015).
+Freshwater habitat indicators are reported based on a hierarchical spatial framework. The framework facilitates comparisons of data at the right spatial scale for particular users, whether this be the entire California Current, ecoregions within the CCE, or smaller spatial units. The framework we use divides the region encompassed by the CCE into ecoregions (Fig. 1.1), and ecoregions into smaller physiographic units. Freshwater ecoregions are based on the biogeographic delineations in [@abell2008freshwater], see also www.feow.org, who define six ecoregions for watersheds entering the California Current, three of which comprise the two largest watersheds directly entering the California Current (the Columbia and the Sacramento-San Joaquin Rivers). Within ecoregions, we summarized data at scales of evolutionary significant units (ESUs) and 8-field hydrologic unit classifications (HUC-8). Status and trends for all freshwater indicators are estimated using space-time models that account for spatial and temporal autocorrelation [@lindgren2015bayesian].
 
 ```{r}
 #| echo: false
@@ -50,3 +50,5 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\
 #| results: 'asis'
 cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
 ```
+
+**References**
