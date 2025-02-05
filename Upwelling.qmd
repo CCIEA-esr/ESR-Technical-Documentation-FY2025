@@ -4,9 +4,9 @@
 
 The CCE is an upwelling dominated system, with the interaction between upwelling, stratification, and source water properties controlling much of coastal temperatures, nutrient input, and overall productivity.
 
-The Coastal Upwelling Transport Index (CUTI, pronounced "cutie") and the Biologically Effective Upwelling Transport Index (BEUTI; pronounced "beauty") leverage state-of-the-art ocean models as well as satellite and in situ data to improve upon historically available upwelling indices for the U.S. west coast. CUTI provides estimates of vertical transport near the coast (i.e., upwelling/downwelling). It was developed as a more accurate alternative to the previously available ‘Bakun Index’. BEUTI provides estimates of vertical nitrate flux near the coast (i.e., the amount of nitrate upwelled/downwelled), which may be more relevant than upwelling strength when considering some biological responses.
+The Coastal Upwelling Transport Index (CUTI, pronounced "cutie") and the Biologically Effective Upwelling Transport Index (BEUTI; pronounced "beauty") leverage state-of-the-art ocean models as well as satellite and in situ data to improve upon historically available upwelling indices for the U.S. west coast [@jacox2018coastal]. CUTI provides estimates of vertical transport near the coast (i.e., upwelling/downwelling). It was developed as a more accurate alternative to the previously available ‘Bakun Index’. BEUTI provides estimates of vertical nitrate flux near the coast (i.e., the amount of nitrate upwelled/downwelled), which may be more relevant than upwelling strength when considering some biological responses.
 
-The historical Bakun (1973, 1975) upwelling indices provide long time series of upwelling, and are based on estimates of offshore Ekman transport driven by geostrophic wind stress. Geostrophic winds are derived from mean surface atmospheric pressure fields provided by the U.S. Navy Fleet Numerical Meteorological and Oceanographic Center (FNMOC), Monterey, CA.
+The historical Bakun (@bakun1973coastal; @bakun1975daily) upwelling indices provide long time series of upwelling, and are based on estimates of offshore Ekman transport driven by geostrophic wind stress. Geostrophic winds are derived from mean surface atmospheric pressure fields provided by the U.S. Navy Fleet Numerical Meteorological and Oceanographic Center (FNMOC), Monterey, CA.
 
 Time series of the upwelling indices provide information on upwelling strength at sub-seasonal frequency and upwelling phenology, and allow interannual comparisons of seasonal upwelling timing and frequency. Additionally, the calculation of cumulative upwelling allows for a comparison of the total amount of upwelling a region receives during the entire course of the year. Cumulative upwelling is calculated as the daily summation of upwelling values (additive for positive upwelling, and subtractive for negative upwelling - aka downwelling) starting on Jan 1 and ending on Dec 31st.
 
@@ -98,3 +98,4 @@ for(i in 1:length(erddap_id)){
   }
 ```
 
+**References**
