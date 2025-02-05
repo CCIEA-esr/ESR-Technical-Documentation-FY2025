@@ -1,6 +1,9 @@
 # Juvenile Salmon
 
-**Description** \[Write this up \]
+**Description** 
+The Northern CCE survey (known as the Juvenile Salmon Ocean Ecology Survey, JSOES) occurs in June and targets juvenile salmon in surface waters off Oregon and Washington. A Nordic 264 rope trawl is towed for 15-30 min at approximately 6.5 km/hr. The gear is fished during daylight hours in near-surface (upper 20 m) waters, which is appropriate for targeting juvenile salmon.
+
+Juvenile salmon data from the Northern CCE are provided by B. Burke, NMFS/NWFSC and C. Morgan, OSU/CIMRS. Data are derived from surface trawls taken during the NWFSC Juvenile Salmon & Ocean Ecosystem Survey (JSOES; https://www.fisheries.noaa.gov/west-coast/science-data/ocean-ecosystem-indicators-pacific-salmon-marine-survival-northern). Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.
 
 **Indicators**
 
