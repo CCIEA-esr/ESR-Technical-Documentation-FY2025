@@ -9,8 +9,9 @@ Derived data sets make up the majority of the indicators presented in the CCIEA 
 **Data flow**
 Indicator data is submitted by data providers in a standard format consisting of "long" csv files with standardized column headers and consistent file names. These requirement allow all indicators to be handled with the same R plotting code and enable automation of the data upload process.
 
-After uploading, standardized data and metadata is organized on a private Google Drive by ESR year, and served publicly via [ERDDAP&trade;](https://oceanview.pfeg.noaa.gov/erddap/search/index.html?&searchFor=cciea_)
+After uploading, standardized data and metadata is organized on a private Google Drive by ESR year, and served [publicly](https://oceanview.pfeg.noaa.gov/erddap/search/index.html?&searchFor=cciea_) via ERDDAP&trade; [@simons2022erddap]
 
+**References**
 
 
 
