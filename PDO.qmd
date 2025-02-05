@@ -1,6 +1,6 @@
 # PDO (Pacific Decadal Oscillation)
 
-**Description** The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The Pacific Decadal Oscillation (PDO) describes North Pacific sea surface temperature (SST) anomalies that may persist for many years. The PDO is derived from sea surface temperature anomalies (SSTa) in the Northeast Pacific, which often persist in “regimes” that last for many years. In positive PDO regimes, coastal SSTa along North American tend to be warmer, while those in the central North Pacific tend to be cooler. Positive PDOs are associated with warmer SST and lower productivity in the CCE, while negative PDOs indicate cooler SST and are associated with higher productivity.
+**Description** The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The Pacific Decadal Oscillation (PDO) describes North Pacific sea surface temperature (SST) anomalies that may persist for many years. The PDO is derived from sea surface temperature anomalies (SSTa) in the Northeast Pacific, which often persist in “regimes” that last for many years [@Wen2014factors; @Huang2017extended; @Smith2008improvements]. In positive PDO regimes, coastal SSTa along North American tend to be warmer, while those in the central North Pacific tend to be cooler. Positive PDOs are associated with warmer SST and lower productivity in the CCE, while negative PDOs indicate cooler SST and are associated with higher productivity.
 
 ```{r get-file-from-google-drive}
 #| echo: false
@@ -36,3 +36,4 @@ cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erdd
 
 **Data analysis**
 
+**Reference**
