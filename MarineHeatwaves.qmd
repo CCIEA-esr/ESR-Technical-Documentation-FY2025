@@ -32,7 +32,7 @@ The underlying climatology used for SST anomaly analysis has changed from 1982-2
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **References**

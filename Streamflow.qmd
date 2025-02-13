@@ -1,4 +1,5 @@
 # Streamflow
+{{< include _setup.qmd >}}
 
 Flow is derived from active USGS gauges with records that are of at least 30 years’ duration (waterdata.usgs.gov/nwis/sw). Daily means from 213 gauges were used to calculate annual 1-day maximum and 7-day minimum flows for ecoregion and Chinook salmon ESU boundaries. These indicators correspond to flow parameters to which salmon populations are most sensitive. We use standardized anomalies of streamflow time series from individual gauges.
 
@@ -6,41 +7,11 @@ Freshwater habitat indicators are reported based on a hierarchical spatial frame
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-erddap_id='cciea_HB_FLOW'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
 #| results: 'asis'
-
+erddap_id='cciea_HB_FLOW'
 regions=c("Ecoregion","ESU")
-nregions=length(regions)
 meas=c("1 day max","7 day min")
-nmeas=length(meas)
-for(j in 1:nregions){
-  for(k in 1:nmeas){
-    cat("**Streamflow ",meas[k]," ",regions[j]," indicators:**\n\n",sep="")
-    cat("* <b>",regions[j],"s:</b>\n",sep="")
-      for (i in 1:num_ind){
-        if(grepl(meas[k],meta$Title[i]) & grepl(regions[j],meta$Title[i])){
-  cat("     + ",meta$region[i],"\n")
-  cind=i
-  }
-}
-
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
-  }
-}
+one_id_by_twotitle_query(erddap_id,regions,meas,"Streamflow ")
 ```
 
 **Data extraction**
@@ -48,7 +19,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **References**

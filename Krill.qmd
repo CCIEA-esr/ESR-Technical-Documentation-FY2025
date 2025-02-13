@@ -1,4 +1,5 @@
 # Krill
+{{< include _setup.qmd >}}
 
 **Description** Krill are among the most important prey in the CCE. The krill Euphausia pacifica is sampled year-round along the Trinidad Head Line off northern California (Fig. 1.1). Mean adult length and total biomass of E. pacifica sampled off the Trinidad Head Line indicate productivity at the base of the food web, krill condition, and energy content for predators [@robertson2020climate; @fisher2020comparison].
 
@@ -8,31 +9,11 @@ Krill are also detected acoustically during the Joint U.S.-Canada Pacific Hake E
 
 Krill biomass estimates derived from the Joint U.S.-Canada Pacific Hake Ecosystem and Acoustic Trawl (PHEAT) survey hydroacoustic data are provided by E. Phillips, NMFS/NWFSC.
 
-```{r get-file-from-google-drive}
-#| echo: false
-#| message: false
-#| eval: true
-erddap_id='cciea_EI_KRILLEN'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-**Indicators**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
-
-for (i in 1:num_ind){
-  cat("* <b>",meta$Title[i],"</b>\n")
-  cat("     + *Additional Calculations: *",meta$Additional_Calculations[i],"\n")
-  }
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-
+erddap_id='cciea_EI_KRILLEN'
+one_id_multimeta(erddap_id)
 ```
 
 **Data extraction**
@@ -40,7 +21,7 @@ cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 

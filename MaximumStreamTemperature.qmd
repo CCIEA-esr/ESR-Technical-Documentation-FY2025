@@ -1,4 +1,5 @@
 # Maximum Stream Temperatures
+{{< include _setup.qmd >}}
 
 **Description** Mean maximum stream temperatures in August were determined from 446 USGS gauges with temperature monitoring capability. While these gauges did not necessarily operate simultaneously throughout the period of record, at least two gauges provided data each year in all ecoregions. Stream temperature records are limited in California, so two ecoregions (Sacramento/San Joaquin and Southern California Bight-Baja) were combined. Maximum temperatures exhibit strong ecoregional differences in absolute temperature (for example, Salish Sea and Washington Coast streams are much cooler on average than California streams).
 
@@ -7,41 +8,11 @@ Freshwater habitat indicators are reported based on a hierarchical spatial frame
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-erddap_id='cciea_HB_FLOW'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
 #| results: 'asis'
-
+erddap_id='cciea_HB_FLOW'
 regions=c("Ecoregion")
-nregions=length(regions)
 meas=c("August Mean Max stream temperature")
-nmeas=length(meas)
-for(j in 1:nregions){
-  for(k in 1:nmeas){
-    cat("**Streamflow ",meas[k]," ",regions[j]," indicators:**\n\n",sep="")
-    cat("* <b>",regions[j],"s:</b>\n",sep="")
-      for (i in 1:num_ind){
-        if(grepl(meas[k],meta$Title[i]) & grepl(regions[j],meta$Title[i])){
-  cat("     + ",meta$region[i],"\n")
-  cind=i
-  }
-}
-
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
-  }
-}
+one_id_by_twotitle_query(erddap_id,regions,meas,"")
 ```
 
 **Data extraction**
@@ -49,7 +20,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **Data analysis**

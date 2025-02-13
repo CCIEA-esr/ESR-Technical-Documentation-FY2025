@@ -1,4 +1,5 @@
 # Northern California Current Forage
+{{< include _setup.qmd >}}
 
 **Description** The Northern CCE survey (known as the Juvenile Salmon Ocean Ecology Survey, JSOES) occurs in June and targets juvenile salmon in surface waters off Oregon and Washington. It also collects adult and juvenile (age 1+) pelagic forage fishes, market squid, and gelatinous zooplankton with regularity. A Nordic 264 rope trawl is towed for 15-30 min at approximately 6.5 km/hr. The gear is fished during daylight hours in near-surface (upper 20 m) waters, which is appropriate for targeting juvenile salmon.
 
@@ -10,33 +11,9 @@ Pelagic forage data from the Northern CCE are provided by B. Burke, NMFS/NWFSC a
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_EI_FBN'
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+one_id_byquery(erddap_id,"Species")
 ```
 
 **Data extraction**
@@ -44,7 +21,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **Data analysis**

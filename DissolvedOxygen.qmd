@@ -1,16 +1,12 @@
 # Dissolved Oxygen
+{{< include _setup.qmd >}}
 
 **Description** 
 Nearshore dissolved oxygen (DO) depends on many processes, including currents, upwelling, air--sea exchange, and community-level production and respiration in the water column and benthos. DO is required for organismal respiration; low DO can compress habitat and cause stress or die-offs for sensitive species. Waters with DO levels \<1.4 mL/L (\~ 2 mg/L, note unit change) are considered to be hypoxic; such conditions may occur on the shelf following the onset of spring upwelling, and continue into the summer and early fall months until the fall transition vertically mixes shelf waters. Upwelling-driven hypoxia occurs because upwelled water from deeper ocean sources tends to be low in DO, and microbial decomposition of organic matter in the summer and fall increases overall system respiration and oxygen consumption, particularly closer to the seafloor [(]@chan2008emergence].
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
 erddap_id='cciea_OC_DO'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
 ```
 
 **CalCOFI Indicators**
@@ -18,23 +14,7 @@ num_ind = nrow(meta)
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("* <b>Locations:</b>\n")
-for (i in 1:num_ind){
-if(grepl("CalCOFI",meta$Title[i])){
-  cat("     + ",meta$ERDDAP_query_value[i],"\n")
-  cind=i
-  }
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n")
+one_id_by_title_query(erddap_id,"CalCOFI","Locations")
 ```
 
 **Newport Line Indicators**
@@ -42,23 +22,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n"
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("* <b>Locations:</b>\n")
-for (i in 1:num_ind){
-if(grepl("NH",meta$Title[i])){
-  cat("     + ",meta$ERDDAP_query_value[i],"\n")
-  cind=i
-  }
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n")
+one_id_by_title_query(erddap_id,"NH","Locations")
 ```
 
 **Data extraction**
@@ -66,7 +30,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n"
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 

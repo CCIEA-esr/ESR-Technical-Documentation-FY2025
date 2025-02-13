@@ -1,4 +1,5 @@
 # Snow-water equivalent
+{{< include _setup.qmd >}}
 
 **Description** 
 Snow-water equivalent (SWE) is measured using data from the California Department of Water Resources snow survey program (California Data Exchange Center, cdec.water.ca.gov) and The Natural Resources Conservation Service’s SNOTEL sites across Washington, Oregon, California and Idaho. Snow data are converted into SWEs based on the weight of samples collected at regular intervals using a standardized protocol. Measurements on April 1 are considered the best indicator of maximum extent of SWE; thereafter snow tends to melt rather than accumulate.
@@ -7,41 +8,12 @@ Freshwater habitat indicators are reported based on a hierarchical spatial frame
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-erddap_id='cciea_HB_FLOW'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
 #| results: 'asis'
-
+erddap_id='cciea_HB_FLOW'
 regions=c("Ecoregion")
-nregions=length(regions)
 meas=c("Snow water equivalent")
-nmeas=length(meas)
-for(j in 1:nregions){
-  for(k in 1:nmeas){
-    cat("**Streamflow ",meas[k]," ",regions[j]," indicators:**\n\n",sep="")
-    cat("* <b>",regions[j],"s:</b>\n",sep="")
-      for (i in 1:num_ind){
-        if(grepl(meas[k],meta$Title[i]) & grepl(regions[j],meta$Title[i])){
-  cat("     + ",meta$region[i],"\n")
-  cind=i
-  }
-}
+one_id_by_twotitle_query(erddap_id,regions,meas,"")
 
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
-  }
-}
 ```
 
 **Data extraction**
@@ -49,7 +21,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **References**

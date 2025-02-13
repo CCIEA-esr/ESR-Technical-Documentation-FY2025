@@ -1,4 +1,5 @@
 # Central California Current Forage
+{{< include _setup.qmd >}}
 
 **Description** 
 The Central CCE forage survey (known as the Rockfish Recruitment and Ecosystem Assessment Survey, RREAS) samples much of the West Coast each May to mid-June, using midwater trawls sampling between 30 and 45 m depths during nighttime hours. The survey targets young-of-the-year (YOY) rockfish species and a variety of other YOY and adult forage species, market squid, adult krill, and gelatinous zooplankton. Juvenile rockfish, anchovy, krill, and market squid are among the most important prey for CCE predators [@szoboszlai2015forage]. Time series presented here are from the "Core Area" of that survey, centered off Monterey Bay. Catch data were standardized by using a delta-GLM to estimate year effects while accounting for spatial and temporal covariates to yield relative abundance indices, shown with their approximate 95% confidence limits [@santora2021diverse]. The 2023 survey effort in the "Core Area" was comparable to previous years, apart from 2020.
@@ -9,33 +10,9 @@ Pelagic forage data from the Central CCE were provided by J. Field, T. Rogers, K
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_EI_FBC'
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+one_id_byquery(erddap_id,"Species")
 ```
 
 **Data extraction**
@@ -43,7 +20,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 

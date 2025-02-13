@@ -8,6 +8,11 @@
 library(tidyverse)
 library(dplyr)
 
+#-------- getMetadata(erddap_id) --------------
+# Get subset of metadata by column and erddap_id
+# We could read directly from the spreadsheet on the Google Drive, but downloading the csv file ensures
+# that everyone is using the same metadata.csv file, and it can easily be archived by ESR year
+
 getMetadata <-function(erddap_id){
 # get link from google drive
 # 'https://docs.google.com/spreadsheets/d/1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo/edit?gid=727721099#gid=727721099'
@@ -23,7 +28,12 @@ getMetadata <-function(erddap_id){
   meta <- meta[order(meta$Figure_grouping),]
   return(meta)
   }
+  
+# Functions to print out metadata for data sets organized in various ways
 
+#----------one_id_multimeta(erddap_id) ------------
+# Common case when there is one erddap_id but the dataset may have multiple indicators, each with it's own unique metadata
+#Examples: ONI (one indicator), MarineHeatWaves (multiple indicators)
 one_id_multimeta <-function(erddap_id){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
@@ -35,6 +45,11 @@ one_id_multimeta <-function(erddap_id){
     }
   }
   
+#----------one_id_bylat(erddap_id) ------------
+# One erddap_id but multiple indicators, each at a different latitude or latitude range
+# Prints only latitude unless latitude2 is present, in which case print the range
+# Assumes the metadata is the same for all latitudes
+# Examples: SST and HCI
 one_id_bylat <-function(erddap_id){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
@@ -48,6 +63,72 @@ one_id_bylat <-function(erddap_id){
     print_meta(meta,1)
   }
   
+#----------one_id_byquery(erddap_id,query_title) ------------
+# One erddap_id but multiple indicators, list by query parameter (typically species)
+# Example: Forage
+one_id_byquery <-function(erddap_id,query_title){
+  meta=getMetadata(erddap_id)
+  num_ind = nrow(meta)
+  cat("* <b>",query_title,":</b>\n",sep="")
+
+  for (i in 1:num_ind){
+    cat("     + ",meta$ERDDAP_query_value[i],"\n")
+    }
+    print_meta(meta,1)
+  }
+   
+#----------one_id_by_title_query(erddap_id,title_phrase,query_title) ------------
+# One erddap_id but multiple indicators, each with different erddap_query_parameter (commonly location or species)
+# Sort indicators according to a phrase contained in its Title, asssumes metadata is the same for indicators sorted by each phrase
+# Prints query parameters contained in each sorted set under the heading query_title
+# Example: Dissolved Oxygen
+one_id_by_title_query <-function(erddap_id,title_phrase,query_title){
+  meta=getMetadata(erddap_id)
+  num_ind = nrow(meta)
+  cat("* <b>",query_title,":</b>\n",sep="")
+
+  for (i in 1:num_ind){
+    if(grepl(title_phrase,meta$Title[i])){
+      cat("     + ",meta$ERDDAP_query_value[i],"\n")
+      cind=i
+      }
+    }
+    print_meta(meta,cind)
+  }
+  
+#----------one_id_by_twotitle_query(erddap_id,title_phrase1,title_phrase2,query_title) ------------
+# One erddap_id but multiple indicators, each with different erddap_query_parameter (commonly location or species)
+# Sort indicators according to two phrases contained in its Title, asssumes metadata is the same for indicators sorted by each phrase
+# Prints query parameters contained in each sorted set under the heading query_title
+# title_prases are vectors
+# future: generalize for any number of phrases (eliminate function one_id_by_title_query)
+# Example: Dissolved Oxygen
+one_id_by_twotitle_query <-function(erddap_id,title_phrase1,title_phrase2,query_title){
+  meta=getMetadata(erddap_id)
+  num_ind = nrow(meta)
+  nphrase1=length(title_phrase1)
+  nphrase2=length(title_phrase2)
+  
+  for(j in 1:nphrase1){
+    for(k in 1:nphrase2){
+      cat("<p>**",query_title,title_phrase2[k]," ",title_phrase1[j]," indicators:**\n\n",sep="")
+      cat("* <b>",title_phrase1[j],"s:</b>\n",sep="")
+        for (i in 1:num_ind){
+          if(grepl(title_phrase2[k],meta$Title[i]) & grepl(title_phrase1[j],meta$Title[i])){
+            cat("     + ",meta$region[i],"\n")
+            cind=i
+             }
+           }
+         print_meta(meta,cind)
+         cat("</p>")
+         }
+       } 
+  }
+  
+#----------multi_id_onemeta(erddap_id) ------------
+# Multiple erddap_id's but each has the same metadata
+# erddap_id is a vector
+# Example: NPH and NPH_JF on same page
 multi_id_onemeta <-function(erddap_id){
   num_ind = length(erddap_id)
   metalist <- list()
@@ -63,7 +144,11 @@ multi_id_onemeta <-function(erddap_id){
     }
     print_meta(meta,2)
   }
-  
+
+#-----------print_meta(meta,i)----------------
+# Used by functions above that print metadata, used for all pages
+# meta: list extracted by getMetadata()
+# i: the list index number to print
 print_meta <- function(meta,i){
     cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n",sep="")
     cat("* <b>Data Steward: </b>",meta$Contact[i],"\n",sep="")
@@ -72,6 +157,8 @@ print_meta <- function(meta,i){
     if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n",sep="")
 }
   
+#-----------multi_id_onemeta(erddap_id)----------------
+# print the ERDDAP link(s) for a given set of erddap_id(s)
 get_erddap_link <-function(erddap_id){
   s=""
   if(length(erddap_id)>1)s="s"
