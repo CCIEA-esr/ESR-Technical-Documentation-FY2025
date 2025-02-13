@@ -1,6 +1,7 @@
 
 # Habitat Compression Index
 
+{{< include _setup.qmd >}}
 
 **Description** The Habitat Compression Index (HCI) is the area of cool habitat along the coast, which is suitable for a diverse and productive portion of the CCE food web. HCI is estimated in four biogeographic provinces along the shelf within the CCE. See [@santora2020habitat; @schroeder2022habitat] for more information.
 
@@ -8,33 +9,9 @@
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_OC_HCI'
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Latitude bands:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",meta$latitude[i],"-",meta$latitude2[i],"N\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+one_id_bylat(erddap_id)
 ```
 
 **Public availability statement** Source data are publicly available.
@@ -46,7 +23,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **References**

@@ -1,17 +1,15 @@
 
 # Marine Heatwaves
+{{< include _setup.qmd >}}
 
 **Description** Marine heatwaves (MHW) occur when ocean temperatures are much warmer than usual for an extended period of time; they are specifically defined by the difference between the current temperature and the expected temperature for a specific location and time of year \[1\]. MHWs are a growing field of study worldwide because of their effects on ecosystem structure, biodiversity, and regional economies.
 
 
-```{r get-file-from-google-drive}
+```{r}
 #| echo: false
-#| message: false
-#| eval: true
+#| results: 'asis'
+
 erddap_id='cciea_OC_MHW'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
 ```
 
 **Indicators**
@@ -20,14 +18,7 @@ num_ind = nrow(meta)
 #| echo: false
 #| results: 'asis'
 
-for (i in 1:num_ind){
-cat("* <b>",meta$Title[i],"</b>\n")
-cat("     + *Component Category: *", meta$Component_Section[i],"\n")
-cat("     + *Data Steward: *",meta$Contact[i],"\n")
-cat("     + *Institution: *",meta$Institution[i],"\n")
-if(meta$Source_Data[i]!="")cat("     + *Source Data: *",meta$Source_Data[i],"\n")
-if(meta$Additional_Calculations[i]!="")cat("     + *Additional Calculations: *",meta$Additional_Calculations[i],"\n")
-}
+one_id_multimeta(erddap_id)
 ```
 
 **Additional Information**

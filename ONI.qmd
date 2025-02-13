@@ -1,39 +1,23 @@
 # ONI (Oceanic Niño Index)
-
+{{< include _setup.qmd >}}
 
 **Description** The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. El Niño–Southern Oscillation (ENSO) events impact the CCLME by modifying the jet stream and storm tracks, changing the nearshore thermocline, and influencing coastal currents that affect poleward transport and distribution of equatorial and subequatorial waters (and species). the status of the equatorial ENSO is described by the Oceanic Niño Index. An ONI above 0.5°C indicates El Niño conditions, which often lead to lower primary production, weaker upwelling, poleward transport of equatorial waters and species, and more southerly storm tracks in the CCE. An ONI below -0.5°C means La Niña conditions, which create atmospheric pressure conditions that lead to upwelling-favorable winds that drive productivity in the CCE.
 
-
-```{r get-file-from-google-drive}
-#| echo: false
-#| message: false
-#| eval: true
-erddap_id='cciea_OC_ONI'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
 
 ```{r}
 #| echo: false
 #| results: 'asis'
 
-for (i in 1:num_ind){
-cat("<b>",meta$Title[i],"</b>\n\n",sep="")
-cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[i],"\n")
-cat("* <b>Institution: </b>",meta$Institution[i],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n")
-if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n")
-}
+erddap_id='cciea_OC_ONI'
+one_id_multimeta(erddap_id)
 ```
+
 
 **Data extraction**
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
-**Data analysis**

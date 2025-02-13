@@ -1,4 +1,5 @@
 # Upwelling
+{{< include _setup.qmd >}}
 
 **Description**
 
@@ -12,79 +13,29 @@ Time series of the upwelling indices provide information on upwelling strength a
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
+#| results: 'asis'
 erddap_id <- c("cciea_OC_CUTI","cciea_OC_BEUTI","cciea_OC_UI")
-cuti_meta=getMetadata(erddap_id[1])
-beuti_meta=getMetadata(erddap_id[2])
-bakun_meta=getMetadata(erddap_id[3])
-meta <- rbind(cuti_meta,beuti_meta,bakun_meta)
-num_ind=nrow(meta)
 ```
 
 **Coastal Upwelling Transport Index (CUTI)**
 ```{r}
 #| echo: false
 #| results: 'asis'
-num_ind=nrow(cuti_meta)
-
-cat("* <b>Latitudes:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",cuti_meta$latitude[i],"N\n")
-}
+one_id_bylat(erddap_id[1])
 ```
 
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", cuti_meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",cuti_meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",cuti_meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",cuti_meta$Source_Data[1],"\n")
-if(cuti_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",cuti_meta$Additional_Calculations[1],"\n")
-```
 **Biologically Effective Upwelling Transport Index (BEUTI)**
 ```{r}
 #| echo: false
 #| results: 'asis'
-num_ind=nrow(beuti_meta)
-
-cat("* <b>Latitudes:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",beuti_meta$latitude[i],"N\n")
-}
+one_id_bylat(erddap_id[2])
 ```
 
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", beuti_meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",beuti_meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",beuti_meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",beuti_meta$Source_Data[1],"\n")
-if(beuti_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",beuti_meta$Additional_Calculations[1],"\n")
-```
 **Bakun Upwelling Index**
 ```{r}
 #| echo: false
 #| results: 'asis'
-num_ind=nrow(bakun_meta)
-
-cat("* <b>Latitudes:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",bakun_meta$latitude[i],"N\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", bakun_meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",bakun_meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",bakun_meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",bakun_meta$Source_Data[1],"\n")
-if(bakun_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",bakun_meta$Additional_Calculations[1],"\n")
+one_id_bylat(erddap_id[3])
 ```
 
 **Data extraction**
@@ -92,10 +43,7 @@ if(bakun_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: 
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; links: \n\n")
-for(i in 1:length(erddap_id)){
-  cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
-  }
+get_erddap_link(erddap_id)
 ```
 
 **References**

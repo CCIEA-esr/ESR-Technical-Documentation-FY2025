@@ -1,0 +1,85 @@
+
+```{r setup}
+#| echo: false
+#| message: false
+#| eval: true
+# download/update the excel file with the spreadsheet ####
+
+library(tidyverse)
+library(dplyr)
+
+getMetadata <-function(erddap_id){
+# get link from google drive
+# 'https://docs.google.com/spreadsheets/d/1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo/edit?gid=727721099#gid=727721099'
+#library(googledrive)
+#if(1==1){
+#file_id = '1QlA_c8Km6SmkOke19nVpsE7gpw8RcY7zY69fnCeSIYo'
+#drive_download( as_id(file_id) , path = 'metadata.csv', overwrite = TRUE)
+#}
+
+  df = read.csv('metadata.csv')
+  df_trimmed<- df %>% select(c('Component_Section', 'Subcomponent', 'ERDDAP_Dataset_ID', 'ERDDAP_query_value', 'Contact', 'Title', 'Institution', 'Source_Data', 'Additional_Calculations', 'region', 'latitude', 'longitude', 'latitude2', 'longitude2','Sampling_frequency','Figure_grouping','year_begin','year_end'))
+  meta <- df_trimmed %>% filter(ERDDAP_Dataset_ID==erddap_id)
+  meta <- meta[order(meta$Figure_grouping),]
+  return(meta)
+  }
+
+one_id_multimeta <-function(erddap_id){
+  meta=getMetadata(erddap_id)
+  num_ind = nrow(meta)
+
+  for (i in 1:num_ind){
+    cat("<b>",meta$Title[i],"</b>\n\n",sep="")
+    print_meta(meta,i)
+    cat("\n")
+    }
+  }
+  
+one_id_bylat <-function(erddap_id){
+  meta=getMetadata(erddap_id)
+  num_ind = nrow(meta)
+  cat("* <b>Latitudes:</b>\n")
+
+  for (i in 1:num_ind){
+    lat2=""
+    if(!is.na(meta$latitude2[i]))lat2=paste(" - ",meta$latitude2[i],sep="")
+    cat("     + ",meta$latitude[i],lat2," N\n",sep="")
+    }
+    print_meta(meta,1)
+  }
+  
+multi_id_onemeta <-function(erddap_id){
+  num_ind = length(erddap_id)
+  metalist <- list()
+  for (i in 1:num_ind){
+    m <- getMetadata(erddap_id[i])
+    metalist[[i]] <- m
+    }
+  meta <- do.call(rbind,metalist)
+  
+  cat("* <b>Indicators:</b>\n")
+  for (i in 1:num_ind){
+    cat("     + ",meta$Title[i],"\n")
+    }
+    print_meta(meta,2)
+  }
+  
+print_meta <- function(meta,i){
+    cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n",sep="")
+    cat("* <b>Data Steward: </b>",meta$Contact[i],"\n",sep="")
+    cat("* <b>Institution: </b>",meta$Institution[i],"\n",sep="")
+    cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n",sep="")
+    if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n",sep="")
+}
+  
+get_erddap_link <-function(erddap_id){
+  s=""
+  if(length(erddap_id)>1)s="s"
+  cat("ERDDAP&trade; link",s,": <br>",sep="")
+  for(i in 1:length(erddap_id)){
+    cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
+    }
+  }
+  
+```
+
