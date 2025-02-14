@@ -14,7 +14,7 @@ erddap_id='cciea_OC_DO'
 ```{r}
 #| echo: false
 #| results: 'asis'
-one_id_by_title_query(erddap_id,"CalCOFI","Locations")
+one_id_by_title_query(erddap_id,"CalCOFI","Locations",TRUE)
 ```
 
 **Newport Line Indicators**
@@ -22,7 +22,7 @@ one_id_by_title_query(erddap_id,"CalCOFI","Locations")
 ```{r}
 #| echo: false
 #| results: 'asis'
-one_id_by_title_query(erddap_id,"NH","Locations")
+one_id_by_title_query(erddap_id,"NH","Locations",TRUE)
 ```
 
 ```{r}

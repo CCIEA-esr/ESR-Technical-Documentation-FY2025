@@ -108,19 +108,35 @@ one_id_bytitle <-function(erddap_id,query_title){
     cat("</p>")
   }
    
-#----------one_id_by_title_query(erddap_id,title_phrase,query_title) ------------
+#----------one_id_by_title_query(erddap_id,title_phrase,query_title,latlon) ------------
 # One erddap_id but multiple indicators, each with different erddap_query_parameter (commonly location or species)
-# Sort indicators according to a phrase contained in its Title, asssumes metadata is the same for indicators sorted by each phrase
-# Prints query parameters contained in each sorted set under the heading query_title
-# Example: Dissolved Oxygen
-one_id_by_title_query <-function(erddap_id,title_phrase,query_title){
+# title_phrase: Sort indicators according to a phrase contained in its Title, asssumes metadata is the same for indicators sorted by each phrase
+# query_title: Prints query parameters contained in each sorted set under the heading query_title
+# latlon: true or false, if true print lat/lon after query (usually a location)
+# Example: Dissolved Oxygen, Ocean Acidification with titles like: "Dissolved Oxygen at 150 m: CalCOFI 90.90"
+one_id_by_title_query <-function(erddap_id,title_phrase,query_title,latlon){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
   cat("<p>* <b>",query_title,":</b>\n",sep="")
 
   for (i in 1:num_ind){
     if(grepl(title_phrase,meta$Title[i])){
-      cat("     + ",meta$ERDDAP_query_value[i],"\n")
+      #hack to make CalCOFI station locations prettier
+      lat=""
+      lon=""
+      if(isTRUE(latlon)){
+        if(!is.na(meta$latitude[i]))lat=paste(meta$latitude[i]," N, ",sep="")
+        if(!is.na(meta$longitude[i]))lon=paste(meta$longitude[i]," E",sep="")
+        }
+      if(title_phrase == "CalCOFI"){
+        spl1=strsplit(sub(".*at ", "", meta$Title[i])," ")[[1]]
+        spl2=spl1[4]
+        spl3=strsplit(spl2,"\\.")[[1]]
+        cat("     + ",spl1[1],"m: Line ",spl3[1],", Station ",spl3[2]," (",lat,lon,")\n",sep="")
+        }
+      else{
+        cat("     + ",meta$ERDDAP_query_value[i]," (",lat,lon,")\n",sep="")
+       }
       cind=i
       }
     }

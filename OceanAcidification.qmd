@@ -13,7 +13,7 @@ erddap_id='cciea_OC_ARG'
 ```{r}
 #| echo: false
 #| results: 'asis'
-one_id_by_title_query(erddap_id,"NH","Locations")
+one_id_by_title_query(erddap_id,"NH","Locations",TRUE)
 get_erddap_link(erddap_id)
 ```
 
