@@ -38,8 +38,6 @@ one_id_bylat(erddap_id[2])
 one_id_bylat(erddap_id[3])
 ```
 
-**Data extraction**
-
 ```{r}
 #| echo: false
 #| results: 'asis'

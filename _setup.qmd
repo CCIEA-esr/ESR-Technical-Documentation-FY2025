@@ -67,7 +67,7 @@ one_id_multimeta <-function(erddap_id){
 one_id_bylat <-function(erddap_id){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("* <b>Latitudes:</b>\n")
+  cat("<p>* <b>Latitudes:</b>\n")
 
   for (i in 1:num_ind){
     lat2=""
@@ -75,6 +75,7 @@ one_id_bylat <-function(erddap_id){
     cat("     + ",meta$latitude[i],lat2," N\n",sep="")
     }
     print_meta(meta,1)
+    cat("</p>")
   }
   
 #----------one_id_byquery(erddap_id,query_title) ------------
@@ -83,12 +84,28 @@ one_id_bylat <-function(erddap_id){
 one_id_byquery <-function(erddap_id,query_title){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("* <b>",query_title,":</b>\n",sep="")
+  cat("<p>* <b>",query_title,":</b>\n",sep="")
 
   for (i in 1:num_ind){
     cat("     + ",meta$ERDDAP_query_value[i],"\n")
     }
     print_meta(meta,1)
+    cat("</p>")
+  }
+   
+#----------one_id_bytitle(erddap_id,query_title) ------------
+# One erddap_id but multiple indicators, list by subset of title (typically species)
+# Example: Commercial Fishery Revenue
+one_id_bytitle <-function(erddap_id,query_title){
+  meta=getMetadata(erddap_id)
+  num_ind = nrow(meta)
+  cat("<p>* <b>",query_title,":</b>\n",sep="")
+
+  for (i in 1:num_ind){
+    cat("     + ",sub(".*; ","",meta$Title[i]),"\n")
+    }
+    print_meta(meta,1)
+    cat("</p>")
   }
    
 #----------one_id_by_title_query(erddap_id,title_phrase,query_title) ------------
@@ -99,7 +116,7 @@ one_id_byquery <-function(erddap_id,query_title){
 one_id_by_title_query <-function(erddap_id,title_phrase,query_title){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("* <b>",query_title,":</b>\n",sep="")
+  cat("<p>* <b>",query_title,":</b>\n",sep="")
 
   for (i in 1:num_ind){
     if(grepl(title_phrase,meta$Title[i])){
@@ -108,6 +125,7 @@ one_id_by_title_query <-function(erddap_id,title_phrase,query_title){
       }
     }
     print_meta(meta,cind)
+   cat("</p>")
   }
   
 #----------one_id_by_twotitle_query(erddap_id,title_phrase1,title_phrase2,query_title) ------------
@@ -147,12 +165,13 @@ multi_id_onemeta <-function(erddap_id){
   meta <- getMultiMetadata(erddap_id)
   num_ind = nrow(meta)
   
-  cat("* <b>Indicators:</b>\n")
+  cat("<p>* <b>Indicators:</b>\n")
   for (i in 1:num_ind){
     cat("     + ",meta$Title[i],"\n")
     }
     print_meta(meta,2)
-  }
+    cat("</p>")
+ }
 
 #-----------print_meta(meta,i)----------------
 # Used by functions above that print metadata, used for all pages
@@ -161,17 +180,41 @@ multi_id_onemeta <-function(erddap_id){
 print_meta <- function(meta,i){
     cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n",sep="")
     if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("* <b>Time Range: </b>",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
-    cat("* <b>Data Steward: </b>",meta$Contact[i],"\n",sep="")
+    cat("* <b>CCIEA Data Contact: </b>",meta$Contact[i],"\n",sep="")
     cat("* <b>Institution: </b>",meta$Institution[i],"\n",sep="")
     cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n",sep="")
     if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n",sep="")
 }
   
-#-----------multi_id_onemeta(erddap_id)----------------
+#-----------print_meta_about(meta,i)----------------
+# Used by functions above that print metadata, used for all pages, this one just prints source, additional calculations and time range
+# prints as second indent of list instead of first
+# meta: list extracted by getMetadata()
+# i: the list index number to print
+# Example: Fishery Landings
+print_meta_about <- function(meta,i){
+  if(meta$Additional_Calculations[i]!="")cat("    + *About this indicator: * ",meta$Additional_Calculations[i],"\n")
+    if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("    + *Time Range: * ",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
+    cat("    + *Source Data: *",meta$Source_Data[i],"\n\n",sep="")
+  }
+  
+#-----------print_meta_about_remainder(meta,i)----------------
+# Used by functions above that print metadata, used for all pages, this one just prints source, additional calculations and time range
+# meta: list extracted by getMetadata()
+# i: the list index number to print
+# Example: Fishery Landings
+print_meta_remainder <- function(meta,i){
+    cat("**Component Category: **", meta$Component_Section[i],"\n\n",sep="")
+    cat("**CCIEA Data Contact: **",meta$Contact[i],"\n\n",sep="")
+    cat("**Institution: **",meta$Institution[i],"\n\n",sep="")
+}
+  
+#-----------get_erddap_link(erddap_id)----------------
 # print the ERDDAP link(s) for a given set of erddap_id(s)
 get_erddap_link <-function(erddap_id){
   s=""
   if(length(erddap_id)>1)s="s"
+  cat("**Indicator Download",s,": **\n\n",sep="")
   cat("ERDDAP&trade; link",s,": <br>",sep="")
   for(i in 1:length(erddap_id)){
     cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")

@@ -13,16 +13,7 @@ Juvenile salmon data from the Northern CCE are provided by B. Burke, NMFS/NWFSC 
 #| results: 'asis'
 erddap_id='cciea_SM_FBN'
 one_id_byquery(erddap_id,"Species")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
-
-**Data analysis**
 
 **References**

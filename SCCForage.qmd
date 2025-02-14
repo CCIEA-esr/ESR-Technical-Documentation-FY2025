@@ -13,16 +13,6 @@ Pelagic forage larvae data from the Southern CCE were provided by A. Thompson, N
 #| results: 'asis'
 erddap_id='cciea_EI_FBS'
 one_id_byquery(erddap_id,"Species")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 
-**Data analysis**
-
-**References**

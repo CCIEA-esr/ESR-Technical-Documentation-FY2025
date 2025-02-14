@@ -13,13 +13,6 @@ Pelagic forage data from the Central CCE were provided by J. Field, T. Rogers, K
 #| results: 'asis'
 erddap_id='cciea_EI_FBC'
 one_id_byquery(erddap_id,"Species")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 

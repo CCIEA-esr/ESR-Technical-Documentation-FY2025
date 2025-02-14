@@ -13,14 +13,6 @@ erddap_id='cciea_HB_FLOW'
 regions=c("Ecoregion")
 meas=c("Snow water equivalent")
 one_id_by_twotitle_query(erddap_id,regions,meas,"")
-
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 

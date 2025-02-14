@@ -10,14 +10,6 @@
 #| results: 'asis'
 erddap_id='cciea_EI_WH_ENT'
 one_id_byquery(erddap_id,"Species")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 
-**References**

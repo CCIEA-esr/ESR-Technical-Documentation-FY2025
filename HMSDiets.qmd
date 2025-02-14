@@ -9,9 +9,6 @@
 #| echo: false
 #| results: 'asis'
 erddap_id <- c("cciea_HMS_ALB_DIET","cciea_HMS_BLF_DIET","cciea_HMS_SWD_DIET")
-alb_meta=getMetadata(erddap_id[1])
-blf_meta=getMetadata(erddap_id[2])
-swd_meta=getMetadata(erddap_id[3])
 ```
 
 **Albacore tuna diet**
@@ -36,8 +33,6 @@ one_id_byquery(erddap_id[2],"Species")
 #| results: 'asis'
 one_id_byquery(erddap_id[3],"Species")
 ```
-
-**Data extraction**
 
 ```{r}
 #| echo: false

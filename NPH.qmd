@@ -11,18 +11,5 @@
 
 erddap_id <- c("cciea_OC_NPH","cciea_OC_NPH_JF")
 multi_id_onemeta(erddap_id)
-```
-
-**Data sources** The U.S. Navy Fleet Numerical Meteorology and Oceanography Center (FNMOC) to take advantage of the Navy's global oceanographic and meteorological databases. FNMOC produces operational forecasts of the state of the atmosphere and the ocean several times daily and maintains archives of several important parameters, such as sea level pressure and temperature. The NPH area is derived from FNMOC Sea Level Pressure (SLP) monthly means. The SLP data are available at <https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html>.
-
-**Additional Information** During the winter, periods of upwelling or, farther north, reduced downwelling can limit stratification and facilitate introduction of nutrients to the surface, acting to precondition the ecosystem for increased production in the spring [@Schroeder2009; @Black2010]. The area of sea level pressure associated with the North Pacific High (NPH) can be used as an index of this winter preconditioning [@Schroeder2013].
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
-
-**References**

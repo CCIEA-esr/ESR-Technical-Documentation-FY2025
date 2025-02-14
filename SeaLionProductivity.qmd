@@ -12,14 +12,6 @@ To reduce disturbance to California sea lions and to improve the accuracy of our
 #| results: 'asis'
 erddap_id='cciea_MM_pup_count'
 one_id_multimeta(erddap_id)
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 
-**Data analysis**

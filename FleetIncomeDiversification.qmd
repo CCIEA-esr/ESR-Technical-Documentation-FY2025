@@ -1,4 +1,5 @@
 # Fleet Income Diversification
+{{< include _setup.qmd >}}
 
 **Description** Catches and prices from many fisheries exhibit high interannual variability, leading to high variability in fisher’s revenue, but variability can be reduced by diversifying activities across multiple fisheries or regions (Kasperski and Holland 2013). Individuals may have good reasons to specialize, including reduced costs or greater efficiency; thus while diversification may reduce income variation, it does not necessarily promote higher average profitability. We use the Effective Shannon Index (ESI) to examine diversification of fishing revenue for more than 28,000 vessels fishing off the West Coast and Alaska over the last 40 years. The ESI increases as revenues are spread across more fisheries, and as revenues are spread more evenly across fisheries; ESI = 1 when a vessel’s revenues are from a single species group and region; ESI = 2 if revenues are spread evenly across 2 fisheries; ESI = 3 if revenues are spread evenly across 3 fisheries; and so on. If revenue is not evenly distributed across fisheries, then the ESI value is lower than the number of fisheries a vessel enters.
 
@@ -6,43 +7,8 @@ Diversification can take other forms. Spreading effort and catch over the year, 
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_HD_ESI_VESS'
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
+one_id_byquery(erddap_id,"Indicators")
+get_erddap_link(erddap_id)
 ```
-
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Indicators:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
-```
-
-**Data analysis**
-
-**References**

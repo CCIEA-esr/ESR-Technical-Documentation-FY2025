@@ -1,44 +1,13 @@
 # Fishery Revenue Concentration
+{{< include _setup.qmd >}}
 
 **Description** Along with factors like processor availability and local infrastructure influence, variability in port-level landings can impact the overall distribution of fishing revenue along the coast. The Theil Index metric assesses the geographic concentration of fishing revenues, and is used to track progress toward meeting NS-8. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. Annually, we calculate the Theil Index for all fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries (Leonard and Watson 2011).
 
-```{r get-file-from-google-drive}
+```{r}
 #| echo: false
-#| message: false
-#| eval: true
+#| results: 'asis'
 erddap_id='cciea_HD_THEIL'
-source("_getmeta.R")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
+one_id_bytitle(erddap_id,"Species")
+get_erddap_link(erddap_id)
 ```
 
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",sub(".*; ","",meta$Title[i]),"\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-if(meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
-```
-
-**Data analysis**
-
-**References**

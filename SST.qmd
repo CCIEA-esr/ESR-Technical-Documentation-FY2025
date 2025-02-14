@@ -10,13 +10,6 @@
 #| results: 'asis'
 erddap_id='cciea_OC_SST'
 one_id_bylat(erddap_id)
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 
@@ -24,8 +17,34 @@ get_erddap_link(erddap_id)
 ## Satellite data {.unnumbered}
 Satellite data which has been collected in a similar fashion since 1982, allows for a basin-scale view of sea surface temperature (SST) at up to daily and sub-degree (spatial) resolution.
 
+**SST anoms, 5-year means and trends**
+
+* **Description** Seasonal SST summary maps are derived from the three statistics shown in the IEA type time series (current value, mean and trend over the last 5 years). The current value is shown as an anomaly and the 5-year mean and trend are
+
+* **Indicator Category** Climate and Ocean Drivers
+
+* **CCIEA Data Contact** Schroeder
+
+* **Additional Information** The seasonal averages are: winter (Jan-Mar), spring (Apr-Jun), summer (Jul-Sep), and summer (Oct-Nov). Daily SST maps are optimally interpolated, remotely sensed temperatures [@Huang2021]. The daily optimal interpolated AVHRR SST can be downloaded from ERDDAP, https://coastwatch.pfeg.noaa.gov/erddap/index.html, dataset ID: ncdcOisst21Agg.
+
+
 ## Glider data {.unnumbered}
 Glider data has also become an increasingly useful tool for analyzing trends in subsurface water temperatures over time. Subsurface gliders, which generally sample in onshore-offshore transects on a weekly to monthly basis, have been in service long enough for the development of climatologies, which are then used to compute temperature anomalies.
+
+**CUGN glider time-depth**
+
+* **Description** Time versus depth profiles of water temperatures off of Monterey (66), Pt Conception (80), and north of San Diego (90) demonstrate the extent of recent warm and cool anomalies into the water column, as well as spatial and temporal dynamics of these anomalies.
+
+* **Indicator Category** Climate and Ocean Drivers
+
+* **CCIEA Data Contact** Schroeder
+
+* **Region** Lines 66, 80, 90
+
+* **Data sources** Netcdf files of the three lines can be downloaded from <https://spraydata.ucsd.edu/projects/CUGN/>. The data downloaded are temperature anomalies created by CUGN.
+
+* **Additional Information** The temperature anomaly data provided in the netcdf file has data across the line at 5 m intervals over 0-500 m and distances at 5 km from the coat out to the end of the line (66=400 km, 80=365 km, 90=530 km). Distance can be averaged using Python xarray to select specific distance ranges and then averaging over the distances. The time interval of the netcdf file is 10 days.
+
 
 **References**
 

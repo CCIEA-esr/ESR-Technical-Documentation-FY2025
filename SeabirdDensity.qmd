@@ -35,12 +35,8 @@ for (r in 1:num_regions){
 }
 ```
 
-**Data extraction**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
 get_erddap_link(erddap_id)
 ```
-
-**Data analysis**

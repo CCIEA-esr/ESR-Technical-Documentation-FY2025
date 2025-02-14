@@ -1,4 +1,5 @@
 # Fishery Landings
+{{< include _setup.qmd >}}
 
 **Description** Fishery landings are indicators of ecosystem services provided and also reflect removals from the CCE. Commercial landings data are best summarized by the Pacific Fisheries Information Network (PacFIN; pacfin.psmfc.org), and recreational landings are best summarized by the Recreational Fisheries Information Network (RecFIN; www.recfin.org). Landings provide the best long-term indicator of fisheries removals. Status and trends are estimated relative to a frame of reference of 1991-2020. In most cases, landings data for the most recent reporting years are only complete through the latter months (e.g., October-December); these data are updated in the next annual cycle.
 
@@ -8,44 +9,15 @@ Commercial landings data are reported coastwide and by state (CA, OR, WA) by fis
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_AC_landings'
 meta=getMetadata(erddap_id)
 num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
-#| results: 'asis'
 
 for (i in 1:num_ind){
 cat("* **",meta$ERDDAP_query_value[i],"**\n",sep="")
-  if(meta$Additional_Calculations[i]!="")cat("    + *About this indicator: * ",meta$Additional_Calculations[i],"\n")
-cat("    + *Source Data: *",meta$Source_Data[i],"\n\n",sep="")
+print_meta_about(meta,i)
 }
+print_meta_remainder(meta,1)
+get_erddap_link(erddap_id)
 ```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("**Component Category: **", meta$Component_Section[1],"\n\n",sep="")
-cat("**Data Steward: **",meta$Contact[1],"\n\n",sep="")
-cat("**Institution: **",meta$Institution[1],"\n\n",sep="")
-
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
-```
-
-**Data analysis**
-  
-**References**

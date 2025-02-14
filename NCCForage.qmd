@@ -14,16 +14,5 @@ Pelagic forage data from the Northern CCE are provided by B. Burke, NMFS/NWFSC a
 #| results: 'asis'
 erddap_id='cciea_EI_FBN'
 one_id_byquery(erddap_id,"Species")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
-
-**Data analysis**
-
-**References**

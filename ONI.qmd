@@ -10,14 +10,6 @@
 
 erddap_id='cciea_OC_ONI'
 one_id_multimeta(erddap_id)
-```
-
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 

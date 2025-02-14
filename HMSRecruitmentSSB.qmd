@@ -13,16 +13,6 @@ The 2024 bigeye tuna assessment underwent several changes since the last benchma
 #| results: 'asis'
 erddap_id='cciea_HMS_recruit'
 one_id_byquery(erddap_id,"Species")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 
-**Data analysis**
-
-**References**

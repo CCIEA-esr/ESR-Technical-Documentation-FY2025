@@ -25,8 +25,6 @@ one_id_by_title_query(erddap_id,"CalCOFI","Locations")
 one_id_by_title_query(erddap_id,"NH","Locations")
 ```
 
-**Data extraction**
-
 ```{r}
 #| echo: false
 #| results: 'asis'

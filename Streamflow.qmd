@@ -12,13 +12,6 @@ erddap_id='cciea_HB_FLOW'
 regions=c("Ecoregion","ESU")
 meas=c("1 day max","7 day min")
 one_id_by_twotitle_query(erddap_id,regions,meas,"Streamflow ")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 

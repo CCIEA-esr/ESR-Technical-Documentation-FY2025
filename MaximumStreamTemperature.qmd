@@ -13,16 +13,7 @@ erddap_id='cciea_HB_FLOW'
 regions=c("Ecoregion")
 meas=c("August Mean Max stream temperature")
 one_id_by_twotitle_query(erddap_id,regions,meas,"")
-```
-
-**Data extraction**
-
-```{r}
-#| echo: false
-#| results: 'asis'
 get_erddap_link(erddap_id)
 ```
-
-**Data analysis**
 
 **References**

@@ -33,8 +33,6 @@ for (r in 1:num_regions){
 }
 ```
 
-**Data extraction**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
