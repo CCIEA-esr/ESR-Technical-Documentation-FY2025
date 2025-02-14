@@ -160,6 +160,7 @@ multi_id_onemeta <-function(erddap_id){
 # i: the list index number to print
 print_meta <- function(meta,i){
     cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n",sep="")
+    if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("* <b>Time Range: </b>",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
     cat("* <b>Data Steward: </b>",meta$Contact[i],"\n",sep="")
     cat("* <b>Institution: </b>",meta$Institution[i],"\n",sep="")
     cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n",sep="")
