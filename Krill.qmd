@@ -1,7 +1,7 @@
 # Krill
 {{< include _setup.qmd >}}
 
-**Description** Krill are among the most important prey in the CCE. The krill Euphausia pacifica is sampled year-round along the Trinidad Head Line off northern California (Fig. 1.1). Mean adult length and total biomass of E. pacifica sampled off the Trinidad Head Line indicate productivity at the base of the food web, krill condition, and energy content for predators [@robertson2020climate; @fisher2020comparison].
+**Description** Krill are among the most important prey in the CCE. The krill *Euphausia pacifica* is sampled year-round along the Trinidad Head Line off northern California (see Fig. 1 in the Introduction of this document). Mean adult length and total biomass of *E. pacifica* sampled off the Trinidad Head Line indicate productivity at the base of the food web, krill condition, and energy content for predators [@robertson2020climate; @fisher2020comparison].
 
 Trinidad Head krill data are provided by E. Bjorkstedt, NMFS/SWFSC SWFSC, Cal Poly, Humboldt and R. Robertson, Cooperative Institute for Marine Ecosystems and Climate (CIMEC) at Cal Poly, Humboldt.
 
