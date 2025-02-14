@@ -1,4 +1,4 @@
-# SST (Sea Surface Temperature)
+# Ocean Temperature
 {{< include _setup.qmd >}}
 
 ## Buoy Data {.unnumbered}
