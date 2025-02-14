@@ -1,4 +1,5 @@
 # HMS Spawning Stock Biomass and Recruitment
+{{< include _setup.qmd >}}
 
 **Description** Biomass and recruitment estimates for many HMS stocks that occupy the California Current are available from stock assessments conducted by collaborators under the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean (ISC) or the Inter-American Tropical Tuna Commission (IATTC). The only assessment updates since the 2023-24 ecosystem status report are for Pacific bluefin tuna, skipjack tuna, and bigeye tuna.
 
@@ -9,33 +10,9 @@ The 2024 bigeye tuna assessment underwent several changes since the last benchma
 **Indicators**
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_HMS_recruit'
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+one_id_byquery(erddap_id,"Species")
 ```
 
 **Data extraction**
@@ -43,7 +20,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **Data analysis**

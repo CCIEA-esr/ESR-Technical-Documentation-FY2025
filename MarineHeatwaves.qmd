@@ -5,19 +5,12 @@
 **Description** Marine heatwaves (MHW) occur when ocean temperatures are much warmer than usual for an extended period of time; they are specifically defined by the difference between the current temperature and the expected temperature for a specific location and time of year \[1\]. MHWs are a growing field of study worldwide because of their effects on ecosystem structure, biodiversity, and regional economies.
 
 
-```{r}
-#| echo: false
-#| results: 'asis'
-
-erddap_id='cciea_OC_MHW'
-```
-
 **Indicators**
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-
+erddap_id='cciea_OC_MHW'
 one_id_multimeta(erddap_id)
 ```
 

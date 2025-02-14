@@ -1,18 +1,14 @@
 # Seabird Productivity
+{{< include _setup.qmd >}}
 
 **Description** Seabird population productivity, measured through indicators of reproductive success, tracks marine environmental conditions and often reflects forage production near breeding colonies. We report on standardized anomalies of fledgling production per pair of breeding adults for the Northern CCE (one species at Destruction Island, Washington and three species at Yaquina Head, Oregon) and the Central CCE (five species on Southeast Farallon Island and two species on Año Nuevo Island). These focal species span a range of feeding habits and ways of provisioning their chicks, and thus provide a broad picture of the status of foraging conditions.
 
 \[add Table N.1\]
 
-```{r get-file-from-google-drive}
+```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
 erddap_id <- c("cciea_B_PR_ANOM","cciea_B_PR_ANOM_ND")
-sb_meta=getMetadata(erddap_id[1])
-sb_private_meta=getMetadata(erddap_id[2])
-meta <- rbind(sb_meta,sb_private_meta)
+meta <- getMultiMetadata(erddap_id)
 regions <- unique(meta['region'])
 num_ind <- nrow(meta)
 num_regions <- nrow(regions)
@@ -24,20 +20,16 @@ num_regions <- nrow(regions)
 #| results: 'asis'
 
 for (r in 1:num_regions){
-  cat("**",regions$region[r],"**\n\n",sep="")
-  
+  cat("<p>**",regions$region[r],"**\n\n",sep="")
   cat("* <b>Species:</b>\n")
   for (i in 1:num_ind){
     if(meta$region[i]==regions$region[r]){
       cat("     + ",sub(" productivity.*","",meta$ERDDAP_query_value[i]),"\n")
       cind=i
+      }
     }
-    }
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
+    print_meta(meta,cind)
+    cat("</p>")
 }
 ```
 
@@ -46,8 +38,5 @@ if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; links: \n\n")
-for(i in 1:length(erddap_id)){
-  cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
-  }
+get_erddap_link(erddap_id)
 ```

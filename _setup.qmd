@@ -29,6 +29,20 @@ getMetadata <-function(erddap_id){
   return(meta)
   }
   
+  
+#-------- getMultiMetadata(erddap_id) --------------
+# Bind metadata for vector of erddap_id's
+
+getMultiMetadata <-function(erddap_id){
+  num_ind = length(erddap_id)
+  metalist <- list()
+  for (i in 1:num_ind){
+    m <- getMetadata(erddap_id[i])
+    metalist[[i]] <- m
+    }
+  meta <- do.call(rbind,metalist)
+  }
+  
 # Functions to print out metadata for data sets organized in various ways
 
 #----------one_id_multimeta(erddap_id) ------------
@@ -130,13 +144,8 @@ one_id_by_twotitle_query <-function(erddap_id,title_phrase1,title_phrase2,query_
 # erddap_id is a vector
 # Example: NPH and NPH_JF on same page
 multi_id_onemeta <-function(erddap_id){
-  num_ind = length(erddap_id)
-  metalist <- list()
-  for (i in 1:num_ind){
-    m <- getMetadata(erddap_id[i])
-    metalist[[i]] <- m
-    }
-  meta <- do.call(rbind,metalist)
+  meta <- getMultiMetadata(erddap_id)
+  num_ind = nrow(meta)
   
   cat("* <b>Indicators:</b>\n")
   for (i in 1:num_ind){

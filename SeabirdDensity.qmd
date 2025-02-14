@@ -1,14 +1,12 @@
 # Seabird At-Sea Density
+{{< include _setup.qmd >}}
 
 **Description** Seabird densities on the water during the breeding season can track marine environmental conditions and may reflect regional production and availability of forage. Data from this indicator type can establish habitat use and may be used to detect and track seabird population movements or increases/declines as they relate to ecosystem change. We monitor and report on at-sea densities of three focal seabird species in the Northern, Central, and Southern CCE.
 
 Sooty shearwaters migrate to the CCE from the Southern Hemisphere in spring and summer to forage on the shelf and near the shelf break on small fish, including northern anchovy, as well as squid and zooplankton. Common murres and Cassin’s auklets are resident species in the CCE that feed primarily over the shelf. Common murres target a variety of pelagic fish, while Cassin’s auklets prey mainly on zooplankton and small fish.
 
-```{r get-file-from-google-drive}
+```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
 erddap_id="cciea_B_AS_DENS"
 meta=getMetadata(erddap_id)
 regions <- unique(meta['region'])
@@ -22,7 +20,7 @@ num_regions <- nrow(regions)
 #| results: 'asis'
 
 for (r in 1:num_regions){
-  cat("**",regions$region[r],"**\n\n",sep="")
+  cat("<p>**",regions$region[r],"**\n\n",sep="")
   
   cat("* <b>Species:</b>\n")
   for (i in 1:num_ind){
@@ -30,13 +28,10 @@ for (r in 1:num_regions){
       s<-meta$ERDDAP_query_value[i]
       cat("     + ",paste(sub(" \\(.*","",s),",",sub("\\).*","",sub(".*,","",s)),sep=""),"\n")
       cind=i
+      }
     }
-    }
-cat("* <b>Component Category: </b>", meta$Component_Section[cind],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[cind],"\n")
-cat("* <b>Institution: </b>",meta$Institution[cind],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[cind],"\n")
-if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[cind],"\n\n")
+    print_meta(meta,cind)
+   cat("</p>")
 }
 ```
 
@@ -45,7 +40,7 @@ if(meta$Additional_Calculations[cind]!="")cat("* <b>Additional Calculations: </b
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **Data analysis**

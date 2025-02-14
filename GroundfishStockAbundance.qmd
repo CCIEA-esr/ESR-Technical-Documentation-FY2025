@@ -1,4 +1,5 @@
 # Groundfish Stock Abundance
+{{< include _setup.qmd >}}
 
 **Description** We present relative Stock Status of groundfish in the CCE as the ratio of the current year spawning biomass (in mt) or output (typically in billions of eggs) to unfished relative to the target reference point (as a percentage of unfished biomass; 0.4 for scorpaenids and other fishes; 0.25 for flatfishes). Fishing Intensity uses the fishing rate to achieve a specific spawner potential ratio (SPR), defined as F/FSPR, where SPR is the maximum sustainable yield (MSY) proxy.
 
@@ -6,34 +7,9 @@
 
 ```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
-
+#| results: 'asis'
 erddap_id='cciea_GF_ABND'
-# just want particular indicators from this dataset
-#erddap_query_vals <- c("Yearling Chinook", "Yearling Coho", "Subyearling Chinook")
-meta=getMetadata(erddap_id)
-num_ind = nrow(meta)
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",meta$ERDDAP_query_value[i],"\n")
-}
-```
-
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",meta$Source_Data[1],"\n")
-cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
+one_id_byquery(erddap_id,"Species")
 ```
 
 **Data extraction**
@@ -41,7 +17,7 @@ cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[1],"\n")
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; link: <https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id,".html>",sep="")
+get_erddap_link(erddap_id)
 ```
 
 **Data analysis**

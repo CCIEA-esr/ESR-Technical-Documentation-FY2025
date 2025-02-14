@@ -1,14 +1,13 @@
 # HMS Diets
+{{< include _setup.qmd >}}
 
 **Description** Quantifying the diets of highly migratory fishes in the CCE can complement existing trawl-based assessments of the available forage, provide insight into how forage varies over time and space, as well as provide a direct metric of forage utilization. Albacore Tuna, Bluefin Tuna, and Broadbill Swordfish are opportunistic predators that consume a wide variety of prey taxa across a range of depths and habitats. Albacore, Bluefin, and Swordfish stomachs were provided by commercial and recreational fishers, and prey were identified from whole or hard part remains and are reported as a mean percent abundance. A subset of prey species are presented here focusing on prey that are either themselves under a management plan, or considered ecosystem component species, to highlight their links to highly migratory species. Juvenile Albacore Tuna were collected off Northern California, Oregon, and Washington during the summer and fall fishing season. Bluefin Tuna were collected by recreational fishers in the Southern California Bight from spring until early fall. Swordfish were collected off Southern and Central California during the commercial drift gillnet season (August 15th through January 31st). Swordfish stomachs are classified by the year the fishing season began (stomachs from January are assigned to the previous year’s fishing season).
 
 \[need for descriptive text for figures?\]
 
-```{r get-file-from-google-drive}
+```{r}
 #| echo: false
-#| message: false
-#| eval: true
-source("_getmeta.R")
+#| results: 'asis'
 erddap_id <- c("cciea_HMS_ALB_DIET","cciea_HMS_BLF_DIET","cciea_HMS_SWD_DIET")
 alb_meta=getMetadata(erddap_id[1])
 blf_meta=getMetadata(erddap_id[2])
@@ -16,67 +15,26 @@ swd_meta=getMetadata(erddap_id[3])
 ```
 
 **Albacore tuna diet**
-```{r}
-#| echo: false
-#| results: 'asis'
-num_ind=nrow(alb_meta)
-
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",alb_meta$ERDDAP_query_value[i],"\n")
-}
-```
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("* <b>Component Category: </b>", alb_meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",alb_meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",alb_meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",alb_meta$Source_Data[1],"\n")
-if(alb_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",alb_meta$Additional_Calculations[1],"\n")
+one_id_byquery(erddap_id[1],"Species")
 ```
+
 **Bluefin diet**
 ```{r}
 #| echo: false
 #| results: 'asis'
-num_ind=nrow(blf_meta)
-
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",blf_meta$ERDDAP_query_value[i],"\n")
-}
+one_id_byquery(erddap_id[2],"Species")
 ```
 
-```{r}
-#| echo: false
-#| results: 'asis'
-cat("* <b>Component Category: </b>", blf_meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",blf_meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",blf_meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",blf_meta$Source_Data[1],"\n")
-if(blf_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",blf_meta$Additional_Calculations[1],"\n")
-```
 **Swordfish diet**
-```{r}
-#| echo: false
-#| results: 'asis'
-num_ind=nrow(swd_meta)
-
-cat("* <b>Species:</b>\n")
-for (i in 1:num_ind){
-cat("     + ",swd_meta$ERDDAP_query_value[i],"\n")
-}
-```
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("* <b>Component Category: </b>", swd_meta$Component_Section[1],"\n")
-cat("* <b>Data Steward: </b>",swd_meta$Contact[1],"\n")
-cat("* <b>Institution: </b>",swd_meta$Institution[1],"\n")
-cat("* <b>Source Data: </b>",swd_meta$Source_Data[1],"\n")
-if(swd_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </b>",swd_meta$Additional_Calculations[1],"\n")
+one_id_byquery(erddap_id[3],"Species")
 ```
 
 **Data extraction**
@@ -84,10 +42,6 @@ if(swd_meta$Additional_Calculations[1]!="")cat("* <b>Additional Calculations: </
 ```{r}
 #| echo: false
 #| results: 'asis'
-cat("ERDDAP&trade; links: \n\n")
-for(i in 1:length(erddap_id)){
-  cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
-  }
+get_erddap_link(erddap_id)
 ```
 
-**Data analysis**
