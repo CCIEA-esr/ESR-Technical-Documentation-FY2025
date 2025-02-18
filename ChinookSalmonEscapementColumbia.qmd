@@ -6,10 +6,7 @@
 
 **Data Steward** Burke; brian.burke@noaa.gov
 
-**Data sources**
-
-**Data extraction**
-
-**Data analysis**
+**Additional Information**
+Data and metrics are provided B. Burke, who submits figures and plots to the CCIEA editorial team based on unpublished model results.
 
 **References**

@@ -3,6 +3,13 @@
 **Description** 
 Yearly indices of the abundances of juvenile sablefish, Dover sole, shortspine thornyhead, and longspine thornyhead along the West Coast were calculated using species distribution models. Strong year classes can determine age structure and set stock size for marine fishes, and may also indicate favorable environmental conditions, increased future catches, and impending potential bycatch issues. Here, we provide estimates of juvenile abundance for 13 species of West Coast groundfishes, including four from DTS assemblage (Dover sole, thornyheads, and sablefish) as a potential leading indicator of incoming strong year classes. The DTS assemblage is a valuable fishery, and bycatch of some species, like small sablefish, can impact other fisheries such as the at-sea hake fishery.
 
+**Indicator Category** Ecological Integrity
+
+**Data Steward** N. Tolimieri, NMFS/NWFSC (nick.tolimieri@noaa.gov)
+
+**Additional Information**
+Data are collected and analyzed independently by N. Tolimieri, who submits unpublished figures and plots to the CCIEA editorial team.
+
 **Data sources** 
 Data for indicators come from the West Coast Groundfish Bottom Trawl Survey (WCGBTS) (Keller et al. 2017) for 2003-2021. There were no data for 2020 because the WCGBTS was canceled due to the COVID-19 pandemic. The survey data includes estimates of age, length, and biomass for subsamples of each haul, and occasionally for the entire haul when catch is low.
 

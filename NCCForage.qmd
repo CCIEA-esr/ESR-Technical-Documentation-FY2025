@@ -1,7 +1,7 @@
 # Northern California Current Forage
 {{< include _setup.qmd >}}
 
-**Description** The Northern CCE survey (known as the Juvenile Salmon Ocean Ecology Survey, JSOES) occurs in June and targets juvenile salmon in surface waters off Oregon and Washington. It also collects adult and juvenile (age 1+) pelagic forage fishes, market squid, and gelatinous zooplankton with regularity. A Nordic 264 rope trawl is towed for 15-30 min at approximately 6.5 km/hr. The gear is fished during daylight hours in near-surface (upper 20 m) waters, which is appropriate for targeting juvenile salmon.
+**Description** The Northern CCE survey (known as the Juvenile Salmon Ocean Ecology Survey, JSOES) occurs in June and targets juvenile salmon in surface waters off Oregon and Washington [@morgan2019recent]. It also collects adult and juvenile (age 1+) pelagic forage fishes, market squid, and gelatinous zooplankton with regularity. A Nordic 264 rope trawl is towed for 15-30 min at approximately 6.5 km/hr. The gear is fished during daylight hours in near-surface (upper 20 m) waters, which is appropriate for targeting juvenile salmon.
 
 Several other taxa (e.g., anchovy, sardine, herring and mackerels) collected by the June JSOES surface trawl are not considered to be sampled quantitatively due to their behavior (i.e., depth in the water column during daylight hours) and mesh size of sampling gear. Thus, we do not report catch-per-unit-effort (CPUE) of these species, rather noting them in terms of their relative prevalence - the proportion of stations where they were caught.
 
