@@ -233,7 +233,7 @@ get_erddap_link <-function(erddap_id){
   cat("**Indicator Download",s,": **\n\n",sep="")
   cat("ERDDAP&trade; link",s,": <br>",sep="")
   for(i in 1:length(erddap_id)){
-    cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n",sep="")
+    cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n\n",sep="")
     }
   }
   
