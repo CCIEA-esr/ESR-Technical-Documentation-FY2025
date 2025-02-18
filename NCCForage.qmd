@@ -7,13 +7,15 @@ Several other taxa (e.g., anchovy, sardine, herring and mackerels) collected by 
 
 Pelagic forage data from the Northern CCE are provided by B. Burke, NMFS/NWFSC and C. Morgan, OSU/CIMRS. Data are derived from surface trawls taken during the NWFSC Juvenile Salmon & Ocean Ecosystem Survey (JSOES; https://www.fisheries.noaa.gov/west-coast/science-data/ocean-ecosystem-indicators-pacific-salmon-marine-survival-northern). Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.
 
-**Indicators**
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-erddap_id='cciea_EI_FBN'
-one_id_byquery(erddap_id,"Species")
+erddap_id=c('cciea_EI_FBN','cciea_EI_FPN')
+cat("<b>Forage Biomass:</b>\n")
+one_id_byquery(erddap_id[1],"Species")
+cat("<b>Forage Prevalence:</b>\n")
+one_id_byquery(erddap_id[2],"Species")
 get_erddap_link(erddap_id)
 ```
 
