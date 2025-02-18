@@ -5,21 +5,15 @@ Acoustic-trawl method (ATM) surveys have been used by the NOAA Southwest Fisheri
 
 The five most abundant CPS in this domain are Northern Anchovy, Pacific Herring, Pacific Sardine, Jack Mackerel, and Pacific Mackerel. The biomass of Pacific Sardine is calculated separately for the northern and southern stocks based on oceanographic habitat, spatial separation, and demographic structure [@zwolinski2024updated]. The ATM combines data from echosounders which record CPS echoes, and trawls which produce information about the composition, sizes, and ages of the fishes. This survey also samples the densities of CPS eggs at 3-m depth using a continuous underway fish egg sampler (CUFES) mounted on the ship’s hull.
 
-CPS surveys typically span the area between Cape Flattery, WA and San Diego,CA but in some years also include Vancouver Island, Canada (2015-2019) and portions of Baja CA (2021-2022). Data and figure provided by K. Stierhoff, NMFS/SWFSC and J. Zwolinski, UCSC and NMFS/SWFSC.
+CPS surveys typically span the area between Cape Flattery, WA and San Diego,CA but in some years also include Vancouver Island, Canada (2015-2019) and portions of Baja CA (2021-2022).
 
 **Indicator Category** Ecological Integrity
 
-**Data Steward** Stierhoff; kevin.stierhoff@noaa.gov
+**Data Steward** K. Stierhoff, NMFS/SWFSC (kevin.stierhoff@noaa.gov) and J. Zwolinski, UCSC and NMFS/SWFSC
 
 **Additional Information**
-See also: 
+Data are collected and analyzed by K. Stierhoff and J. Zwolinski, who submit figures and plots to the CCIEA editorial team based on a preliminary version of the annual CPS Acoustic Trawl survey report, which is ultimately published as a NOAA Technical Reports. For recent examples, see: 
 NOAA Technical Memorandum NMFS-SWFSC-676. https://doi.org/10.25923/77kp-ww39
 NOAA Technical Memorandum NMFS-SWFSC-683. https://doi.org/10.25923/40x3-b146
-
-**Data sources**
-
-**Data extraction**
-
-**Data analysis**
 
 **References**
