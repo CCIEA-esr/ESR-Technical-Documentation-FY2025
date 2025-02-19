@@ -1,9 +1,14 @@
 # Seabird Productivity
 {{< include _setup.qmd >}}
 
-**Description** Seabird population productivity, measured through indicators of reproductive success, tracks marine environmental conditions and often reflects forage production near breeding colonies. We report on standardized anomalies of fledgling production per pair of breeding adults for the Northern CCE (one species at Destruction Island, Washington and three species at Yaquina Head, Oregon) and the Central CCE (five species on Southeast Farallon Island and two species on Año Nuevo Island). These focal species span a range of feeding habits and ways of provisioning their chicks, and thus provide a broad picture of the status of foraging conditions.
+**Description** Seabird population productivity, measured through indicators of reproductive success, tracks marine environmental conditions and often reflects forage production near breeding colonies. We report on standardized anomalies of fledgling production per pair of breeding adults for the Northern CCE (one species at Destruction Island, Washington and three species at Yaquina Head, Oregon) and the Central CCE (five species on Southeast Farallon Island and two species on Año Nuevo Island). Collectively, these focal species span a range of feeding habits and ways of provisioning their chicks, and thus provide a broad picture of the status of foraging conditions.
 
-\[add Table N.1\]
+*Brandt’s cormorants* forage primarily on pelagic and benthic fishes in waters over the shelf, generally within 20 km of breeding colonies; they return to the colony during the day to deliver regurgitated fish to their chicks.
+*Cassin’s auklets* forage primarily on zooplankton near or on the shelf break, generally within 30 km of colonies; they forage by day and night and return to the colony at night to feed chicks.
+*Common murres* forage primarily on pelagic fishes in waters over the shelf and near the shelf break, generally within 80 km of colonies; they return to the colony during daylight hours to deliver single whole fish to their chicks.
+*Pelagic cormorants* forage primarily on pelagic and benthic fishes in waters over the shelf, generally within 20 km of breeding colonies; they return to the colony during the day to deliver regurgitated fish to their chicks.
+*Pigeon guillemots* forage primarily on small benthic and pelagic fishes over the shelf in the nearshore environment, generally within 10 km of colonies; they return to the colony during the day to deliver single fish to chicks.
+*Rhinoceros auklets* forage primarily on pelagic fishes over the continental shelf, generally within 50 km of colonies; they return to the colony after dusk to deliver multiple whole fish to their chicks.
 
 ```{r}
 #| echo: false
@@ -38,3 +43,5 @@ for (r in 1:num_regions){
 #| results: 'asis'
 get_erddap_link(erddap_id)
 ```
+
+**References**
