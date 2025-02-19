@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -484,9 +504,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> Biomass and recruitment estimates for many HMS stocks that occupy the California Current are available from stock assessments conducted by collaborators under the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean (ISC) or the Inter-American Tropical Tuna Commission (IATTC). The only assessment updates since the 2023-24 ecosystem status report are for Pacific bluefin tuna, skipjack tuna, and bigeye tuna.</p>
-<p>The 2024 bigeye tuna assessment underwent several changes since the last benchmark assessment (Xu et al.&nbsp;2024) The assessment uses a risk analysis approach, encompassing three levels of hypotheses structured hierarchically to address the main uncertainties in the assessment. The time-series shown here are multi-model estimates. The 2024 skipjack tuna assessment is a significant improvement over the 2022 interim assessment (Bi et al.&nbsp;2024). It reflects major advancements in the assessment methodologies and incorporates new data sets, including tagging data. The Pacific bluefin tuna assessment also included some improvements to the model used in the last (2022) benchmark assessment (ISC 2024). One of the major changes made was to shorten the assessment time period to start in 1983 instead of 1952. This adjustment was implemented because more reliable data were available after 1983. For all species, we emphasize that the status and trends symbols shown in our status and trend figures reflect short-term patterns relative to time series averages (with a period of reference of 1991-2020), and do not necessarily reflect reference points based on, e.g., unfished stock biomass.</p>
-<p>[this section will require a bit more writing to incorporate evolving approaches and methods]</p>
+<p><strong>Description</strong> Biomass and recruitment estimates for many HMS stocks that occupy the California Current are available from stock assessments conducted by collaborators under the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean (ISC) or the Inter-American Tropical Tuna Commission (IATTC).</p>
+<p><strong>2024-01 Update</strong> The only assessment updates since the 2023-24 ecosystem status report are for Pacific bluefin tuna, skipjack tuna, and bigeye tuna. The 2024 bigeye tuna assessment underwent several changes since the last benchmark assessment <span class="citation" data-cites="Xu2024stock">(<a href="#ref-Xu2024stock" role="doc-biblioref"><strong>Xu2024stock?</strong></a>)</span>. The assessment uses a risk analysis approach, encompassing three levels of hypotheses structured hierarchically to address the main uncertainties in the assessment. The time-series shown here are multi-model estimates. The 2024 skipjack tuna assessment is a significant improvement over the 2022 interim assessment <span class="citation" data-cites="Bi2024stock">(<a href="#ref-Bi2024stock" role="doc-biblioref"><strong>Bi2024stock?</strong></a>)</span>. It reflects major advancements in the assessment methodologies and incorporates new data sets, including tagging data. The Pacific bluefin tuna assessment also included some improvements to the model used in the last (2022) benchmark assessment <span class="citation" data-cites="ISC2024stock">(<a href="#ref-ISC2024stock" role="doc-biblioref">ISC 2024</a>)</span>. One of the major changes made was to shorten the assessment time period to start in 1983 instead of 1952. This adjustment was implemented because more reliable data were available after 1983. For all species, we emphasize that the status and trends symbols shown in our status and trend figures reflect short-term patterns relative to time series averages (with a period of reference of 1991-2020), and do not necessarily reflect reference points based on, e.g., unfished stock biomass.</p>
 <p><strong>Indicators</strong></p>
 <p>
 </p><ul>
@@ -509,8 +528,14 @@ ul.task-list li input[type="checkbox"] {
 <p></p>
 <p><strong>Indicator Download: </strong></p>
 <p>ERDDAP™ link: <br><a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_HMS_recruit.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_HMS_recruit.html</a></p>
+<p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ISC2024stock" class="csl-entry" role="listitem">
+ISC. 2024. <span>“Stock Assessment of Pacific Bluefin Tuna in the Pacific Ocean in 2024.”</span> Annex 13, 22nd Meeting of the International Scientific Committee for Tuna; Tuna-Like Species in the North Pacific Ocean, Victoria, Canada.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
