@@ -13,3 +13,5 @@ erddap_id <- c("cciea_OC_NPH","cciea_OC_NPH_JF")
 multi_id_onemeta(erddap_id)
 get_erddap_link(erddap_id)
 ```
+
+**References**
