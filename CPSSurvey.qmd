@@ -9,7 +9,7 @@ CPS surveys typically span the area between Cape Flattery, WA and San Diego,CA b
 
 **Indicator Category** Ecological Integrity
 
-**Data Steward** K. Stierhoff, NMFS/SWFSC (kevin.stierhoff@noaa.gov) and J. Zwolinski, UCSC and NMFS/SWFSC
+**Data Steward** K. Stierhoff, NMFS/SWFSC (kevin.stierhoff at noaa.gov) and J. Zwolinski, UCSC and NMFS/SWFSC
 
 **Additional Information**
 Data are collected and analyzed by K. Stierhoff and J. Zwolinski, who submit figures and plots to the CCIEA editorial team based on an early version of the annual CPS Acoustic Trawl survey report (preliminary until published, and subject to change), which is ultimately published as a NOAA Technical Reports. 
