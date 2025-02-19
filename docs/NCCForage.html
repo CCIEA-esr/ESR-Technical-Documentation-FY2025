@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,6 +52,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./CCCForage.html" rel="next">
 <link href="./Krill.html" rel="prev">
+<link href="./figures/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -481,7 +502,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> The Northern CCE survey (known as the Juvenile Salmon Ocean Ecology Survey, JSOES) occurs in June and targets juvenile salmon in surface waters off Oregon and Washington. It also collects adult and juvenile (age 1+) pelagic forage fishes, market squid, and gelatinous zooplankton with regularity. A Nordic 264 rope trawl is towed for 15-30 min at approximately 6.5 km/hr. The gear is fished during daylight hours in near-surface (upper 20 m) waters, which is appropriate for targeting juvenile salmon.</p>
+<p><strong>Description</strong> The Northern CCE survey (known as the Juvenile Salmon Ocean Ecology Survey, JSOES) occurs in June and targets juvenile salmon in surface waters off Oregon and Washington <span class="citation" data-cites="morgan2019recent">(<a href="#ref-morgan2019recent" role="doc-biblioref">Morgan et al. 2019</a>)</span>. It also collects adult and juvenile (age 1+) pelagic forage fishes, market squid, and gelatinous zooplankton with regularity. A Nordic 264 rope trawl is towed for 15-30 min at approximately 6.5 km/hr. The gear is fished during daylight hours in near-surface (upper 20 m) waters, which is appropriate for targeting juvenile salmon.</p>
 <p>Several other taxa (e.g., anchovy, sardine, herring and mackerels) collected by the June JSOES surface trawl are not considered to be sampled quantitatively due to their behavior (i.e., depth in the water column during daylight hours) and mesh size of sampling gear. Thus, we do not report catch-per-unit-effort (CPUE) of these species, rather noting them in terms of their relative prevalence - the proportion of stations where they were caught.</p>
 <p>Pelagic forage data from the Northern CCE are provided by B. Burke, NMFS/NWFSC and C. Morgan, OSU/CIMRS. Data are derived from surface trawls taken during the NWFSC Juvenile Salmon &amp; Ocean Ecosystem Survey (JSOES; https://www.fisheries.noaa.gov/west-coast/science-data/ocean-ecosystem-indicators-pacific-salmon-marine-survival-northern). Similarity analysis and cluster plot by A. Thompson, NMFS/SWFSC.</p>
 <b>Forage Biomass:</b>
@@ -556,6 +577,11 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-morgan2019recent" class="csl-entry" role="listitem">
+Morgan, Cheryl A, Brian R Beckman, Laurie A Weitkamp, and Kurt L Fresh. 2019. <span>“Recent Ecosystem Disturbance in the Northern California Current.”</span> <em>Fisheries</em> 44 (10): 465–74.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
