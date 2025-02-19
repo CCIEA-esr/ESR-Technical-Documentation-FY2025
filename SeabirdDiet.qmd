@@ -1,7 +1,8 @@
 # Seabird Diet
+
 {{< include _setup.qmd >}}
 
-**Description** Seabird diet .....
+**Description** Seabird diet composition during the breeding season often tracks marine environmental conditions and reflects production and availability of forage within regions of the CCE. We present seabird diet data from the northern and central regions to help shed light on foraging conditions on an annual basis.
 
 ```{r}
 #| echo: false
@@ -13,6 +14,7 @@ num_regions <- nrow(regions)
 ```
 
 **Indicator Regions**
+
 ```{r}
 #| echo: false
 #| results: 'asis'
@@ -32,12 +34,10 @@ for (r in 1:num_regions){
 }
 ```
 
-**Data extraction**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
 get_erddap_link(erddap_id)
 ```
 
-**Data analysis**
+**References**
