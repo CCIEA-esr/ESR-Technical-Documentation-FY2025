@@ -7,7 +7,6 @@ Albacore Tuna, Bluefin Tuna, and Broadbill Swordfish are opportunistic predators
 
 Juvenile Albacore Tuna were collected off Northern California, Oregon, and Washington during the summer and fall fishing season. Bluefin Tuna were collected by recreational fishers in the Southern California Bight from spring until early fall. Swordfish were collected off Southern and Central California during the commercial drift gillnet season (August 15th through January 31st). Swordfish stomachs are classified by the year the fishing season began (stomachs from January are assigned to the previous year’s fishing season).
 
-\[need for descriptive text for figures?\]
 
 ```{r}
 #| echo: false
