@@ -41,6 +41,7 @@ getMultiMetadata <-function(erddap_id){
     metalist[[i]] <- m
     }
   meta <- do.call(rbind,metalist)
+  return(meta)
   }
   
 # Functions to print out metadata for data sets organized in various ways

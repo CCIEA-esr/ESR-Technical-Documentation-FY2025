@@ -1,4 +1,3 @@
-
 # North Pacific High Indicators
 
 {{< include _setup.qmd >}}
