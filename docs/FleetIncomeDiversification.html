@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -484,8 +504,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> Catches and prices from many fisheries exhibit high interannual variability, leading to high variability in fisher’s revenue, but variability can be reduced by diversifying activities across multiple fisheries or regions <span class="citation" data-cites="Kasperski2013income">(<a href="#ref-Kasperski2013income" role="doc-biblioref"><strong>Kasperski2013income?</strong></a>)</span>. Individuals may have good reasons to specialize, including reduced costs or greater efficiency; thus while diversification may reduce income variation, it does not necessarily promote higher average profitability. We use the Effective Shannon Index (ESI) to examine diversification of fishing revenue for more than 28,000 vessels fishing off the West Coast and Alaska over the last 40 years. The ESI increases as revenues are spread across more fisheries, and as revenues are spread more evenly across fisheries; ESI = 1 when a vessel’s revenues are from a single species group and region; ESI = 2 if revenues are spread evenly across 2 fisheries; ESI = 3 if revenues are spread evenly across 3 fisheries; and so on. If revenue is not evenly distributed across fisheries, then the ESI value is lower than the number of fisheries a vessel enters.</p>
-<p>Diversification can take other forms. Spreading effort and catch over the year, or simply fishing more weeks of the year, can both increase revenue and decrease interannual variation of revenue just as species diversification does. In fact, <span class="citation" data-cites="Abbot2023species">(<a href="#ref-Abbot2023species" role="doc-biblioref"><strong>Abbot2023species?</strong></a>)</span> showed that reductions in revenue variation associated with species diversification can be explained mainly by increased temporal diversification, which can be achieved by fishing in multiple fisheries but also by fishing for more weeks of the year in a single fishery. Effective Shannon Index can also be used to examine how widely and evenly vessel revenues are spread across weeks of the year as an indicator or temporal diversification. Like the species diversification metric, this index increases the more weeks of the year a vessel has revenue and the more evenly that revenue is distributed across weeks. A vessel fishing 15 weeks of the year with the same revenue each of those weeks would have a temporal ESI of 15, and that number would decline as revenue is spread less evenly over the 15 weeks.</p>
+<p><strong>Description</strong> Catches and prices from many fisheries exhibit high interannual variability, leading to high variability in fisher’s revenue, but variability can be reduced by diversifying activities across multiple fisheries or regions <span class="citation" data-cites="kasperski2013income">(<a href="#ref-kasperski2013income" role="doc-biblioref">Kasperski and Holland 2013</a>)</span>. Individuals may have good reasons to specialize, including reduced costs or greater efficiency; thus while diversification may reduce income variation, it does not necessarily promote higher average profitability. We use the Effective Shannon Index (ESI) to examine diversification of fishing revenue for more than 28,000 vessels fishing off the West Coast and Alaska over the last 40 years. The ESI increases as revenues are spread across more fisheries, and as revenues are spread more evenly across fisheries; ESI = 1 when a vessel’s revenues are from a single species group and region; ESI = 2 if revenues are spread evenly across 2 fisheries; ESI = 3 if revenues are spread evenly across 3 fisheries; and so on. If revenue is not evenly distributed across fisheries, then the ESI value is lower than the number of fisheries a vessel enters.</p>
+<p>Diversification can take other forms. Spreading effort and catch over the year, or simply fishing more weeks of the year, can both increase revenue and decrease interannual variation of revenue just as species diversification does. In fact, <span class="citation" data-cites="abbot2023species">(<a href="#ref-abbot2023species" role="doc-biblioref"><strong>abbot2023species?</strong></a>)</span> showed that reductions in revenue variation associated with species diversification can be explained mainly by increased temporal diversification, which can be achieved by fishing in multiple fisheries but also by fishing for more weeks of the year in a single fishery. Effective Shannon Index can also be used to examine how widely and evenly vessel revenues are spread across weeks of the year as an indicator or temporal diversification. Like the species diversification metric, this index increases the more weeks of the year a vessel has revenue and the more evenly that revenue is distributed across weeks. A vessel fishing 15 weeks of the year with the same revenue each of those weeks would have a temporal ESI of 15, and that number would decline as revenue is spread less evenly over the 15 weeks.</p>
 <p>
 </p><ul>
 <li><b>Indicators:</b>
@@ -536,8 +556,14 @@ ul.task-list li input[type="checkbox"] {
 <p></p>
 <p><strong>Indicator Download: </strong></p>
 <p>ERDDAP™ link: <br><a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_HD_ESI_VESS.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_HD_ESI_VESS.html</a></p>
+<p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kasperski2013income" class="csl-entry" role="listitem">
+Kasperski, Stephen, and Daniel S Holland. 2013. <span>“<span class="nocase">Income diversification and risk for fishermen</span>.”</span> <em>Proceedings of the National Academy of Sciences</em> 110 (6): 2076–81.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
