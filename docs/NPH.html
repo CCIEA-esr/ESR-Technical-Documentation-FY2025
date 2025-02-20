@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -496,7 +516,7 @@ ul.task-list li input[type="checkbox"] {
 <li><b>Time Range: </b>1967 - 2024</li>
 <li><b>CCIEA Data Contact: </b>isaac.schroeder@noaa.gov</li>
 <li><b>Institution: </b>NOAA SWFSC/ERD</li>
-<li><b>Source Data: </b>Variations in large-scale atmospheric forcing influence upwelling dynamics and ecosystem productivity in the California Current System.The area of the North Pacific High (NPH) is characterized by areal extent of the 1020 Pa isobar. Winter values (January - February mean) of the NPH area can be used as an ecosystem pre-conditioning index (Schroeder et al., doi:10.1002/grl.50100).The area of the NPH are calculated from monthly mean sea level pressure (SLP) fields created by the U.S. Navy Fleet Numerical Meterology and Oceanography Center (FNMOC). Monthly SLP data available at <a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html" target="_blank">https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html</a>. The area is the areal extent of the 1020 hPa contour for a given month. The January - February mean is the average of the January and February areas for a given year.</li>
+<li><b>Source Data: </b>Variations in large-scale atmospheric forcing influence upwelling dynamics and ecosystem productivity in the California Current System.The area of the North Pacific High (NPH) is characterized by areal extent of the 1020 Pa isobar. Winter values (January - February mean) of the NPH area can be used as an ecosystem pre-conditioning index (<span class="citation" data-cites="Schroeder2013">Schroeder et al. (<a href="#ref-Schroeder2013" role="doc-biblioref">2013</a>)</span>, doi:10.1002/grl.50100).The area of the NPH are calculated from monthly mean sea level pressure (SLP) fields created by the U.S. Navy Fleet Numerical Meterology and Oceanography Center (FNMOC). Monthly SLP data available at <a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html" target="_blank">https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdlasFnWPr.html</a>. The area is the areal extent of the 1020 hPa contour for a given month. The January - February mean is the average of the January and February areas for a given year.</li>
 <li><b>Additional Calculations: </b>The NRT ROMS temperature data downloaded from the UCSC website (<a href="http://oceanmodeling.ucsc.edu/index.html" target="_blank">http://oceanmodeling.ucsc.edu/index.html</a>) has grid points with 2 m temperature data reported as Not-A-Number, these values are 2 m temperatu. Tdata at these grid points are obtained by extrapolating the data to 2 m depth using the interp1d routine from the Python library scipy.interpolate sub-package.</li>
 </ul>
 <p></p>
@@ -506,6 +526,11 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Schroeder2013" class="csl-entry" role="listitem">
+Schroeder, Isaac D., Bryan A. Black, William J. Sydeman, Steven J. Bograd, Elliott L. Hazen, Jarrod A. Santora, and Brian K. Wells. 2013. <span>“The North Pacific High and Wintertime Pre‐conditioning of California Current Productivity.”</span> <em>Geophysical Research Letters</em> 40 (3): 541–46. <a href="https://doi.org/10.1002/grl.50100">https://doi.org/10.1002/grl.50100</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -484,19 +504,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The North Pacific Gyre Oscillation (NPGO) is a low-frequency variation of sea surface height, indicating variations in the circulation of the North Pacific Subtropical Gyre and the Alaskan Gyre, which in turn relate to the source waters for the CCLME. Positive NPGO values are associated with increased equatorward flow, along with increased surface salinities, nutrients, and chlorophyll-a. Negative NPGO values are associated with decreases in such values, implying less subarctic source water and generally lower productivity.</p>
+<p><strong>Description</strong> The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The North Pacific Gyre Oscillation (NPGO, <span class="citation" data-cites="DiLorenzo2008">Di Lorenzo et al. (<a href="#ref-DiLorenzo2008" role="doc-biblioref">2008</a>)</span>) is a low-frequency variation of sea surface height, indicating variations in the circulation of the North Pacific Subtropical Gyre and the Alaskan Gyre, which in turn relate to the source waters for the CCLME. Positive NPGO values are associated with increased equatorward flow, along with increased surface salinities, nutrients, and chlorophyll-a. Negative NPGO values are associated with decreases in such values, implying less subarctic source water and generally lower productivity.</p>
 <p><b>North Pacific Gyre Oscillation Index</b></p>
 <ul>
 <li><b>Component Category: </b>Climate and Ocean Drivers</li>
 <li><b>Time Range: </b>1950 - 2024</li>
 <li><b>CCIEA Data Contact: </b>isaac.schroeder@noaa.gov</li>
-<li><b>Institution: </b>Georgia Institute of Technology (GT)</li>
+<li><b>Institution: </b>Brown University</li>
 <li><b>Source Data: </b>The <a href="https://www.o3d.org/npgo/data/NPGO.txt" target="_blank">NPGO</a> is calculated from an Empirical Orthogonal Function analysis of sea-surface height in the Northeast Pacific. The NPGO is the second dominant mode.</li>
 </ul>
 <p><strong>Indicator Download: </strong></p>
 <p>ERDDAP™ link: <br><a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_OC_NPGO.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_OC_NPGO.html</a></p>
+<p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-DiLorenzo2008" class="csl-entry" role="listitem">
+Di Lorenzo, E., N. Schneider, K. M. Cobb, P. J. S. Franks, K. Chhak, A. J. Miller, J. C. McWilliams, et al. 2008. <span>“North Pacific Gyre Oscillation Links Ocean Climate and Ecosystem Change.”</span> <em>Geophysical Research Letters</em> 35 (8). <a href="https://doi.org/10.1029/2007gl032838">https://doi.org/10.1029/2007gl032838</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

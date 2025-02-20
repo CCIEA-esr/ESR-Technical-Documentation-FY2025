@@ -1,7 +1,7 @@
 # NPGO (North Pacific Gyre Oscillation)
 {{< include _setup.qmd >}}
 
-**Description** The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The North Pacific Gyre Oscillation (NPGO) is a low-frequency variation of sea surface height, indicating variations in the circulation of the North Pacific Subtropical Gyre and the Alaskan Gyre, which in turn relate to the source waters for the CCLME. Positive NPGO values are associated with increased equatorward flow, along with increased surface salinities, nutrients, and chlorophyll-a. Negative NPGO values are associated with decreases in such values, implying less subarctic source water and generally lower productivity.
+**Description** The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The North Pacific Gyre Oscillation (NPGO, @DiLorenzo2008) is a low-frequency variation of sea surface height, indicating variations in the circulation of the North Pacific Subtropical Gyre and the Alaskan Gyre, which in turn relate to the source waters for the CCLME. Positive NPGO values are associated with increased equatorward flow, along with increased surface salinities, nutrients, and chlorophyll-a. Negative NPGO values are associated with decreases in such values, implying less subarctic source water and generally lower productivity.
 
 ```{r}
 #| echo: false
@@ -12,3 +12,4 @@ one_id_multimeta(erddap_id)
 get_erddap_link(erddap_id)
 ```
 
+**References**

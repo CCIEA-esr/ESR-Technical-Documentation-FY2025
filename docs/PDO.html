@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -484,19 +504,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The Pacific Decadal Oscillation (PDO) describes North Pacific sea surface temperature (SST) anomalies that may persist for many years. Positive PDOs are associated with warmer SST and lower productivity in the CCE, while negative PDOs indicate cooler SST and are associated with higher productivity.</p>
+<p><strong>Description</strong> The CCLME is driven by atmosphere–ocean energy exchange that occurs on many temporal and spatial scales. The Pacific Decadal Oscillation (PDO, <span class="citation" data-cites="Mantua1997">Mantua et al. (<a href="#ref-Mantua1997" role="doc-biblioref">1997</a>)</span>) describes North Pacific sea surface temperature (SST) anomalies that may persist for many years. Positive PDOs are associated with warmer SST and lower productivity in the CCE, while negative PDOs indicate cooler SST and are associated with higher productivity.</p>
 <p><b>Pacific Decadal Oscillation Index</b></p>
 <ul>
 <li><b>Component Category: </b>Climate and Ocean Drivers</li>
 <li><b>Time Range: </b>1950 - 2025</li>
 <li><b>CCIEA Data Contact: </b>isaac.schroeder@noaa.gov</li>
 <li><b>Institution: </b>NOAA SWFSC/FED</li>
-<li><b>Source Data: </b>PDO index is defined as the projections of the ERSST V5 monthly SSTA onto the 1st EOF pattern of North Pacific 20N-60N. 1900-1993 DATA from ERSST V3b is used to derived the climatology and the 1st EOF pattern. Reference: Wen, C., A. Kumar, and Y. Xue, 2014: Factors contributing to uncertainty in Pacific decadal oscillation index. Geophys. Res. Lett., 41, 7980-7986, doi:<a href="https://doi.org/10.1002/2014GL061992" target="_blank">https://doi.org/10.1002/2014GL061992</a> ERSST.V5 : Huang, B., Peter W. Thorne, et. al, 2017: Extended Reconstructed Sea Surface Temperature version 5 (ERSSTv5), Upgrades, validations, and intercomparisons. J. Climate Smith, T. M., Reynolds, R. W., Peterson, T. C., and Lawrimore, J. (2008), Improvements to NOAA’s historical merged land-ocean surface temperature analysis (1880-2006), J. Clim., 21( 10), 2283-2296. <em>Note: 2023-03-10 UW-JISAO PDO is not longer being updated. This PDO is now ERSST V5</em></li>
+<li><b>Source Data: </b>PDO index is defined as the projections of the ERSST V5 monthly SSTA onto the 1st EOF pattern of North Pacific 20N-60N. 1900-1993 DATA from ERSST V3b is used to derived the climatology and the 1st EOF pattern. Reference: <span class="citation" data-cites="wen2014pdo">(<a href="#ref-wen2014pdo" role="doc-biblioref">Wen, Kumar, and Xue 2014</a>)</span> Wen, C., A. Kumar, and Y. Xue, 2014: Factors contributing to uncertainty in Pacific decadal oscillation index. Geophys. Res. Lett., 41, 7980-7986, doi:https://doi.org/10.1002/2014GL061992 ERSST.V5 : <span class="citation" data-cites="Huang2017">(<a href="#ref-Huang2017" role="doc-biblioref">Huang et al. 2017</a>)</span> Huang, B., Peter W. Thorne, et. al, 2017: Extended Reconstructed Sea Surface Temperature version 5 (ERSSTv5), Upgrades, validations, and intercomparisons. J. Climate <span class="citation" data-cites="smith2008">(<a href="#ref-smith2008" role="doc-biblioref">Smith et al. 2008</a>)</span> Smith, T. M., Reynolds, R. W., Peterson, T. C., and Lawrimore, J. (2008), Improvements to NOAA’s historical merged land-ocean surface temperature analysis (1880-2006), J. Clim., 21( 10), 2283-2296. <em>Note: 2023-03-10 UW-JISAO PDO is not longer being updated. This PDO is now ERSST V5</em></li>
 </ul>
 <p><strong>Indicator Download: </strong></p>
 <p>ERDDAP™ link: <br><a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_OC_PDO.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_OC_PDO.html</a></p>
+<p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Huang2017" class="csl-entry" role="listitem">
+Huang, Boyin, Peter W. Thorne, Viva F. Banzon, Tim Boyer, Gennady Chepurin, Jay H. Lawrimore, Matthew J. Menne, Thomas M. Smith, Russell S. Vose, and Huai-Min Zhang. 2017. <span>“Extended Reconstructed Sea Surface Temperature, Version 5 (ERSSTv5): Upgrades, Validations, and Intercomparisons.”</span> <em>Journal of Climate</em> 30 (20): 8179–8205. <a href="https://doi.org/10.1175/JCLI-D-16-0836.1">https://doi.org/10.1175/JCLI-D-16-0836.1</a>.
+</div>
+<div id="ref-Mantua1997" class="csl-entry" role="listitem">
+Mantua, Nathan J., Steven R. Hare, Yuan Zhang, John M. Wallace, and Robert C. Francis. 1997. <span>“A Pacific Interdecadal Climate Oscillation with Impacts on Salmon Production.”</span> <em>Bulletin of the American Meteorological Society</em> 78 (6): 1069–79. <a href="https://doi.org/10.1175/1520-0477(1997)078<1069:apicow>2.0.co;2">https://doi.org/10.1175/1520-0477(1997)078&lt;1069:apicow&gt;2.0.co;2</a>.
+</div>
+<div id="ref-smith2008" class="csl-entry" role="listitem">
+Smith, Thomas M., Richard W. Reynolds, Thomas C. Peterson, and Jay Lawrimore. 2008. <span>“Improvements to NOAA’s Historical Merged Land-Ocean Surface Temperature Analysis (1880-2006).”</span> <em>Journal of Climate</em> 21 (10): 2283–96. <a href="https://doi.org/10.1175/2007JCLI2100.1">https://doi.org/10.1175/2007JCLI2100.1</a>.
+</div>
+<div id="ref-wen2014pdo" class="csl-entry" role="listitem">
+Wen, C, A Kumar, and Y Xue. 2014. <span>“Factors Contributing to Uncertainty in Pacific Decadal Oscillation Index.”</span> <em>Geophys. Res. Lett.</em> 41: 7980–86. <a href="https://doi.org/10.1002/2014GL061992">https://doi.org/10.1002/2014GL061992</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
