@@ -2,7 +2,7 @@
 {{< include _setup.qmd >}}
 
 **Description** 
-\[draw from old reports; this section will require a bit more writing to incorporate evolving approaches and methods\]
+pull some text from @andrews2015legacy
 
 **Indicators**
 
@@ -14,3 +14,4 @@ one_id_byquery(erddap_id,"Species")
 get_erddap_link(erddap_id)
 ```
 
+**References**

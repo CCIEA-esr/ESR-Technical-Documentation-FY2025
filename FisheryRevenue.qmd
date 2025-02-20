@@ -1,7 +1,7 @@
 # Commercial Fishery Revenue
 {{< include _setup.qmd >}}
 
-**Description** Commercial fishery revenue is a direct indicator of ecosystem services provided to coastal economies of the CCE. Commercial revenue data are best summarized by the Pacific Fisheries Information Network (PacFIN; pacfin.psmfc.org). Revenues are calculated based on consumer price indices in current year (e.g., 2024) dollars. Status and trends are estimated relative to a frame of reference of 1991-2020. In most cases, revenue data for the most recent reporting year are only complete through the latter months (e.g., October-December); these data are updated in the next annual cycle.
+**Description** Commercial fishery revenue is a direct indicator of ecosystem services provided to coastal economies of the CCE. Commercial revenue data are best summarized by the Pacific Fisheries Information Network (PacFIN; https://pacfin.psmfc.org/). Revenues are calculated based on consumer price indices in current year (e.g., 2024) dollars. Status and trends are estimated relative to a frame of reference of 1991-2020. In most cases, revenue data for the most recent reporting year are only complete through the latter months (e.g., October-December); these data are updated in the next annual cycle.
 
 Commercial revenue data are reported coastwide and by state (CA, OR, WA) by fishery species category.
 
@@ -16,3 +16,4 @@ get_erddap_link(erddap_id)
 ```
 ```
 
+**References**
