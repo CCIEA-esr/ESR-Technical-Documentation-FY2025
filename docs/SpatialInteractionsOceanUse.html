@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -425,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SocialVulnerability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Social Vulnerability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Social Vulnerability and Fisheries Engagement</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -485,13 +505,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Below, we describe two portfolios of indicators for i) oceanographic and lower-trophic level productivity and ii) fisheries activity that can help identify ocean areas important to the overall structure and function of the CCE, and that can track potential social-ecological impacts across all stages of OWE development.</p>
-<p>Oceanography and Productivity. Six broad-scale indicators of long-term, spatial variation in oceanography and lower-trophic level productivity are being used to inform spatial suitability analyses in areas off northern California being considered for OWE development in 2024. The ecosystem indicators include: 1. Average wind-driven upwelling during March-July, calculated at 40m depth from 1988-2012 using the Regional Ocean Modeling System (Raghukumar et al.&nbsp;2023); 2. Long-term, spatial variability and hotspots in primary productivity, calculated from a biogeochemistry model as the average concentration of surface phytoplankton in May-July, 1995-2020 (Fiechter et al.&nbsp;2018); 3. Long-term, spatial variability and hotspots in secondary productivity from May-August, calculated as an ensemble of four different estimates of krill abundance/biomass across the West Coast (Cimino et al.&nbsp;2020; Fiechter et al.&nbsp;2020; Messié et al.&nbsp;2022; Phillips et al.&nbsp;2022); 4. Long-term, spatial variability and hotspots for young-of-year (YOY) rockfishes during their pelagic juvenile life stage in May-June from 2001-2022 (Field et al.&nbsp;2021); 5.Long-term, spatial variability and hotspots for YOY Pacific hake in May-June from 2001-2022 (Field et al.&nbsp;2021); 6. Long-term, spatial variability and hotspots of groundfish nursery habitat on the seafloor, based on summed average densities of juveniles from 13 groundfish species in May-October from 2003-2018 (Tolimieri et al.&nbsp;2020).</p>
-<p>The Bureau of Ocean Energy Management (BOEM) has been using a spatial suitability analysis developed by NOAA’s National Centers for Coastal and Ocean Science (NCCOS) to identify areas BOEM may consider for OWE development. In order to inform an analysis of new areas along the northern California coast, we used BOEM’s methods to calculate an overall suitability score across the six ecosystem indicators for each grid cell (Riley et al.&nbsp;2021). Briefly, the raw data for each indicator was cropped to the area-of-interest, interpolated across a 2x2-km spatial grid, transformed using a z-membership function, and then geometrically averaged across all indicators for each grid cell. This geometric mean represents the suitability score of a grid cell for OWE development relative to the importance of these areas to the processes represented by each indicator; thus, a suitability score of ‘1’ is most suitable for OWE, while suitability scores closer to 0 are less suitable. In addition to being applicable to siting of new areas, these indicators could be used to establish baseline conditions that can be used to identify potential effects resulting from OWE development and to identify relevant mitigation strategies.</p>
+<p>Oceanography and Productivity. Six broad-scale indicators of long-term, spatial variation in oceanography and lower-trophic level productivity are being used to inform spatial suitability analyses in areas off northern California being considered for OWE development in 2024. The ecosystem indicators include: 1. Average wind-driven upwelling during March-July, calculated at 40m depth from 1988-2012 using the Regional Ocean Modeling System (<span class="citation" data-cites="raghukumar2023projected">Raghukumar et al. (<a href="#ref-raghukumar2023projected" role="doc-biblioref">2023</a>)</span>); 2. Long-term, spatial variability and hotspots in primary productivity, calculated from a biogeochemistry model as the average concentration of surface phytoplankton in May-July, 1995-2020 (<span class="citation" data-cites="fiechter2018wind">Fiechter, Edwards, and Moore (<a href="#ref-fiechter2018wind" role="doc-biblioref">2018</a>)</span>); 3. Long-term, spatial variability and hotspots in secondary productivity from May-August, calculated as an ensemble of four different estimates of krill abundance/biomass across the West Coast (<span class="citation" data-cites="cimino2020essential">Cimino et al. (<a href="#ref-cimino2020essential" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="fiechter2020krill">Fiechter et al. (<a href="#ref-fiechter2020krill" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="messie2022satellite">Messié et al. (<a href="#ref-messie2022satellite" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="phillips2022spatiotemporal">Phillips et al. (<a href="#ref-phillips2022spatiotemporal" role="doc-biblioref">2022</a>)</span>); 4. Long-term, spatial variability and hotspots for young-of-year (YOY) rockfishes during their pelagic juvenile life stage in May-June from 2001-2022 (<span class="citation" data-cites="field2021spatiotemporal">Field et al. (<a href="#ref-field2021spatiotemporal" role="doc-biblioref">2021</a>)</span>); 5.Long-term, spatial variability and hotspots for YOY Pacific hake in May-June from 2001-2022 (<span class="citation" data-cites="field2021spatiotemporal">Field et al. (<a href="#ref-field2021spatiotemporal" role="doc-biblioref">2021</a>)</span>); 6. Long-term, spatial variability and hotspots of groundfish nursery habitat on the seafloor, based on summed average densities of juveniles from 13 groundfish species in May-October from 2003-2018 (<span class="citation" data-cites="tolimieri2020spatio">Tolimieri, Wallace, and Haltuch (<a href="#ref-tolimieri2020spatio" role="doc-biblioref">2020</a>)</span>).</p>
+<p>The Bureau of Ocean Energy Management (BOEM) has been using a spatial suitability analysis developed by NOAA’s National Centers for Coastal and Ocean Science (NCCOS) to identify areas BOEM may consider for OWE development. In order to inform an analysis of new areas along the northern California coast, we used BOEM’s methods to calculate an overall suitability score across the six ecosystem indicators for each grid cell (<span class="citation" data-cites="riley2021aquaculture">Riley et al. (<a href="#ref-riley2021aquaculture" role="doc-biblioref">2021</a>)</span>). Briefly, the raw data for each indicator was cropped to the area-of-interest, interpolated across a 2x2-km spatial grid, transformed using a z-membership function, and then geometrically averaged across all indicators for each grid cell. This geometric mean represents the suitability score of a grid cell for OWE development relative to the importance of these areas to the processes represented by each indicator; thus, a suitability score of ‘1’ is most suitable for OWE, while suitability scores closer to 0 are less suitable. In addition to being applicable to siting of new areas, these indicators could be used to establish baseline conditions that can be used to identify potential effects resulting from OWE development and to identify relevant mitigation strategies.</p>
 <p>Fisheries Indicators. We developed seven indicators that describe spatial and temporal variation in groundfish bottom trawling activity from 2002-2021 in the same region being considered for OWE development off the coast of northern California. These indicators were presented in the 2022 ESR and are meant to capture the spatial and temporal variation in fishing effort for the groundfish bottom trawl fishery and to be used in tandem with the ecosystem indicators to identify potential interactions across the entire social-ecological system.</p>
 <p>For the groundfish indicators herein, we used logbook set and retrieval coordinates from the limited-entry/catch shares groundfish bottom trawl fisheries to estimate total duration trawled on a 2x2-km grid. These durations were then used to calculate: 1. total duration trawled in the most recent year (2021); 2. the anomaly of the most recent year relative to the entire time series; 3. the most recent 5-year mean (2017-2021); 4. the most recent 5-year trend (2017-2021); 5. the sum of duration trawled across all years; 6. the proportion of years trawled; and 7. the number of years since trawling occurred within each grid cell.</p>
 <p>To maintain confidentiality, grid cells with &lt;3 vessels operating within the grid cell across the years associated with the indicator have been removed. The first four indicators are consistent with measuring the ‘status’ and ‘trends’ of other ecosystem indicators presented in this report, while the last three have been developed as indicators to use within a risk analysis framework. These indicators account for only federal limited-entry/catch shares groundfish bottom trawl fisheries from 2002-2021, but provide a useful framework for identifying the potential for overlap and conflict between day-to-day fisheries operations and OWE areas. Other fisheries were included in a similar framework and will be added as analyses are completed.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cimino2020essential" class="csl-entry" role="listitem">
+Cimino, Megan A, Jarrod A Santora, Isaac Schroeder, William Sydeman, Michael G Jacox, Elliott L Hazen, and Steven J Bograd. 2020. <span>“Essential Krill Species Habitat Resolved by Seasonal Upwelling and Ocean Circulation Models Within the Large Marine Ecosystem of the California Current System.”</span> <em>Ecography</em> 43 (10): 1536–49.
+</div>
+<div id="ref-fiechter2018wind" class="csl-entry" role="listitem">
+Fiechter, Jerome, Christopher A Edwards, and Andrew M Moore. 2018. <span>“Wind, Circulation, and Topographic Effects on Alongshore Phytoplankton Variability in the California Current.”</span> <em>Geophysical Research Letters</em> 45 (7): 3238–45.
+</div>
+<div id="ref-fiechter2020krill" class="csl-entry" role="listitem">
+Fiechter, Jerome, Jarrod A Santora, Francisco Chavez, Devon Northcott, and Monique Messié. 2020. <span>“Krill Hotspot Formation and Phenology in the California Current Ecosystem.”</span> <em>Geophysical Research Letters</em> 47 (13): e2020GL088039.
+</div>
+<div id="ref-field2021spatiotemporal" class="csl-entry" role="listitem">
+Field, John C, Rebecca R Miller, Jarrod A Santora, Nick Tolimieri, Melissa A Haltuch, Richard D Brodeur, Toby D Auth, et al. 2021. <span>“Spatiotemporal Patterns of Variability in the Abundance and Distribution of Winter-Spawned Pelagic Juvenile Rockfish in the California Current.”</span> <em>PloS One</em> 16 (5): e0251638.
+</div>
+<div id="ref-messie2022satellite" class="csl-entry" role="listitem">
+Messié, Monique, Diego A Sancho-Gallegos, Jerome Fiechter, Jarrod A Santora, and Francisco P Chavez. 2022. <span>“Satellite-Based Lagrangian Model Reveals How Upwelling and Oceanic Circulation Shape Krill Hotspots in the California Current System.”</span> <em>Frontiers in Marine Science</em> 9: 835813.
+</div>
+<div id="ref-phillips2022spatiotemporal" class="csl-entry" role="listitem">
+Phillips, Elizabeth M, Dezhang Chu, Stéphane Gauthier, Sandra L Parker-Stetter, Andrew O Shelton, and Rebecca E Thomas. 2022. <span>“<span class="nocase">Spatiotemporal variability of euphausiids in the California Current Ecosystem: insights from a recently developed time series</span>.”</span> <em>ICES Journal of Marine Science</em> 79 (4): 1312–26.
+</div>
+<div id="ref-raghukumar2023projected" class="csl-entry" role="listitem">
+Raghukumar, Kaustubha, Timothy Nelson, Michael Jacox, Christopher Chartrand, Jerome Fiechter, Grace Chang, Lawrence Cheung, and Jesse Roberts. 2023. <span>“Projected Cross-Shore Changes in Upwelling Induced by Offshore Wind Farm Development Along the California Coast.”</span> <em>Communications Earth &amp; Environment</em> 4 (1): 116.
+</div>
+<div id="ref-riley2021aquaculture" class="csl-entry" role="listitem">
+Riley, Kenneth L, Lisa Claire Wickliffe, Jonathan A Jossart, Jonathan K MacKay, Alyssa L Randall, Gretchen E Bath, Meghan B Balling, Brandon M Jensen, and JA Morris Jr. 2021. <span>“An Aquaculture Opportunity Area Atlas for the US Gulf of Mexico.”</span> National Oceanic; Atmospheric Administration.
+</div>
+<div id="ref-tolimieri2020spatio" class="csl-entry" role="listitem">
+Tolimieri, Nick, John Wallace, and Melissa Haltuch. 2020. <span>“<span class="nocase">Spatio-temporal patterns in juvenile habitat for 13 groundfishes in the California Current Ecosystem</span>.”</span> <em>PloS One</em> 15 (8): e0237996.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -921,8 +970,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./SocialVulnerability.html" class="pagination-link" aria-label="Social Vulnerability">
-        <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Social Vulnerability</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./SocialVulnerability.html" class="pagination-link" aria-label="Social Vulnerability and Fisheries Engagement">
+        <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Social Vulnerability and Fisheries Engagement</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

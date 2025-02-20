@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -425,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./SocialVulnerability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Social Vulnerability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Social Vulnerability and Fisheries Engagement</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -484,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> Along with factors like processor availability and local infrastructure influence, variability in port-level landings can impact the overall distribution of fishing revenue along the coast. The Theil Index metric assesses the geographic concentration of fishing revenues, and is used to track progress toward meeting NS-8. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. Annually, we calculate the Theil Index for all fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries (Leonard and Watson 2011).</p>
+<p><strong>Description</strong> Along with factors like processor availability and local infrastructure influence, variability in port-level landings can impact the overall distribution of fishing revenue along the coast. The Theil Index metric assesses the geographic concentration of fishing revenues, and is used to track progress toward meeting NS-8. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. Annually, we calculate the Theil Index for all fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries (<span class="citation" data-cites="leonard2011description">Leonard and Watson (<a href="#ref-leonard2011description" role="doc-biblioref">2011</a>)</span>).</p>
 <p>
 </p><ul>
 <li><b>Species:</b>
@@ -502,14 +522,20 @@ ul.task-list li input[type="checkbox"] {
 <li><b>Time Range: </b>1981 - 2023</li>
 <li><b>CCIEA Data Contact: </b>karma.norman@noaa.gov</li>
 <li><b>Institution: </b>NOAA NWFSC</li>
-<li><b>Source Data: </b>Theil Index and annual commercial fishery revenue data provided by K. Norman, NMFS/NWFSC, and A. Phillips, PSMFC, with data derived from PacFIN <a href="http://pacfin.psmfc.org" target="_blank">PacFIN</a>.</li>
-<li><b>Additional Calculations: </b>As a potential indicator to track progress toward meeting NS-8, we use a metric called the Theil Index to assess geographic concentration of fishing revenues. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. We calculate the Theil Index for total fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries (IO-PAC; Leonard and Watson 2011).</li>
+<li><b>Source Data: </b>Theil Index and annual commercial fishery revenue data provided by K. Norman, NMFS/NWFSC with data derived from <a href="http://pacfin.psmfc.org" target="_blank">PacFIN</a>.</li>
+<li><b>Additional Calculations: </b>As a potential indicator to track progress toward meeting NS-8, we use a metric called the Theil Index to assess geographic concentration of fishing revenues. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. We calculate the Theil Index for total fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries (IO-PAC; <span class="citation" data-cites="leonard2011description">Leonard and Watson (<a href="#ref-leonard2011description" role="doc-biblioref">2011</a>)</span>).</li>
 </ul>
 <p></p>
 <p><strong>Indicator Download: </strong></p>
 <p>ERDDAP™ link: <br><a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_HD_THEIL.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_HD_THEIL.html</a></p>
+<p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-leonard2011description" class="csl-entry" role="listitem">
+Leonard, Jerry Lamar, and Philip Scott Watson. 2011. <span>“Description of the Input-Output Model for Pacific Coast Fisheries; NOAA Technical Memorandum NMFS-NWFSC ; 111.”</span> <a href="https://repository.library.noaa.gov/view/noaa/8718">https://repository.library.noaa.gov/view/noaa/8718</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
