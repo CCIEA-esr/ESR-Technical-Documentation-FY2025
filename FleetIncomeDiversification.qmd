@@ -13,3 +13,5 @@ erddap_id='cciea_HD_ESI_VESS'
 one_id_byquery(erddap_id,"Indicators")
 get_erddap_link(erddap_id)
 ```
+
+**References**
