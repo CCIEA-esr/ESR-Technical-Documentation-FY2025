@@ -54,7 +54,7 @@ one_id_multimeta <-function(erddap_id){
   num_ind = nrow(meta)
 
   for (i in 1:num_ind){
-    cat("<b>",meta$Title[i],"</b>\n\n",sep="")
+    cat("**",meta$Title[i],"**\n\n",sep="")
     print_meta(meta,i)
     cat("\n")
     }
@@ -68,7 +68,7 @@ one_id_multimeta <-function(erddap_id){
 one_id_bylat <-function(erddap_id){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("<p>* <b>Latitudes:</b>\n")
+  cat("<p>* **Latitudes:**\n")
 
   for (i in 1:num_ind){
     lat2=""
@@ -85,7 +85,7 @@ one_id_bylat <-function(erddap_id){
 one_id_byquery <-function(erddap_id,query_title){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("<p>* <b>",query_title,":</b>\n",sep="")
+  cat("<p>* **",query_title,":**\n",sep="")
 
   for (i in 1:num_ind){
     cat("     + ",meta$ERDDAP_query_value[i],"\n")
@@ -100,7 +100,7 @@ one_id_byquery <-function(erddap_id,query_title){
 one_id_bytitle <-function(erddap_id,query_title){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("<p>* <b>",query_title,":</b>\n",sep="")
+  cat("<p>* **",query_title,":**\n",sep="")
 
   for (i in 1:num_ind){
     cat("     + ",sub(".*; ","",meta$Title[i]),"\n")
@@ -118,7 +118,7 @@ one_id_bytitle <-function(erddap_id,query_title){
 one_id_by_title_query <-function(erddap_id,title_phrase,query_title,latlon){
   meta=getMetadata(erddap_id)
   num_ind = nrow(meta)
-  cat("<p>* <b>",query_title,":</b>\n",sep="")
+  cat("<p>* **",query_title,":**\n",sep="")
 
   for (i in 1:num_ind){
     if(grepl(title_phrase,meta$Title[i])){
@@ -161,7 +161,7 @@ one_id_by_twotitle_query <-function(erddap_id,title_phrase1,title_phrase2,query_
   for(j in 1:nphrase1){
     for(k in 1:nphrase2){
       cat("<p>**",query_title,title_phrase2[k]," ",title_phrase1[j]," indicators:**\n\n",sep="")
-      cat("* <b>",title_phrase1[j],"s:</b>\n",sep="")
+      cat("* **",title_phrase1[j],"s:**\n",sep="")
         for (i in 1:num_ind){
           if(grepl(title_phrase2[k],meta$Title[i]) & grepl(title_phrase1[j],meta$Title[i])){
             cat("     + ",meta$region[i],"\n")
@@ -182,7 +182,7 @@ multi_id_onemeta <-function(erddap_id){
   meta <- getMultiMetadata(erddap_id)
   num_ind = nrow(meta)
   
-  cat("<p>* <b>Indicators:</b>\n")
+  cat("<p>* **Indicators:**\n")
   for (i in 1:num_ind){
     cat("     + ",meta$Title[i],"\n")
     }
@@ -195,12 +195,12 @@ multi_id_onemeta <-function(erddap_id){
 # meta: list extracted by getMetadata()
 # i: the list index number to print
 print_meta <- function(meta,i){
-    cat("* <b>Component Category: </b>", meta$Component_Section[i],"\n",sep="")
-    if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("* <b>Time Range: </b>",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
-    cat("* <b>CCIEA Data Contact: </b>",meta$Contact[i],"\n",sep="")
-    cat("* <b>Institution: </b>",meta$Institution[i],"\n",sep="")
-    cat("* <b>Source Data: </b>",meta$Source_Data[i],"\n",sep="")
-    if(meta$Additional_Calculations[i]!="")cat("* <b>Additional Calculations: </b>",meta$Additional_Calculations[i],"\n",sep="")
+    cat("* **Component Category: **", meta$Component_Section[i],"\n",sep="")
+    if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("* **Time Range: **",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
+    cat("* **CCIEA Data Contact: **",meta$Contact[i],"\n",sep="")
+    cat("* **Institution: **",meta$Institution[i],"\n",sep="")
+    cat("* **Source Data: **",meta$Source_Data[i],"\n",sep="")
+    if(meta$Additional_Calculations[i]!="")cat("* **Additional Calculations: **",meta$Additional_Calculations[i],"\n",sep="")
 }
   
 #-----------print_meta_about(meta,i)----------------
@@ -232,7 +232,7 @@ get_erddap_link <-function(erddap_id){
   s=""
   if(length(erddap_id)>1)s="s"
   cat("**Indicator Download",s,": **\n\n",sep="")
-  cat("ERDDAP&trade; link",s,": <br>",sep="")
+  cat("ERDDAP&trade; link",s,": \n\n",sep="")
   for(i in 1:length(erddap_id)){
     cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n\n",sep="")
     }
