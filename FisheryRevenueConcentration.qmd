@@ -1,7 +1,7 @@
 # Fishery Revenue Concentration
 {{< include _setup.qmd >}}
 
-**Description** Along with factors like processor availability and local infrastructure influence, variability in port-level landings can impact the overall distribution of fishing revenue along the coast. The Theil Index metric assesses the geographic concentration of fishing revenues, and is used to track progress toward meeting NS-8. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. Annually, we calculate the Theil Index for all fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries (@leonard2011description).
+**Description** Along with factors like processor availability and local infrastructure influence, variability in port-level landings can impact the overall distribution of fishing revenue along the coast. The Theil Index metric assesses the geographic concentration of fishing revenues, and is used to track progress toward meeting NS-8. The index estimates the difference between observed revenue concentrations and what they would be if they were perfectly equally distributed across ports; higher values indicate greater concentration in a subset of ports. Annually, we calculate the Theil Index for all fisheries and for specific management groups, at the scale of the 21 port groups previously established for the economic Input-Output model for Pacific Coast fisheries [@leonard2011description].
 
 ```{r}
 #| echo: false
