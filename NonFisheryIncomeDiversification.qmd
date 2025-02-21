@@ -18,3 +18,6 @@ The West Coast Fisheries Participation Survey tool can be accessed at the follow
 https://www.fisheries.noaa.gov/national/science-data/west-coast-fisheries-participation-survey-results
 
 **References**
+
+::: {.sectionrefs}
+:::

@@ -37,3 +37,7 @@ Magnitude and timing of hatchery releases: While much of the habitat indicators 
 Marine residence: Marine residence of 1 to 5 years completes the life cycle for fall run Chinook salmon populations. While a broad number of marine habitat indicators have been examined (Wells et al. 2008), we focused on a limited subset of possible indicators representing initial set-up of ocean entry conditions (March-May), including sea surface temperature, the North Pacific Index, and North Pacific Gyre Oscillation. We also included an index of predation by common murres nesting at Southeast Farallon Island, which was a strong predictor in @friedman2019modeling. Unfortunately, this indicator currently cannot be updated quantitatively. On the positive side, we have updated the krill prey indicator for Klamath River fall Chinook salmon from biomass to average length to better reflect stronger correlations with recruits per spawner. Where indicators were averaged to obtain a marine habitat conditions score, hatchery release timing relative to the spring transition was also included as a marine habitat condition.
 
 **References**
+
+::: {.sectionrefs}
+:::
+

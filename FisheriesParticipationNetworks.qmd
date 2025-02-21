@@ -24,3 +24,7 @@ In network graphs, node size represents the median proportional contribution of 
 **Data analysis**
 
 **References**
+
+::: {.sectionrefs}
+:::
+

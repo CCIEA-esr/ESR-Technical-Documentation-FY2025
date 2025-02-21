@@ -90,10 +90,9 @@ format:
   html:
     theme: cosmo
   pdf:
-    documentclass: report
-    mainfont: "DejaVu Sans"
-    margin-left: 30mm
-    margin-top: 30mm
+    documentclass: scrreprt
+    margin-left: 20mm
+    margin-top: 20mm
     filters:
     - quarto
     - section-bibliographies

@@ -12,3 +12,6 @@ According to thresholds set by the U.S. Food and Drug Administration, domoic aci
 **Data sources**
 
 **References**
+
+::: {.sectionrefs}
+:::

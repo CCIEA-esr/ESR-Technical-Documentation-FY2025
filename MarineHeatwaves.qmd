@@ -27,3 +27,6 @@ get_erddap_link(erddap_id)
 ```
 
 **References**
+
+::: {.sectionrefs}
+:::

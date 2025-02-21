@@ -48,3 +48,6 @@ Glider data has also become an increasingly useful tool for analyzing trends in 
 
 **References**
 
+::: {.sectionrefs}
+:::
+

@@ -110,3 +110,6 @@ jtab1 %>% flextable() %>% autofit()
 ```
 
 **References**
+
+::: {.sectionrefs}
+:::

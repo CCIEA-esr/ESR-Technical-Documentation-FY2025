@@ -18,3 +18,6 @@ NOAA Technical Memorandum NMFS-SWFSC-676. https://doi.org/10.25923/77kp-ww39;
 NOAA Technical Memorandum NMFS-SWFSC-683. https://doi.org/10.25923/40x3-b146
 
 **References**
+
+::: {.sectionrefs}
+:::

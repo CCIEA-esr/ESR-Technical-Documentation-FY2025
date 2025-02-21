@@ -25,3 +25,6 @@ Data are collected and analyzed independently by N. Tolimieri, who submits unpub
 Data for indicators come from the West Coast Groundfish Bottom Trawl Survey (WCGBTS) [@keller2017northwest] for 2003-2021. There were no data for 2020 because the WCGBTS was canceled due to the COVID-19 pandemic. The survey data includes estimates of age, length, and biomass for subsamples of each haul, and occasionally for the entire haul when catch is low.
 
 **References**
+
+::: {.sectionrefs}
+:::

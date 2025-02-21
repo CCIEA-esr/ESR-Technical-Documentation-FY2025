@@ -9,10 +9,8 @@ We also report new efforts to examine thiamine deficiency in hatchery eggs acros
 
 \[this section will require a bit more writing to incorporate evolving approaches and methods\]
 
-**Data sources**
-
-**Data extraction**
-
-**Data analysis**
 
 **References**
+
+::: {.sectionrefs}
+:::

@@ -41,4 +41,8 @@ for (r in 1:num_regions){
 #| results: 'asis'
 get_erddap_link(erddap_id)
 ```
+
 **References**
+
+::: {.sectionrefs}
+:::

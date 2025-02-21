@@ -14,6 +14,9 @@ erddap_id='cciea_AC_revenue'
 one_id_byquery(erddap_id,"Species")
 get_erddap_link(erddap_id)
 ```
-```
 
 **References**
+
+
+::: {.sectionrefs}
+:::
