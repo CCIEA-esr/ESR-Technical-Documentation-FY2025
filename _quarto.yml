@@ -5,7 +5,7 @@ project:
 book:
   title: "CCIEA ESR Technical Documentation"
   subtitle: "California Current Integrated Ecosystem Assessment"
-  author: "Greg Williams, Lynn DeWitt, Isaac Schroeder, Chris Dailey, Nick Tolimieri"
+  author: "Greg Williams, Lynn deWitt, Isaac Schroeder, Chris Dailey, Nick Tolimieri"
   date: last-modified
   cover-image: "figures/BigSur2 1412030498-2641.jpg"
   favicon: "figures/favicon.ico"
@@ -23,12 +23,12 @@ book:
   chapters:
     - index.qmd
     - Introduction.qmd
-    - part: General Methods
+    - part: "General Methods"
       chapters:
       - DataCodeAccess.qmd
       - TimeSeriesQuadplots.qmd
       
-    - part: Climate and Oceans
+    - part: "Climate and Oceans"
       chapters:
       - ONI.qmd
       - PDO.qmd
@@ -44,7 +44,7 @@ book:
       - MaximumStreamTemperature.qmd
       - Streamflow.qmd
       
-    - part: Focal Components of Ecological Integrity
+    - part: "Focal Components of Ecological Integrity"
       chapters:
       - Copepods.qmd
       - Krill.qmd
@@ -69,14 +69,14 @@ book:
       - WhaleEntanglement.qmd
       - HarmfulAlgalBlooms.qmd
       
-    - part: Fishing and Non-Fishing Human Activities
+    - part: "Fishing and Non-Fishing Human Activities"
       chapters:
       - FisheryLandings.qmd
       - FisheryRevenue.qmd
       - OtherHumanActivities.qmd
       - SpatialInteractionsOceanUse.qmd
 
-    - part: Human Wellbeing
+    - part: "Human Wellbeing"
       chapters:
       - SocialVulnerability.qmd
       - FleetIncomeDiversification.qmd
@@ -91,8 +91,13 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    toc: true
+    toc-depth: 1
+    number-depth: 1
     margin-left: 20mm
+    margin-right: 20mm
     margin-top: 20mm
+    margin-bottom: 20mm
     filters:
     - quarto
     - section-bibliographies

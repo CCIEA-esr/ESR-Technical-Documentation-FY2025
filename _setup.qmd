@@ -231,7 +231,7 @@ print_meta_remainder <- function(meta,i){
 get_erddap_link <-function(erddap_id){
   s=""
   if(length(erddap_id)>1)s="s"
-  cat("**Indicator Download",s,": **\n\n",sep="")
+  cat("**Indicator Download",s," **\n\n",sep="")
   cat("ERDDAP&trade; link",s,": \n\n",sep="")
   for(i in 1:length(erddap_id)){
     cat("<https://oceanview.pfeg.noaa.gov/erddap/tabledap/",erddap_id[i],".html> \n\n",sep="")

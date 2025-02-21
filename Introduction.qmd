@@ -14,7 +14,7 @@ The purpose of this document is to collate the methods used to access, collect, 
 
 Indicators included in this document were selected to clearly align with management objectives, which is required for integrated ecosystem assessment (Levin et al. 2009), and has been advised many times in the literature (Degnbol and Jarre 2004; Jennings 2005; Rice and Rochet 2005; Link 2005). A difficulty with practical implementation of this in ecosystem reporting can be the lack of clearly specified ecosystem-level management objectives (although some have been suggested (Murawski 2000)). In our case, considerable effort had already been applied to derive both general goals and operational objectives from both US legislation such as the Magnuson-Stevens Fisheries Conservation and Management Act (MSA) and regional sources (Harvey et al. 2021).
 
-## SAMPLING LOCATIONS {#sec-jm-sampling-locations}
+## Sampling Locations {#sec-jm-sampling-locations}
 
 We generally refer to areas north of Cape Mendocino as the "Northern CCE," Cape Mendocino to Point Conception as the "Central CCE", and south of Point Conception as the "Southern CCE." @fig-sampling-areas shows sampling areas for most regional oceanographic data. Key oceanographic transects are the Newport Line off Oregon, the Trinidad Head Line off northern California, and CalCOFI lines further south, while shaded marine regions indicate sampling areas for most biological surveys. This sampling is complemented by basin-scale oceanographic observations and by outputs from various models. @fig-sampling-areas also shows sampling areas for most biological indicators. The shaded terrestrial areas in @fig-sampling-areas represent freshwater ecoregions in the CCE, and are the basis by which we summarize indicators for snowpack, flows, and stream temperatures.
 
@@ -26,4 +26,9 @@ We generally refer to areas north of Cape Mendocino as the "Northern CCE," Cape 
 
 knitr::include_graphics( paste0(fig_loc,'New_sampling_area_map.png') )
 ```
+
+**References**
+
+::: {.sectionrefs}
+:::
 
