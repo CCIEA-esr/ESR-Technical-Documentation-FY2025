@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -484,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Description</strong> [draw from old reports; this section will require a bit more writing to incorporate evolving approaches and methods]</p>
+<p><strong>Description</strong> pull some text from <span class="citation" data-cites="andrews2015legacy">Andrews et al. (<a href="#ref-andrews2015legacy" role="doc-biblioref">2015</a>)</span></p>
 <p><strong>Indicators</strong></p>
 <p>
 </p><ul>
@@ -510,8 +530,14 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Indicator Download: </strong></p>
 <p>ERDDAP™ link:</p>
 <p><a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_AC_nonfisheries.html" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_AC_nonfisheries.html</a></p>
+<p><strong>References</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-andrews2015legacy" class="csl-entry" role="listitem">
+Andrews, Kelly S, Gregory D Williams, Jameal F Samhouri, Kristin N Marshall, Vladlena Gertseva, and Phillip S Levin. 2015. <span>“The Legacy of a Crowded Ocean: Indicators, Status, and Trends of Anthropogenic Pressures in the California Current Ecosystem.”</span> <em>Environmental Conservation</em> 42 (2): 139–51.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
