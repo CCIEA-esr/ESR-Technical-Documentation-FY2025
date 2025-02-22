@@ -1,31 +1,9 @@
-# Introduction {-}
+# Objective {-}
 
-```{r}
-#| echo: false
-#| warning: false
-library(tidyverse)
 
-wd = getwd()
-fig_loc = paste0(wd,'/figures/')
+The purpose of this document is to collate the methods used to access, collect, process, and analyze derived data (“indicators”) used to describe the status and trend of social, economic, ecological, and biological conditions in the California Current Large Marine Ecosystem (see [Fig. @fig-New_sampling_area_map], below). These indicators are further synthesized in Ecosystem Status Reports produced annually by the Northwest and Southwest Fisheries Science Centers for the Pacific Fisheries Management Council. The metadata for each indicator (in accordance with the Public Access to Research Results (PARR) directive) and the methods used to construct each indicator are described in the subsequent chapters, with each chapter title corresponding to an indicator or analysis present in Ecoystem Status Reports. The most recent and usable html version of this document can be found at <https://cciea-esr.github.io/ESR-Technical-Documentation-FY2025/>. The PDF version of this and future versions document will be archived in NOAA’s Institutional Repository.
 
-```
-
-The purpose of this document is to collate the methods used to access, collect, process, and analyze derived data (“indicators”) used to describe the status and trend of social, economic, ecological, and biological conditions in the California Current Large Marine Ecosystem (see [Fig. @fig-sampling-areas], below). These indicators are further synthesized in Ecosystem Status Reports produced annually by the Northwest and Southwest Fisheries Science Centers for the Pacific Fisheries Management Council. The metadata for each indicator (in accordance with the Public Access to Research Results (PARR) directive) and the methods used to construct each indicator are described in the subsequent chapters, with each chapter title corresponding to an indicator or analysis present in Ecoystem Status Reports. The most recent and usable html version of this document can be found at <https://cciea-esr.github.io/ESR-Technical-Documentation-FY2025/>. The PDF version of this and future versions document will be archived in NOAA’s Institutional Repository.
-
-Indicators included in this document were selected to clearly align with management objectives, which is required for integrated ecosystem assessment (@levin2009iea), and has been advised many times in the literature (@degnbol2004; @jennings2005; @rice2005; Link 2005). A difficulty with practical implementation of this in ecosystem reporting can be the lack of clearly specified ecosystem-level management objectives (although some have been suggested (@murawski2000)). In our case, considerable effort had already been applied to derive both general goals and operational objectives from both US legislation such as the Magnuson-Stevens Fisheries Conservation and Management Act (MSA) and regional sources (Harvey et al. 2021).
-
-## Sampling Locations {#sec-jm-sampling-locations}
-
-We generally refer to areas north of Cape Mendocino as the "Northern CCE," Cape Mendocino to Point Conception as the "Central CCE", and south of Point Conception as the "Southern CCE." @fig-sampling-areas shows sampling areas for most regional oceanographic data. Key oceanographic transects are the Newport Line off Oregon, the Trinidad Head Line off northern California, and CalCOFI lines further south, while shaded marine regions indicate sampling areas for most biological surveys. This sampling is complemented by basin-scale oceanographic observations and by outputs from various models. @fig-sampling-areas also shows sampling areas for most biological indicators. The shaded terrestrial areas in @fig-sampling-areas represent freshwater ecoregions in the CCE, and are the basis by which we summarize indicators for snowpack, flows, and stream temperatures.
-
-```{r}
-#| label: fig-sampling-areas
-#| width: 75%
-#| echo: false
-#| fig.cap: "Map of most sampling efforts in the California Current Ecosystem (CCE) and U.S. west coast Exclusive Economic Zone (EEZ). Symbols indicate hydrographic line sampling stations for oceanographic data. Shaded ocean regions represent biological sampling areas for the Northern California Current (NCC), which includes the Juvenile Salmon and Ocean Ecology Survey (JSOES); the Rockfish Recruitment and Ecosystem Assessment Survey (RREAS), including its Core Area; and the CalCOFI sampling region. The NCC and RREAS shaded areas, combined, also approximate the survey footprints for NOAA's coastwide CPS acoustic/trawl and groundfish bottom trawl surveys. Dashed line approximates foraging area for adult female California sea lions from the San Miguel colony. Shaded terrestrial areas represent the six freshwater ecoregions in the CCE."  
-
-knitr::include_graphics( paste0(fig_loc,'New_sampling_area_map.png') )
-```
+Indicators included in this document were selected to clearly align with management objectives, which is required for integrated ecosystem assessment [@levin2009iea], and has been advised many times in the literature [@degnbol2004; @jennings2005; @rice2005; Link 2005]. A difficulty with practical implementation of this in ecosystem reporting can be the lack of clearly specified ecosystem-level management objectives (although some have been suggested [@murawski2000]). In our case, considerable effort had already been applied to derive both general goals and operational objectives from both US legislation such as the Magnuson-Stevens Fisheries Conservation and Management Act (MSA) and regional sources (Harvey et al. 2021).
 
 **References**
 

@@ -5,7 +5,22 @@ project:
 book:
   title: "CCIEA ESR Technical Documentation"
   subtitle: "California Current Integrated Ecosystem Assessment"
-  author: "Greg Williams, Lynn deWitt, Isaac Schroeder, Chris Dailey, Nick Tolimieri"
+  author:
+    - name: Greg Williams
+      affiliation:
+        - Northwest Fisheries Science Center
+    - name: Lynn deWitt
+      affiliation:
+        - Southwest Fisheries Science Center
+    - name: Isaac Schroeder
+      affiliation:
+        - Southwest Fisheries Science Center
+    - name: Chris Dailey
+      affiliation:
+        - Northwest Fisheries Science Center
+    - name: Nick Tolimieri
+      affiliation:
+        - Northwest Fisheries Science Center
   date: last-modified
   cover-image: "figures/BigSur2 1412030498-2641.jpg"
   favicon: "figures/favicon.ico"
@@ -22,7 +37,10 @@ book:
     collapse-level: 1
   chapters:
     - index.qmd
-    - Introduction.qmd
+    - part: Introduction
+      chapters: 
+        - Introduction.qmd
+        - SamplingLocations.qmd
     - part: "General Methods"
       chapters:
       - DataCodeAccess.qmd
@@ -97,7 +115,7 @@ format:
     margin-left: 20mm
     margin-right: 20mm
     margin-top: 20mm
-    margin-bottom: 20mm
+    margin-bottom: 30mm
     filters:
     - quarto
     - section-bibliographies
