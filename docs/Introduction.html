@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -491,7 +511,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The purpose of this document is to collate the methods used to access, collect, process, and analyze derived data (“indicators”) used to describe the status and trend of social, economic, ecological, and biological conditions in the California Current Large Marine Ecosystem (see <a href="#fig-sampling-areas" class="quarto-xref">Fig.&nbsp;<span>1</span></a>, below). These indicators are further synthesized in Ecosystem Status Reports produced annually by the Northwest and Southwest Fisheries Science Centers for the Pacific Fisheries Management Council. The metadata for each indicator (in accordance with the Public Access to Research Results (PARR) directive) and the methods used to construct each indicator are described in the subsequent chapters, with each chapter title corresponding to an indicator or analysis present in Ecoystem Status Reports. The most recent and usable html version of this document can be found at <a href="https://cciea-esr.github.io/ESR-Technical-Documentation-FY2025/" class="uri">https://cciea-esr.github.io/ESR-Technical-Documentation-FY2025/</a>. The PDF version of this and future versions document will be archived in NOAA’s Institutional Repository.</p>
-<p>Indicators included in this document were selected to clearly align with management objectives, which is required for integrated ecosystem assessment (Levin et al.&nbsp;2009), and has been advised many times in the literature (Degnbol and Jarre 2004; Jennings 2005; Rice and Rochet 2005; Link 2005). A difficulty with practical implementation of this in ecosystem reporting can be the lack of clearly specified ecosystem-level management objectives (although some have been suggested (Murawski 2000)). In our case, considerable effort had already been applied to derive both general goals and operational objectives from both US legislation such as the Magnuson-Stevens Fisheries Conservation and Management Act (MSA) and regional sources (Harvey et al.&nbsp;2021).</p>
+<p>Indicators included in this document were selected to clearly align with management objectives, which is required for integrated ecosystem assessment (<span class="citation" data-cites="levin2009iea">Levin et al. (<a href="#ref-levin2009iea" role="doc-biblioref">2009</a>)</span>), and has been advised many times in the literature (<span class="citation" data-cites="degnbol2004">Degnbol and Jarre (<a href="#ref-degnbol2004" role="doc-biblioref">2004</a>)</span>; <span class="citation" data-cites="jennings2005">Jennings (<a href="#ref-jennings2005" role="doc-biblioref">2005</a>)</span>; <span class="citation" data-cites="rice2005">Rice and Rochet (<a href="#ref-rice2005" role="doc-biblioref">2005</a>)</span>; Link 2005). A difficulty with practical implementation of this in ecosystem reporting can be the lack of clearly specified ecosystem-level management objectives (although some have been suggested (<span class="citation" data-cites="murawski2000">Murawski (<a href="#ref-murawski2000" role="doc-biblioref">2000</a>)</span>)). In our case, considerable effort had already been applied to derive both general goals and operational objectives from both US legislation such as the Magnuson-Stevens Fisheries Conservation and Management Act (MSA) and regional sources (Harvey et al.&nbsp;2021).</p>
 <section id="sec-jm-sampling-locations" class="level2">
 <h2 class="anchored" data-anchor-id="sec-jm-sampling-locations">Sampling Locations</h2>
 <p>We generally refer to areas north of Cape Mendocino as the “Northern CCE,” Cape Mendocino to Point Conception as the “Central CCE”, and south of Point Conception as the “Southern CCE.” <a href="#fig-sampling-areas" class="quarto-xref">Figure&nbsp;<span>1</span></a> shows sampling areas for most regional oceanographic data. Key oceanographic transects are the Newport Line off Oregon, the Trinidad Head Line off northern California, and CalCOFI lines further south, while shaded marine regions indicate sampling areas for most biological surveys. This sampling is complemented by basin-scale oceanographic observations and by outputs from various models. <a href="#fig-sampling-areas" class="quarto-xref">Figure&nbsp;<span>1</span></a> also shows sampling areas for most biological indicators. The shaded terrestrial areas in <a href="#fig-sampling-areas" class="quarto-xref">Figure&nbsp;<span>1</span></a> represent freshwater ecoregions in the CCE, and are the basis by which we summarize indicators for snowpack, flows, and stream temperatures.</p>
@@ -515,6 +535,23 @@ Figure&nbsp;1: Map of most sampling efforts in the California Current Ecosystem 
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-degnbol2004" class="csl-entry" role="listitem">
+Degnbol, P., and A. Jarre. 2004. <span>“Review of Indicators in Fisheries Management – a Development Perspective.”</span> <em>African Journal of Marine Science</em> 26 (1): 303–26. <a href="https://doi.org/10.2989/18142320409504063">https://doi.org/10.2989/18142320409504063</a>.
+</div>
+<div id="ref-jennings2005" class="csl-entry" role="listitem">
+Jennings, Simon. 2005. <span>“Indicators to Support an Ecosystem Approach to Fisheries.”</span> <em>Fish and Fisheries</em> 6 (3): 212–32. <a href="https://doi.org/10.1111/j.1467-2979.2005.00189.x">https://doi.org/10.1111/j.1467-2979.2005.00189.x</a>.
+</div>
+<div id="ref-levin2009iea" class="csl-entry" role="listitem">
+Levin, Phillip, Michael Fogarty, Steven Murawski, and David Fluharty. 2009. <span>“Integrated Ecosystem Assessments: Developing the Scientific Basis for Ecosystem-Based Management of the Ocean.”</span> <em>PLoS Biology</em> 7 (February): e14. <a href="https://doi.org/10.1371/journal.pbio.1000014">https://doi.org/10.1371/journal.pbio.1000014</a>.
+</div>
+<div id="ref-murawski2000" class="csl-entry" role="listitem">
+Murawski, Steven A. 2000. <span>“Definitions of Overfishing from an Ecosystem Perspective.”</span> <em>ICES Journal of Marine Science</em> 57 (3): 649–58. <a href="https://doi.org/10.1006/jmsc.2000.0738">https://doi.org/10.1006/jmsc.2000.0738</a>.
+</div>
+<div id="ref-rice2005" class="csl-entry" role="listitem">
+Rice, Jake, and Marie-joelle Rochet. 2005. <span>“A Framework for Selecting a Suite of Indicators for Fisheries Management.”</span> <em>ICES Journal of Marine Science</em> 62 (3): 516–627. <a href="https://doi.org/10.1016/j.icesjms.2005.01.003">https://doi.org/10.1016/j.icesjms.2005.01.003</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
