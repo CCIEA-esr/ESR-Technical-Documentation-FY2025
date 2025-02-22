@@ -44,7 +44,7 @@ fig_dir =( paste0(home_dir,"/figures/"))
 df = data.frame(read.csv( paste0(fig_dir, 
      "GF-RecruitInfoTable.csv"), header = TRUE))
 
-df %>% flextable %>% autofit() %>%
+df %>% flextable() %>% autofit() %>%
    set_header_labels(.,
   values = list(
    cname = "Common name",
@@ -53,8 +53,10 @@ df %>% flextable %>% autofit() %>%
     Age_Classes = "Age class",
     Depth_range = "Depth range (m)")) %>%
    align(j = 3:5, align = "center", part = "all") %>%
-  italic(j = 2, italic = TRUE, part = "body")
-
+  italic(j = 2, italic = TRUE, part = "body") %>%
+  fit_to_width(max_width = 7)
+# needed to set max_width for pdf output, otherwise table went off the page
+# pdf: italic not working
 # cap_text = paste0("Length, age, and depth range information.")
 
 ```
