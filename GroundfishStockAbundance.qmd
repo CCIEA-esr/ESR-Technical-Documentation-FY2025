@@ -13,6 +13,9 @@ one_id_byquery(erddap_id,"Species")
 get_erddap_link(erddap_id)
 ```
 
+**Additional Information**
+Data are collected and analyzed independently by J. Cope, who submits unpublished figures and plots to the CCIEA editorial team.
+
 **References**
 
 ::: {.sectionrefs}
