@@ -2,7 +2,9 @@
 {{< include _setup.qmd >}}
 
 **Description** 
-pull some text from @andrews2015legacy
+Human activities in, on and around the ocean are varied and growing. These activities generate many benefits, including production of food, employment, energy and livelihoods [@guerry2012modeling]. However, they are also associated with pressures on the ecosystem that have negative consequences, such as loss or modification of habitat, depletions and introductions of species, physical, visual and auditory disturbances, and toxic and non-toxic contamination [@eastwood2007human]. Despite the increasing urgency of these influences [@halpern2007evaluating], it is rare to have a full accounting of how anthropogenic pressures in the marine environment have changed over time.
+
+We developed standardized time series of indicators for a variety of anthropogenic pressures (e.g., trawl bottom contact, commercial shipping, nutrient input) acting across the entire USA's portion of the California Current Large Marine Ecosystem [@andrews2015legacy]. These time series were used to quantify and evaluate the intensity and temporal trends of each pressure. Our synthesis, and corresponding methodological approaches to quantify the intensity and trends of these pressures, provide a foundation for future integrative analyses on ecological components (such as risk analysis and management strategy evaluations) across the CCE.
 
 **Indicators**
 
