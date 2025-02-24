@@ -5,7 +5,7 @@ Below, we describe two portfolios of indicators for i) oceanographic and lower-t
 
 Oceanography and Productivity. Six broad-scale indicators of long-term, spatial variation in oceanography and lower-trophic level productivity are being used to inform spatial suitability analyses in areas off northern California being considered for OWE development in 2024. The ecosystem indicators include: 1. Average wind-driven upwelling during March-July, calculated at 40m depth from 1988-2012 using the Regional Ocean Modeling System [@raghukumar2023projected]; 2. Long-term, spatial variability and hotspots in primary productivity, calculated from a biogeochemistry model as the average concentration of surface phytoplankton in May-July, 1995-2020 [@fiechter2018wind]; 3. Long-term, spatial variability and hotspots in secondary productivity from May-August, calculated as an ensemble of four different estimates of krill abundance/biomass across the West Coast [@cimino2020essential; @fiechter2020krill; @messie2022satellite; @phillips2022spatiotemporal]; 4. Long-term, spatial variability and hotspots for young-of-year (YOY) rockfishes during their pelagic juvenile life stage in May-June from 2001-2022 [@field2021spatiotemporal]; 5.Long-term, spatial variability and hotspots for YOY Pacific hake in May-June from 2001-2022 [@field2021spatiotemporal]; 6. Long-term, spatial variability and hotspots of groundfish nursery habitat on the seafloor, based on summed average densities of juveniles from 13 groundfish species in May-October from 2003-2018 [@tolimieri2020spatio].
 
-**Indicator Category** Fishing and Nonfishing Human Activities
+**Indicator Category** Fishing and Non-Fishing Human Activities
 
 **Data Steward** Andrews; kelly.andrews at noaa.gov
 

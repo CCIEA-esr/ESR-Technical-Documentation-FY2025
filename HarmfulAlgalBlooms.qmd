@@ -7,9 +7,15 @@ Ocean conditions associated with marine heatwaves, El Niño events, or positive 
 
 According to thresholds set by the U.S. Food and Drug Administration, domoic acid levels ≥20 parts per million (ppm) trigger actions for all seafood and tissues except Dungeness crab viscera, for which the level is \>30 ppm (California applies this to rock crab viscera as well) [@FDA2011fish]. Under evisceration orders, Dungeness crab can be landed when the viscera exceeds the threshold but the meat does not, provided that crab are eviscerated by a licensed processor. Oregon was the first West Coast state to pass legislation allowing evisceration, in November 2017, followed by California in October 2021. Washington adopted an emergency evisceration rule in February 2021, and is considering legislation to grant long-term authority for issuing evisceration orders.
 
-\[add more from past ESRs\]
+**Indicator Category** Ecological Integrity
 
-**Data sources**
+**Data Steward** S. Moore, NMFS/NWFSC (stephanie.moore at noaa.gov); 
+
+**Additional Information**
+Domoic acid data are collected from state partners and analyzed independently by S. Moore and C. Free, who submit unpublished figures and plots to the CCIEA editorial team. Data are plotted as monthly maximum domoic acid concentrations for both razor clams and Dungeness crab viscera relative to management thresholds (20 ppm - clams; 30 ppm - crabs).
+
+**Data sources** 
+Domoic acid data are provided by the Washington State Department of Health, Oregon Department of Agriculture, and California Department of Public Health. 
 
 **References**
 
