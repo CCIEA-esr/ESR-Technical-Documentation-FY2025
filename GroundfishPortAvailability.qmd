@@ -5,7 +5,7 @@ We estimated the relative availability of groundfish biomass to individual ports
 
 The present analysis differs from @selden2020coupled in three ways:
 
-1- We estimated the spatial distribution of species using the R package sdmTMB [@anderson2022sdmtmb] instead of VAST [@thorson2019guidance]. The sdmTMB models included Pass and normalized depth as fixed parameters. Year was a time variable and models included both spatial and spatiotemporal (iid) autocorrelation, and a delta-poisson-link-gamma error distribution [@thorson2018three] error distribution.
+1- We estimated the spatial distribution of species using the R package sdmTMB [@anderson2022sdmtmb] instead of VAST [@thorson2019guidance]. The sdmTMB models included Pass and normalized depth as fixed parameters. Year was a time variable and models included both spatial and spatiotemporal (iid) autocorrelation, and a delta-poisson-link-gamma error distribution [@thorson2018three].
 
 2- We used the Location Biomass directly instead of scaling it by spawning stock biomass from the assessment. Thus, the Availability Index is a relative biomass index and not actual available biomass. Biomass was then scaled to 0-1 for presentation by dividing by the highest value in any year.
 
@@ -16,7 +16,7 @@ Previous sdmTMB models used a delta-poisson-link-gamma model structure/distribut
 
 **Indicator Category** Ecological Integrity
 
-**Data Steward** N. Tolimieri, NMFS/NWFSC (nick.tolimieri@noaa.gov)
+**Data Steward** N. Tolimieri, NMFS/NWFSC (nick.tolimieri at noaa.gov)
 
 **Additional Information**
 Data are collected and analyzed independently by N. Tolimieri, who submits unpublished figures and plots to the CCIEA editorial team.
