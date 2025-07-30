@@ -196,7 +196,7 @@ multi_id_onemeta <-function(erddap_id){
 # i: the list index number to print
 print_meta <- function(meta,i){
     cat("* **Component Category: **", meta$Component_Section[i],"\n",sep="")
-    if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("* **Time Range: **",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
+    if(!is.na(meta$year_begin[i])&&(!is.na(meta$year_end[i])))cat("* **Time Range: **",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
     cat("* **CCIEA Data Contact: **",meta$Contact[i],"\n",sep="")
     cat("* **Institution: **",meta$Institution[i],"\n",sep="")
     cat("* **Source Data: **",meta$Source_Data[i],"\n",sep="")
@@ -211,7 +211,7 @@ print_meta <- function(meta,i){
 # Example: Fishery Landings
 print_meta_about <- function(meta,i){
   if(meta$Additional_Calculations[i]!="")cat("    + *About this indicator: * ",meta$Additional_Calculations[i],"\n")
-    if(!is.na(meta$year_begin)&&(!is.na(meta$year_end)))cat("    + *Time Range: * ",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
+    if(!is.na(meta$year_begin[i])&&(!is.na(meta$year_end[i])))cat("    + *Time Range: * ",meta$year_begin[i]," - ",meta$year_end[i],"\n",sep="")
     cat("    + *Source Data: *",meta$Source_Data[i],"\n\n",sep="")
   }
   
